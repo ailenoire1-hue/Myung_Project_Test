@@ -8,6 +8,7 @@
 - PM 브랜치: `user4`
 - PM 워크트리: `C:/Users/DR_ACADEMY/orca/Myung_Project_Test`
 - 공통 작업 규칙: [WEBSITE_WORK_RULES.md](WEBSITE_WORK_RULES.md)
+- 문서 관리 위치: 프로젝트 최상위의 `규칙/` 폴더. 사용자의 요청에 따라 두 문서를 이 폴더로 이동했다.
 - 사용자는 오르카 CLI를 통한 멀티에이전트 제작과 이번 기록의 현재 브랜치 저장을 요청했다.
 
 ## 인터뷰에서 확정한 사항
@@ -76,6 +77,8 @@
 
 Claude는 작업 환경의 PATH에 Node가 없어 오르카에 포함된 Node v24를 `ELECTRON_RUN_AS_NODE`로 사용했다고 보고했다. 제품 필터 동작과 `.filters` 및 `table.specs` 스타일은 PM 통합 시 연결해야 한다.
 
+Antigravity의 완료 보고도 수신했다. 커밋 `31400b38da438291ee0d4939285d22348748ad0f`로 `integrated-expertise.mjs`를 제출했고 회사 소개·포렌식·보안의 세 페이지에 대해 구문 및 ESM import 검증 통과를 보고했다. 두 작업 모두 PM의 검토와 통합은 아직 완료하지 않았다.
+
 ### 작업 세션의 산출물 계약
 
 - 각 작업 세션은 배정된 모듈 한 개만 수정하고 커밋한다.
@@ -89,7 +92,7 @@ Claude는 작업 환경의 PATH에 Node가 없어 오르카에 포함된 Node v2
 
 ## 남은 작업
 
-1. Claude 제출 커밋 `c4be39b`를 검토하고 Antigravity의 완료 보고와 커밋을 수령한다.
+1. Claude 제출 커밋 `c4be39b`와 Antigravity 제출 커밋 `31400b3`를 검토한다.
 2. PM이 공통 디자인과 메인·고객 지원 화면을 구현한다.
 3. 산출물을 검토하고 현재 브랜치에 통합한다.
 4. 다른 작업 세션의 교차 검토를 수행하고 발견 사항을 수정한다.
