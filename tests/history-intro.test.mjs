@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import {readFileSync} from 'node:fs';
+function run({held=false,reduce=false,skip=false,withTrace=false,withYear=false,evolution=false}={}){
+ const state={removed:false,timers:[],raf:[]};
+ const classes=new Set(skip?[]:['intro-pending']);
+ const root={classList:{contains:c=>classes.has(c),add:(...cs)=>cs.forEach(c=>classes.add(c)),remove:(...cs)=>cs.forEach(c=>classes.delete(c))}};
+ const values=[36,200000].map(n=>({dataset:{countTo:String(n)},textContent:''}));
+ const background={inert:false};
+ const trace={style:{},getTotalLength:()=>withYear?1200:100,getPointAtLength:n=>({x:n,y:45-n*(withYear?.37/12:.37)})};
+ const year={textContent:'',style:{setProperty:(name,value)=>{state[name]=value;}}};
+ const head={setAttribute:(name,value)=>state.traceHead=value};
+ const intro={dataset:{splashPreview:'true',introDuration:'4000',evolution:evolution?'1':''},style:{setProperty:(name,value)=>{state[name]=value;}},classList:{add:c=>state[c]=true},querySelectorAll:()=>values,contains:()=>false,remove:()=>state.removed=true,addEventListener:()=>{},querySelector:s=>s==='.intro-skip'?{addEventListener:()=>{}}:withTrace&&s==='[data-intro-trace]'?trace:withTrace&&s==='[data-intro-head]'?head:withYear&&s==='[data-intro-year]'?year:null};
+ const ctx={document:{documentElement:root,visibilityState:'visible',activeElement:null,querySelector:s=>s==='.site-intro'?intro:null,querySelectorAll:s=>s.startsWith('[data-')?[]:[background],addEventListener:()=>{}},window:{},location:{search:skip?'?skip=1':held?'?hold=1':'?intro=1'},matchMedia:()=>({matches:reduce,addEventListener:()=>{}}),URLSearchParams,URL,performance:{now:()=>0},clearTimeout:()=>{},cancelAnimationFrame:()=>{},requestAnimationFrame:fn=>state.raf.push(fn),setTimeout:(fn,ms)=>state.timers.push({fn,ms}),sessionStorage:{setItem:()=>{}}};
+ vm.runInNewContext(readFileSync('dist/assets/splash.js','utf8'),ctx);
+ return {state,values,background,trace,year};
+}
+let r=run();
+assert.equal(r.state.timers[0].ms,4050);
+r.state.raf.shift()(1600);
+assert.deepEqual(r.values.map(e=>e.textContent),['18','100,000']);
+r.state.raf.shift()(2900);
+assert.deepEqual(r.values.map(e=>e.textContent),['36','200,000']);
+assert.equal(r.state.removed,false);r.state.timers[0].fn();assert.equal(r.state.removed,true);assert.equal(r.background.inert,false);
+r=run({held:true});assert.equal(r.state.timers.length,0);assert.deepEqual(r.values.map(e=>e.textContent),['36','200,000']);
+r=run({reduce:true});assert.equal(r.state.timers[0].ms,4000);assert.equal(r.state.raf.length,0);
+r=run({skip:true});assert.equal(r.state.timers.length,0);assert.equal(r.state.removed,true);
+r=run({withTrace:true});assert.equal(r.trace.style.strokeDashoffset,100);r.state.raf.shift()(1650);assert.equal(r.trace.style.strokeDashoffset,50);r.state.raf.shift()(3300);assert.equal(r.trace.style.strokeDashoffset,0);assert.equal(r.state.traceHead,'translate(100 8)');
+r=run({held:true,withTrace:true});assert.equal(r.trace.style.strokeDashoffset,0);
+r=run({reduce:true,withTrace:true});assert.equal(r.trace.style.strokeDashoffset,0);assert.equal(r.state.raf.length,0);
+r=run({withTrace:true,withYear:true,evolution:true});
+assert.equal(r.year.textContent,'1990');assert.equal(r.state['--type-progress'],'0');
+r.state.raf.shift()(1650);
+assert.equal(r.year.textContent,String(1990+Math.round((new Date().getFullYear()-1990)/2)));
+assert.equal(r.state['--trace-x'],'50%');assert.equal(r.trace.style.strokeDashoffset,600);
+r.state.raf.shift()(2850);assert.equal(r.state['--type-progress'],'1');assert.equal(r.state.removed,false);
+r.state.raf.shift()(3300);assert.equal(r.year.textContent,String(new Date().getFullYear()));assert.equal(r.state['--trace-x'],'100%');
+r=run({held:true,withTrace:true,withYear:true,evolution:true});assert.equal(r.year.textContent,String(new Date().getFullYear()));assert.equal(r.state['--type-progress'],'1');
+r=run({reduce:true,withTrace:true,withYear:true,evolution:true});assert.equal(r.state['--type-progress'],'1');assert.equal(r.state.raf.length,0);
+console.log('Four-second timing, count-up, small bottom graph, held preview, skip, and reduced motion checks passed.');
+

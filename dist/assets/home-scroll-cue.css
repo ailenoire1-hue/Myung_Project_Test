@@ -1,0 +1,21 @@
+/* A quiet cue in the unused left rail; the opening film keeps its own cue. */
+.home-scroll-cue{--hsc-ink:#526777;--hsc-line:#879aa980;--hsc-surface:#ffffffde;position:fixed;z-index:29;left:18px;bottom:28px;display:flex;align-items:center;flex-direction:column;justify-content:center;gap:7px;width:48px;min-height:84px;color:var(--hsc-ink);text-decoration:none;-webkit-tap-highlight-color:transparent;transition:color .2s ease}
+.home-scroll-cue[hidden]{display:none!important}
+.home-scroll-cue[data-theme="dark"]{--hsc-ink:#e2e9ed;--hsc-line:#d5e0e680;--hsc-surface:#101e2bc9}
+.home-scroll-cue-mouse{display:flex;justify-content:center;width:23px;height:34px;padding-top:7px;box-sizing:border-box;border:1px solid var(--hsc-line);border-radius:13px;background:var(--hsc-surface)}
+.home-scroll-cue-mouse i{display:block;width:2px;height:7px;border-radius:2px;background:#cf8654;animation:home-cue-wheel 2s ease-in-out infinite}
+.home-scroll-cue-label{font:600 9px/1.2 Arial,sans-serif;letter-spacing:1.45px;margin-left:1px}
+.home-scroll-cue-arrow{display:block;width:18px;height:18px}
+.home-scroll-cue:hover{color:#c27b49}
+.home-scroll-cue:focus-visible{outline:2px solid #cf8654;outline-offset:5px;border-radius:3px}
+.video-scroll-locked .home-scroll-cue,.intro-pending .home-scroll-cue,body:has(dialog[open]) .home-scroll-cue,body:has(.mobile-nav.is-open) .home-scroll-cue{visibility:hidden;pointer-events:none}
+@keyframes home-cue-wheel{0%,100%{opacity:.5;transform:translateY(0)}45%{opacity:1}75%{opacity:0;transform:translateY(8px)}}
+@media(min-width:1760px){.home-scroll-cue{left:24px;bottom:34px}}
+@media(max-height:700px) and (min-width:801px){.home-scroll-cue{bottom:14px;gap:4px;min-height:76px}}
+@media(max-width:800px){
+ .home-scroll-cue{left:calc(50% - 22px);bottom:calc(22px + env(safe-area-inset-bottom,0px));width:44px;min-height:44px;height:44px;gap:0;border:1px solid var(--hsc-line);border-radius:50%;background:var(--hsc-surface)}
+ .home-scroll-cue-mouse,.home-scroll-cue-label{display:none}
+ .home-scroll-cue-arrow{width:21px;height:21px}
+ body:has(.qm-widget.is-open) .home-scroll-cue,body:has(.home-section-nav.is-open) .home-scroll-cue{visibility:hidden;pointer-events:none}
+}
+@media(prefers-reduced-motion:reduce){.home-scroll-cue{transition:none}.home-scroll-cue-mouse i{animation:none}}

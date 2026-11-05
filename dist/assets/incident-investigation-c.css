@@ -1,0 +1,127 @@
+/* Preview C: a restrained editorial casebook with evidence-led paper visuals. */
+.ir-c{--irc-ink:#172430;--irc-muted:#6c7781;--irc-line:#d9ddd9;--irc-paper:#fff;--irc-accent:#c9763e}
+.ir-c .ir-section{background:#f6f5f0;color:var(--irc-ink)}
+.ir-c .ir-section:nth-of-type(even){background:#fbfaf7}
+.ir-c .ir-heading .ir-eyebrow{color:#a5683d;letter-spacing:.13em}
+.ir-c .ir-heading h2{font-weight:760;letter-spacing:-.045em}
+.ir-c .ir-section-caption{border-color:var(--irc-line);color:var(--irc-muted)}
+.ir-c .irc-index-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.ir-c .irc-index-card{display:flex;flex-direction:column;min-height:352px;padding:22px 26px 18px;background:#fff;border:1px solid #dadfdc;box-shadow:0 10px 26px #17243004;color:inherit;text-decoration:none;transition:transform .25s,border-color .25s}
+.ir-c .irc-index-card:hover{transform:translateY(-5px);border-color:#c9763e}
+.ir-c .irc-index-card:focus-visible{outline:3px solid #c9763e;outline-offset:4px}
+.ir-c .irc-index-card>header{display:flex;align-items:center;justify-content:space-between;padding-bottom:13px;border-bottom:1px solid var(--irc-line)}
+.ir-c .irc-index-card>header>span{font:500 43px/1 Georgia,serif;color:#a0a9ae;letter-spacing:-.06em}
+.ir-c .irc-index-card>header>svg{width:35px;height:35px;color:#926844}
+.ir-c .irc-index-question{margin:20px 0 10px;font-size:20px;line-height:1.45;font-weight:650;letter-spacing:-.035em}
+.ir-c .irc-index-card h3{font-size:15px;line-height:1.5;margin:0 0 4px;color:#a66031}
+.ir-c .irc-index-copy{margin:0;color:var(--irc-muted);font-size:14px;line-height:1.7}
+.ir-c .irc-index-sources{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0 17px}
+.ir-c .irc-index-sources span{font-size:11px;line-height:1.6;border-bottom:1px solid #cbd1d4;padding-bottom:3px;color:#72808b}
+.ir-c .irc-index-card>footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;font-size:12px;font-weight:650}
+.ir-c .irc-index-card>footer b{font-size:20px;font-weight:400;color:#b26c3a}
+.ir-c .irc-layout{display:grid;grid-template-columns:minmax(265px,.8fr) minmax(0,1.6fr);gap:clamp(26px,4vw,62px);align-items:center}
+.ir-c .irc-question-label{display:flex;align-items:center;gap:10px;font-size:11px;color:#8a9298;letter-spacing:.04em}
+.ir-c .irc-question-label>span{color:#a56434;font-weight:700}
+.ir-c .irc-question-label>i{height:1px;width:25px;background:#b3babd}
+.ir-c .irc-question>h3{font-size:clamp(22px,1.72vw,26px);font-weight:700;line-height:1.5;letter-spacing:-.045em;margin:13px 0 16px;word-break:keep-all}
+.ir-c .irc-scope{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ir-c .irc-scope li{display:flex;gap:12px;align-items:start}
+.ir-c .irc-scope li>span{font:500 11px/1.8 ui-monospace,monospace;color:#a7734a;padding-top:1px}
+.ir-c .irc-scope h4{font-size:14px;line-height:1.55;margin:0 0 2px;font-weight:680}
+.ir-c .irc-scope p{font-size:12px;line-height:1.65;margin:0;color:var(--irc-muted);word-break:keep-all}
+.ir-c .irc-output{margin-top:21px;border-top:1px solid #ccd2d4;padding-top:13px;display:grid;gap:5px}
+.ir-c .irc-output>span{font-size:10px;color:#8b9295;letter-spacing:.07em}
+.ir-c .irc-output>strong{font-size:12px;line-height:1.5;font-weight:600;color:#8a5a39}
+.ir-c .irc-paper{background:var(--irc-paper);padding:20px 24px 15px;border:1px solid #d7dddf;border-top:2px solid #ad7952;box-shadow:0 10px 26px #17243006;overflow:hidden}
+.ir-c .irc-paper-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.ir-c .irc-paper-head>div>span{font:500 9px/1.5 ui-monospace,monospace;letter-spacing:.12em;color:#82909a}
+.ir-c .irc-paper-head h3{font-size:18px;line-height:1.5;letter-spacing:-.03em;font-weight:700;margin:4px 0 0}
+.ir-c .irc-paper-stamp{display:grid;place-items:center;width:40px;height:40px;border:1px solid #b28f76;color:#a26d45;font-size:11px;letter-spacing:.13em;transform:rotate(-6deg);flex-shrink:0}
+.ir-c .irc-example{margin:6px 0 16px;font-size:10px;color:#92999d;letter-spacing:.035em}
+.ir-c .irc-ransom-evidence{display:grid;grid-template-columns:1.04fr 1fr;gap:24px;align-items:center}
+.ir-c .irc-chronology>div{display:grid;grid-template-columns:59px 10px minmax(0,1fr);gap:12px;position:relative;padding:10px 0}
+.ir-c .irc-chronology time{font:500 10px/1.6 ui-monospace,monospace;color:#6b7b87;white-space:nowrap;padding-top:3px}
+.ir-c .irc-event-dot{height:7px;width:7px;background:#bc845f;position:relative;margin-top:7px;border-radius:50%}
+.ir-c .irc-chronology>div:not(:last-child) .irc-event-dot:after{content:"";position:absolute;top:13px;left:3px;width:1px;height:57px;background:#dae0e4}
+.ir-c .irc-chronology h4{font-size:13px;line-height:1.5;margin:0 0 3px}
+.ir-c .irc-chronology code{display:block;font-size:10px;color:#ad7047;white-space:nowrap}
+.ir-c .irc-chronology small{display:block;margin-top:4px;font-size:10px;line-height:1.6;color:#8b969e}
+.ir-c .irc-file-samples{padding:15px;background:#f5f6f4;border:1px solid #e5e8e6}
+.ir-c .irc-file-samples>span{font-size:10px;line-height:1.5;color:#88949b}
+.ir-c .irc-file-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px 9px;margin-top:14px}
+.ir-c .irc-file-grid>div{text-align:center;color:#9fa9af}
+.ir-c .irc-file-grid svg{display:block;width:29px;height:29px;margin:0 auto 5px}
+.ir-c .irc-file-grid small{display:block;font:500 8px/1.5 ui-monospace,monospace;letter-spacing:.06em}
+.ir-c .irc-file-grid b{display:block;font-size:9px;line-height:1.5;font-weight:500;margin-top:3px}
+.ir-c .irc-file-grid .irc-altered{color:#bc7e55}
+.ir-c .irc-file-samples>p{display:flex;align-items:center;gap:5px;margin:13px 0 0;font-size:9px;color:#8d969b;line-height:1.5}
+.ir-c .irc-file-samples>p>i{width:4px;height:4px;background:#bc7e55}
+.ir-c .irc-paper-note{margin:13px 0 0;padding-top:11px;border-top:1px solid #e2e6e8;font-size:10px;line-height:1.65;color:#8b959c;word-break:keep-all}
+.ir-c .irc-message{display:flex;gap:14px;align-items:center;padding:12px 14px;background:#f5f6f4;border:1px solid #e6e8e6}
+.ir-c .irc-message-icon>svg{width:30px;height:30px;color:#9f7352}
+.ir-c .irc-message dl{margin:0;display:grid;gap:3px;min-width:0}
+.ir-c .irc-message dl>div{display:flex;gap:9px;font-size:10px;line-height:1.5}
+.ir-c .irc-message dt{width:42px;color:#9ba4aa;font-family:ui-monospace,monospace;flex-shrink:0}
+.ir-c .irc-message dd{margin:0;color:#607180;overflow-wrap:anywhere}
+.ir-c .irc-message>span{margin-left:auto;white-space:nowrap;color:#a57852;font-size:9px;border:1px solid #d9c5b6;padding:4px 6px}
+.ir-c .irc-account-flow{display:grid;grid-template-columns:1fr 20px 1fr 20px 1fr;align-items:center;margin-top:17px}
+.ir-c .irc-account-flow>section{min-width:0}
+.ir-c .irc-account-flow>section>svg{display:block;width:26px;height:26px;color:#8d9ca8;margin-bottom:7px}
+.ir-c .irc-account-flow>section>span{font:500 9px/1.5 ui-monospace,monospace;color:#a77857}
+.ir-c .irc-account-flow h4{font-size:13px;line-height:1.5;margin:5px 0 4px}
+.ir-c .irc-account-flow code{font-size:10px;color:#6f828f;white-space:nowrap}
+.ir-c .irc-account-flow p{font-size:10px;line-height:1.5;margin:7px 0 0;color:#8c969f;word-break:keep-all}
+.ir-c .irc-account-flow>b{font-weight:400;color:#c5cdd1;font-size:18px;align-self:center}
+.ir-c .irc-evidence-table{border-top:1px solid #748490}
+.ir-c .irc-evidence-table>[role=row]{display:grid;grid-template-columns:1.5fr .75fr .9fr .9fr;align-items:center;min-height:42px;border-bottom:1px solid #e5e8ea;gap:10px}
+.ir-c .irc-evidence-table>[role=row]>span{font-size:11px;line-height:1.5;text-align:center;min-width:0}
+.ir-c .irc-evidence-table>[role=row]>span:first-child{display:flex;align-items:center;gap:7px;text-align:left}
+.ir-c .irc-evidence-table svg{height:20px;width:20px;flex-shrink:0;color:#9aa8b1}
+.ir-c .irc-evidence-table .irc-table-head{min-height:32px}
+.ir-c .irc-evidence-table .irc-table-head>span{font-size:10px;color:#8e9aa2}
+.ir-c .irc-state{display:inline-block;font-size:9px;line-height:1.5;padding:3px 8px;font-weight:600;border-radius:2px}
+.ir-c .irc-state-yes{color:#5b7281;background:#edf1f3}
+.ir-c .irc-state-review{color:#af764d;background:#f6eee6}
+.ir-c .irc-state-unknown{color:#a3adb4;background:#f7f8f8}
+.ir-c .irc-evidence-keys{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:17px}
+.ir-c .irc-evidence-keys>section{display:flex;gap:8px;align-items:start}
+.ir-c .irc-evidence-keys>section>span{font:500 9px/1.6 ui-monospace,monospace;color:#a57550;border-bottom:1px solid #d9c3b3}
+.ir-c .irc-evidence-keys h4{font-size:11px;line-height:1.5;margin:0 0 3px}
+.ir-c .irc-evidence-keys p{font-size:10px;line-height:1.5;margin:0;color:#929ba2}
+.ir-c .irc-report-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.ir-c .irc-report-sheet{padding:19px 22px 0;background:#fff;box-shadow:0 8px 24px #23354408;border:1px solid #d9dfe0;display:flex;flex-direction:column;min-height:348px}
+.ir-c .irc-report-sheet>header{display:flex;align-items:center;justify-content:space-between;padding-bottom:13px;border-bottom:1px solid #d4dce0}
+.ir-c .irc-report-sheet>header>span{font:500 8px/1.5 ui-monospace,monospace;letter-spacing:.1em;color:#8898a4}
+.ir-c .irc-report-sheet>header>b{font:500 23px/1 Georgia,serif;color:#ac7a56}
+.ir-c .irc-report-sheet h3{font-size:21px;line-height:1.5;margin:14px 0 0;letter-spacing:-.04em}
+.ir-c .irc-report-subtitle{font:500 10px/1.5 Georgia,serif;color:#a1a8ad;margin:2px 0 14px}
+.ir-c .irc-finding{padding:8px 0;border-bottom:1px solid #edf0f1;display:grid;grid-template-columns:74px 1fr;gap:7px}
+.ir-c .irc-finding>span{font-size:10px;line-height:1.6;color:#9a7457}
+.ir-c .irc-finding>strong{font-size:11px;line-height:1.6;font-weight:500;color:#5d707d}
+.ir-c .irc-unconfirmed>span,.ir-c .irc-unconfirmed>strong{color:#9ca8b0}
+.ir-c .irc-report-sheet>footer{margin-top:auto;padding:11px 0 12px;border-top:1px solid #dce2e5;font-size:10px;line-height:1.5;color:#81929e}
+.ir-c .irc-report-events{padding:0;margin:0 0 14px;list-style:none}
+.ir-c .irc-report-events li{display:flex;gap:13px;padding:10px 0;position:relative}
+.ir-c .irc-report-events time{font:500 9px/1.6 ui-monospace,monospace;color:#a27452;padding-top:1px}
+.ir-c .irc-report-events strong{font-size:12px;line-height:1.5;font-weight:600}
+.ir-c .irc-report-events small{display:block;font-size:10px;line-height:1.5;color:#94a1aa;margin-top:4px}
+.ir-c .irc-register{display:grid;margin-bottom:14px}
+.ir-c .irc-register>div{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #edf0f1}
+.ir-c .irc-register svg{height:24px;width:24px;color:#ac8c75;flex-shrink:0}
+.ir-c .irc-register b{font-size:11px;line-height:1.5;font-weight:600}
+.ir-c .irc-register small{display:block;font-size:10px;line-height:1.5;color:#91a0ab;margin-top:4px}
+.ir-c .irc-report-disclosure{font-size:10px;line-height:1.5;color:#98a2a8;margin:12px 0 0;text-align:right}
+@media(min-width:1100px) and (max-height:780px){
+ .ir-c .irc-index-grid{gap:20px}.ir-c .irc-index-card{min-height:288px;padding:16px 20px 14px}.ir-c .irc-index-card>header{padding-bottom:8px}.ir-c .irc-index-card>header>span{font-size:32px}.ir-c .irc-index-card>header>svg{width:28px;height:28px}.ir-c .irc-index-question{font-size:18px;margin:13px 0 7px}.ir-c .irc-index-card h3{font-size:13px}.ir-c .irc-index-copy{font-size:12px}.ir-c .irc-index-sources{margin:10px 0}.ir-c .irc-index-sources span{font-size:10px}
+ .ir-c .irc-layout{grid-template-columns:minmax(260px,.85fr) minmax(0,1.6fr);gap:28px}.ir-c .irc-question>h3{font-size:21px;margin:9px 0 12px}.ir-c .irc-scope{gap:9px}.ir-c .irc-scope h4{font-size:12px}.ir-c .irc-scope p{font-size:11px}.ir-c .irc-output{margin-top:13px;padding-top:10px}.ir-c .irc-output>strong{font-size:11px}
+ .ir-c .irc-paper{padding:14px 18px 11px}.ir-c .irc-paper-head h3{font-size:16px}.ir-c .irc-paper-stamp{width:32px;height:32px}.ir-c .irc-example{margin:4px 0 11px}.ir-c .irc-ransom-evidence{gap:18px}.ir-c .irc-chronology>div{padding:7px 0;gap:9px}.ir-c .irc-chronology>div:not(:last-child) .irc-event-dot:after{height:50px}.ir-c .irc-file-samples{padding:10px}.ir-c .irc-file-grid{gap:9px 7px;margin-top:8px}.ir-c .irc-file-grid svg{height:24px;width:24px}.ir-c .irc-file-samples>p{margin-top:8px}.ir-c .irc-paper-note{margin-top:9px;padding-top:8px;font-size:9px}
+ .ir-c .irc-message{padding:9px 11px;gap:10px}.ir-c .irc-account-flow{margin-top:11px}.ir-c .irc-account-flow>section>svg{width:22px;height:22px;margin-bottom:4px}.ir-c .irc-account-flow h4{font-size:12px;margin:3px 0}.ir-c .irc-account-flow p{margin-top:4px;font-size:9px}.ir-c .irc-evidence-table>[role=row]{min-height:38px}.ir-c .irc-evidence-keys{margin-top:12px;gap:8px}
+ .ir-c .irc-report-gallery{gap:20px}.ir-c .irc-report-sheet{min-height:300px;padding:13px 17px 0}.ir-c .irc-report-sheet>header{padding-bottom:9px}.ir-c .irc-report-sheet h3{font-size:18px;margin-top:10px}.ir-c .irc-report-subtitle{margin-bottom:9px}.ir-c .irc-finding{padding:6px 0}.ir-c .irc-finding>strong{font-size:10px}.ir-c .irc-report-events li{padding:7px 0}.ir-c .irc-register>div{padding:7px 0}.ir-c .irc-report-sheet>footer{padding:9px 0}.ir-c .irc-report-disclosure{margin-top:8px;font-size:9px}
+}
+@media(max-width:1099px){
+ .ir-c .irc-layout{grid-template-columns:1fr;gap:24px}.ir-c .irc-question>h3 br{display:none}.ir-c .irc-question>h3{font-size:24px}.ir-c .irc-scope{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.ir-c .irc-output{display:flex;align-items:baseline;gap:12px;margin-top:16px}.ir-c .irc-paper{padding:22px 24px 18px}.ir-c .irc-paper-head h3{font-size:19px}.ir-c .irc-ransom-evidence{gap:30px}.ir-c .irc-file-grid{gap:15px}.ir-c .irc-chronology>div{padding:15px 0}.ir-c .irc-chronology>div:not(:last-child) .irc-event-dot:after{height:65px}.ir-c .irc-index-grid{gap:16px}.ir-c .irc-index-card{padding:19px 19px 16px}.ir-c .irc-index-question{font-size:18px}.ir-c .irc-index-copy{font-size:12px}.ir-c .irc-report-gallery{gap:16px}.ir-c .irc-report-sheet{padding:17px 16px 0}.ir-c .irc-finding{grid-template-columns:1fr;gap:3px}.ir-c .irc-report-events li{gap:9px}.ir-c .irc-register>div{gap:8px}
+}
+@media(max-width:680px){
+ .ir-c .irc-index-grid,.ir-c .irc-report-gallery{grid-template-columns:1fr;gap:17px}.ir-c .irc-index-card{min-height:0;padding:20px}.ir-c .irc-index-card>header>span{font-size:35px}.ir-c .irc-index-question{font-size:23px;margin-top:17px}.ir-c .irc-index-card h3{font-size:15px}.ir-c .irc-index-copy{font-size:14px}.ir-c .irc-index-sources{margin:15px 0 19px}.ir-c .irc-index-sources span{font-size:11px}.ir-c .irc-scope{grid-template-columns:1fr;gap:13px}.ir-c .irc-scope h4{font-size:14px}.ir-c .irc-scope p{font-size:12px}.ir-c .irc-question>h3{font-size:23px}.ir-c .irc-output{display:grid;gap:5px}.ir-c .irc-layout{gap:22px}.ir-c .irc-paper{padding:17px 15px 14px}.ir-c .irc-paper-head h3{font-size:17px}.ir-c .irc-paper-head>div>span{font-size:8px}.ir-c .irc-paper-stamp{width:33px;height:33px}.ir-c .irc-example{margin-bottom:12px;font-size:9px}.ir-c .irc-ransom-evidence{grid-template-columns:1fr;gap:18px}.ir-c .irc-chronology>div{padding:10px 0;grid-template-columns:66px 9px 1fr;gap:13px}.ir-c .irc-chronology time{font-size:11px}.ir-c .irc-chronology h4{font-size:14px}.ir-c .irc-chronology code,.ir-c .irc-chronology small{font-size:11px}.ir-c .irc-chronology>div:not(:last-child) .irc-event-dot:after{height:58px}.ir-c .irc-file-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}.ir-c .irc-file-grid svg{width:25px;height:25px}.ir-c .irc-file-grid small{font-size:7px}.ir-c .irc-file-samples{padding:12px}.ir-c .irc-paper-note{font-size:10px}.ir-c .irc-message{padding:12px 10px;gap:8px;align-items:start}.ir-c .irc-message-icon{display:none}.ir-c .irc-message>span{display:none}.ir-c .irc-message dl>div{font-size:10px}.ir-c .irc-message dt{width:37px}.ir-c .irc-account-flow{grid-template-columns:1fr;gap:12px;margin:18px 0}.ir-c .irc-account-flow>section{display:grid;grid-template-columns:33px 1fr;column-gap:12px}.ir-c .irc-account-flow>section>svg{grid-column:1;grid-row:1/5;width:27px;height:27px;margin-top:7px}.ir-c .irc-account-flow>section>:not(svg){grid-column:2}.ir-c .irc-account-flow>section>span{font-size:10px}.ir-c .irc-account-flow h4{font-size:14px;margin:3px 0}.ir-c .irc-account-flow code,.ir-c .irc-account-flow p{font-size:11px}.ir-c .irc-account-flow>b{display:none}.ir-c .irc-evidence-table>[role=row]{grid-template-columns:1.4fr .6fr .8fr .8fr;gap:4px;min-height:43px}.ir-c .irc-evidence-table>[role=row]>span{font-size:9px}.ir-c .irc-evidence-table .irc-table-head>span{font-size:8px}.ir-c .irc-evidence-table svg{display:none}.ir-c .irc-state{font-size:8px;padding:3px 5px}.ir-c .irc-evidence-keys{gap:12px;grid-template-columns:1fr;margin:17px 0}.ir-c .irc-evidence-keys h4{font-size:12px}.ir-c .irc-evidence-keys p{font-size:11px}.ir-c .irc-evidence-keys>section>span{font-size:10px}.ir-c .irc-report-sheet{min-height:335px;padding:19px 23px 0}.ir-c .irc-report-sheet h3{font-size:23px}.ir-c .irc-finding{grid-template-columns:78px 1fr;gap:8px;padding:10px 0}.ir-c .irc-finding>strong{font-size:12px}.ir-c .irc-finding>span{font-size:11px}.ir-c .irc-report-events strong{font-size:14px}.ir-c .irc-report-events small,.ir-c .irc-report-events time{font-size:11px}.ir-c .irc-report-events li{padding:13px 0}.ir-c .irc-register>div{padding:13px 0;gap:13px}.ir-c .irc-register b{font-size:13px}.ir-c .irc-register small{font-size:11px}.ir-c .irc-report-sheet>footer{font-size:11px}.ir-c .irc-report-disclosure{text-align:left;font-size:10px;line-height:1.7}
+}
+@media(prefers-reduced-motion:reduce){.ir-c .irc-index-card{transition:none}.ir-c .irc-index-card:hover{transform:none}}

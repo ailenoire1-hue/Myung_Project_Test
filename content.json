@@ -1,0 +1,165 @@
+{
+  "company": {
+    "name": "명디지털포렌식센터",
+    "legalName": "(주)명정보기술",
+    "english": "MYUNG DIGITAL FORENSIC CENTER",
+    "phone": "1577-4872",
+    "hours": "평일 09:00 – 18:00",
+    "address": "충북 청주시 청원구 오창읍 과학산업3로 168",
+    "registration": "315-81-04436",
+    "ceo": "이명재",
+    "fax": "043-218-8408",
+    "founded": "1990. 6. 20"
+  },
+  "services": [
+    {
+      "slug": "digital-forensics",
+      "name": "디지털포렌식 서비스",
+      "english": "DIGITAL FORENSICS SERVICES",
+      "number": "01",
+      "intro": "기록에 남은 흔적을,\n사건의 근거로 연결합니다.",
+      "description": "PC·저장매체, 스마트폰, 메신저와 음성·영상 기록을 분석해 사건과 관련된 사실관계를 확인합니다.",
+      "image": "forensics.jpg",
+      "items": [
+        {
+          "id": "pc-storage",
+          "name": "PC·저장매체 포렌식",
+          "english": "PC & STORAGE",
+          "description": "파일과 사용 기록에서 자료의 생성·이동·삭제 정황을 확인합니다.",
+          "tags": []
+        },
+        {
+          "id": "smartphone-forensics",
+          "name": "스마트폰 포렌식",
+          "english": "MOBILE FORENSICS",
+          "description": "기기와 백업에 남은 사용자 기록을 분석합니다.",
+          "tags": []
+        },
+        {
+          "id": "messenger-forensics",
+          "name": "메신저·미디어 포렌식",
+          "english": "MESSAGES & MEDIA",
+          "description": "대화의 맥락과 첨부파일, 출처를 함께 검토합니다.",
+          "tags": []
+        },
+        {
+          "id": "audio-video",
+          "name": "음성·영상 분석",
+          "english": "AUDIO & VIDEO",
+          "description": "파일 구조와 시간 흐름, 생성·편집 정황을 살펴봅니다.",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "slug": "incident-response",
+      "name": "침해사고 조사",
+      "english": "INCIDENT INVESTIGATION",
+      "number": "02",
+      "intro": "사고의 원인을 밝히고,\n다음 대응을 준비합니다.",
+      "description": "랜섬웨어, 해킹과 악성코드, 개인정보 사고. 디지털 증거를 바탕으로 사고의 경위와 영향을 조사합니다.",
+      "image": "investigation.jpg",
+      "items": [
+        {
+          "id": "ransomware",
+          "name": "랜섬웨어 사고조사",
+          "english": "RANSOMWARE INVESTIGATION",
+          "description": "랜섬웨어 감염과 관련된 시스템 및 로그를 분석하여 침입 경로와 사고 범위를 파악합니다.",
+          "tags": [
+            "감염 경위 분석",
+            "침입 경로 확인",
+            "피해 범위 조사"
+          ]
+        },
+        {
+          "id": "malware",
+          "name": "해킹, 악성코드 사고조사",
+          "english": "HACKING & MALWARE INVESTIGATION",
+          "description": "해킹 흔적과 악성코드의 활동을 조사하고, 시스템에서 발생한 행위와 관련된 증거를 분석합니다.",
+          "tags": [
+            "시스템 로그",
+            "악성코드 분석",
+            "행위 추적"
+          ]
+        },
+        {
+          "id": "personal-data",
+          "name": "이메일 등 개인정보 사고조사",
+          "english": "EMAIL & PERSONAL DATA INVESTIGATION",
+          "description": "이메일 및 개인정보와 관련된 사고의 경위를 살펴보고, 유출 정황과 영향 범위를 확인합니다.",
+          "tags": [
+            "이메일 분석",
+            "유출 정황 확인",
+            "영향 범위 조사"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "enterprise-security",
+      "name": "기업 보안 관리 서비스",
+      "english": "ENTERPRISE SECURITY MANAGEMENT",
+      "number": "03",
+      "intro": "업무 환경을 살피고,\n필요한 보안을 갖춥니다.",
+      "description": "원격 보안 점검과 퇴사자 관리부터 보안 솔루션, 서버·NAS·백업과 보안 인프라 구축까지 지원합니다.",
+      "image": "company.jpg",
+      "items": [
+        {
+          "id": "remote-security",
+          "name": "원격 보안 점검",
+          "english": "REMOTE SECURITY ASSESSMENT",
+          "description": "원격으로 기업의 시스템 보안 상태를 점검하고, 확인이 필요한 위험 요소를 살펴봅니다.",
+          "tags": [
+            "원격 점검",
+            "보안 상태 확인",
+            "위험 요소 파악"
+          ]
+        },
+        {
+          "id": "employee-offboarding",
+          "name": "퇴사자 관리",
+          "english": "EMPLOYEE OFFBOARDING",
+          "description": "퇴사 과정에서 업무용 기기와 데이터의 상태를 확인하고, 기업 정보의 반출 여부를 점검합니다.",
+          "tags": [
+            "업무용 기기 점검",
+            "데이터 보존",
+            "정보 반출 확인"
+          ]
+        },
+        {
+          "id": "security-solutions",
+          "name": "보안 솔루션",
+          "english": "SECURITY SOLUTIONS",
+          "description": "기업의 시스템과 데이터를 보호하기 위한 보안 솔루션의 도입 및 활용 방향을 함께 검토합니다.",
+          "tags": [
+            "시스템 보호",
+            "데이터 보안",
+            "운영 환경 검토"
+          ]
+        },
+        {
+          "id": "server-nas",
+          "name": "서버·NAS·백업",
+          "english": "SERVER, NAS & STORAGE",
+          "description": "데이터 저장과 관리를 위한 서버 및 NAS 등 스토리지 구성을 기업의 사용 목적에 맞춰 검토합니다.",
+          "tags": [
+            "서버",
+            "NAS",
+            "데이터 저장 및 관리"
+          ]
+        },
+        {
+          "id": "security-infrastructure",
+          "name": "보안 인프라 구축",
+          "english": "SECURITY INFRASTRUCTURE",
+          "description": "계정·네트워크·보안 로그를 연결하는 기업의 보호 체계를 구성합니다.",
+          "tags": [
+            "구축 설계",
+            "보안 설정",
+            "운영 인계"
+          ]
+        }
+      ]
+    }
+  ]
+}

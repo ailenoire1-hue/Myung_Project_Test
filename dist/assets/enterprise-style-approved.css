@@ -1,0 +1,27 @@
+/* Approved C chapters, with the shared service-entry hierarchy. */
+.es-live-c .es-live-hero>.ip-wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:80px;padding-block:70px 76px}
+.es-live-c .es-hero-copy{min-width:0}
+.es-live-c .es-live-hero h1{font-size:clamp(36px,3.4vw,52px);line-height:1.35;margin:15px 0 26px;font-weight:750}
+.es-live-c .es-hero-lead{font-size:clamp(20px,1.75vw,27px);font-weight:550;line-height:1.7;letter-spacing:-.045em;color:#eef3f7}
+.es-live-c .es-hero-description{font-size:15px;line-height:1.95;margin-top:20px;color:#a4b4c2}
+.es-live-c .dp-hero-actions{color:#c2d1dd}
+.es-live-c .es-hero-quick{color:#f0f4f7;position:relative;min-width:0}
+.es-live-c .es-hero-quick a{padding:26px 6px;gap:21px}
+.es-live-c .es-hero-quick svg{flex:0 0 35px}
+.es-live-c .es-hero-quick strong{font-size:21px}
+.es-live-c .es-hero-backdrop{position:absolute;inset:0 0 0 42%;opacity:.14;pointer-events:none;color:#8facbf;display:grid;place-items:center}
+.es-live-c .es-hero-backdrop svg{width:100%;height:100%;max-height:800px}
+.es-live-c .es-content>section,.es-live-c main>section#contact{position:relative}
+.es-live-c .es-live-anchor{position:absolute;top:0;left:0;width:0;height:0;pointer-events:none;scroll-margin-top:calc(var(--ip-header,94px) + var(--es-nav-height,58px))}
+.es-live-c #top>.es-live-anchor{scroll-margin-top:var(--ip-header,94px)}
+/* Readable consultation situations, one full-width line per item. */
+.es-page.es-restyle.es-live-c .es-overview .pa-ch__label{font-size:18px;color:#dce8f0;margin:24px 0 9px!important;font-weight:650}
+.es-page.es-restyle.es-live-c .es-overview .ip-signs{display:flex;flex-direction:column;align-items:stretch;gap:0;max-width:580px}
+.es-page.es-restyle.es-live-c .es-overview .ip-signs li{display:flex;width:100%;min-height:62px;padding:11px 0;gap:15px;border:0;border-bottom:1px solid #415968;border-radius:0;background:transparent;color:#f0f4f7;font-size:19px;font-weight:550;line-height:1.5}
+.es-page.es-restyle.es-live-c .es-overview .ip-signs li>span{width:36px;height:36px;flex:0 0 36px;background:#2b4354;color:#e2b38d;border-radius:4px}
+.es-page.es-restyle.es-live-c .es-overview .ip-signs svg{width:23px;height:23px}
+@media(min-width:1100px) and (max-height:780px){.es-page.es-restyle.es-live-c .es-overview .pa-ch__top{padding-block:5px 10px}.es-page.es-restyle.es-live-c .es-overview .pa-ch__no b{font-size:36px}.es-page.es-restyle.es-live-c .es-overview h2{font-size:32px;margin-top:8px}.es-page.es-restyle.es-live-c .es-overview .pa-ch__q{font-size:19px;margin-top:10px}.es-page.es-restyle.es-live-c .es-overview .ip-lead{margin-top:10px}.es-page.es-restyle.es-live-c .es-overview .pa-ch__label{font-size:17px;margin:17px 0 6px!important}.es-page.es-restyle.es-live-c .es-overview .ip-signs li{min-height:49px;padding-block:7px;font-size:17px;gap:13px}.es-page.es-restyle.es-live-c .es-overview .ip-signs li>span{width:32px;height:32px;flex-basis:32px}}
+@media(max-width:700px){.es-page.es-restyle.es-live-c .es-overview .pa-ch__label{font-size:18px;margin-top:22px!important}.es-page.es-restyle.es-live-c .es-overview .ip-signs li{font-size:17px;min-height:59px;gap:12px}.es-page.es-restyle.es-live-c .es-overview .ip-signs li>span{width:33px;height:33px;flex-basis:33px}}
+@media(min-width:1100px) and (max-height:780px){.es-live-c .es-live-hero>.ip-wrap{padding-block:38px 48px;gap:65px}.es-live-c .es-live-hero h1{font-size:42px}.es-live-c .es-hero-quick a{padding-block:22px}.es-live-c .es-hero-quick strong{font-size:20px}}
+@media(max-width:1099px){.es-live-c .es-live-hero>.ip-wrap{gap:36px}.es-live-c .es-live-hero h1{font-size:35px}.es-live-c .es-hero-description{font-size:13px}.es-live-c .es-hero-quick a{gap:15px;padding-block:23px}.es-live-c .es-hero-quick strong{font-size:18px}}
+@media(max-width:760px){.es-live-c .es-live-hero>.ip-wrap{grid-template-columns:1fr;gap:30px;padding-block:42px 40px;min-height:calc(100svh - var(--ip-header,74px))}.es-live-c .es-live-hero h1{font-size:32px;margin-bottom:20px}.es-live-c .es-hero-lead{font-size:20px}.es-live-c .es-hero-quick{margin:0}.es-live-c .es-hero-quick a{padding-block:20px}.es-live-c .es-hero-quick strong{font-size:18px}.es-live-c .es-hero-backdrop{inset:10% -30% 0 5%}.es-live-c .es-hero-description br{display:none}}

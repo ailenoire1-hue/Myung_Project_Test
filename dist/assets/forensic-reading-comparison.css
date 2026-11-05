@@ -1,0 +1,24 @@
+.fr-comparison{background:#f1f5f7;color:#162b3b;font-family:'SUIT',sans-serif}
+.fr-comparison main{width:calc(100% - 88px);max-width:1450px;margin:0 auto;padding:36px 0 52px}
+.fr-compare-brand{display:inline-flex;align-items:center;gap:18px;font:800 28px/1.5 'Manrope',sans-serif;letter-spacing:-.04em}
+.fr-compare-brand span{font:500 9px/1.5 'Manrope',sans-serif;letter-spacing:.16em;color:#8498a6}
+.fr-compare-kicker{font-size:10px;line-height:1.6;color:#b67a51;letter-spacing:.18em;margin-top:28px}
+.fr-comparison h1{font-size:39px;line-height:1.45;letter-spacing:-.045em;margin:14px 0 20px;font-weight:700}
+.fr-compare-lead{font-size:14px;color:#758a98;line-height:1.95;margin:0}
+.fr-compare-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:34px}
+.fr-compare-grid article{min-width:0;border:1px solid #d7e2e9;background:#fff}
+.fr-compare-image{display:block;aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid #dce6ed}
+.fr-compare-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.fr-compare-copy{padding:23px 25px 20px;position:relative}
+.fr-compare-copy>span{position:absolute;right:25px;top:25px;color:#d1dee7;font-size:24px;font-weight:650}
+.fr-compare-copy>small{font-size:12px;color:#b87d54;line-height:1.6}
+.fr-compare-copy h2{font-size:24px;font-weight:650;line-height:1.5;letter-spacing:-.045em;margin:13px 0 18px}
+.fr-compare-copy>p{font-size:14px;color:#78909f;line-height:1.9;min-height:53px;margin:0 0 24px}
+.fr-compare-copy>div{font-size:11px;color:#99aab5;line-height:1.8;min-height:38px}
+.fr-compare-copy>a:not(.fr-compare-jump){display:flex;justify-content:space-between;align-items:center;border-top:1px solid #dde7ed;padding-top:17px;margin-top:22px;font-size:13px;color:#294559}
+.fr-compare-copy>a b{font-weight:400;font-size:19px}
+.fr-compare-jump{display:block;font-size:11px;color:#8ca0ae;margin-top:11px;line-height:1.6}
+.fr-comparison footer{display:flex;justify-content:space-between;align-items:center;gap:25px;border-top:1px solid #d8e3eb;margin-top:27px;padding-top:22px;font-size:11px;line-height:1.8;color:#8c9fac}
+.fr-comparison a:focus-visible{outline:2px solid #bf6839;outline-offset:4px}
+.fr-comparison a:hover{color:#bf6839}
+@media(max-width:900px){.fr-comparison main{width:calc(100% - 40px)}.fr-compare-grid{grid-template-columns:1fr}.fr-comparison h1{font-size:31px}.fr-compare-lead{font-size:13px}.fr-compare-lead br{display:none}.fr-compare-copy h2{font-size:23px}.fr-compare-copy>p{min-height:0}.fr-comparison footer{display:block}.fr-comparison footer a{display:block;margin-top:12px}}

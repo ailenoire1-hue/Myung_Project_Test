@@ -1,0 +1,200 @@
+/* Approved MDFC STORY plan 2. Reference: local preview on port 4192. */
+/* Situation-led editorial chapter aligned to the existing service chapters. */
+.ms-home,.home-page #home-insights.ms-home{
+ display:flex;align-items:center;min-height:100dvh;padding:122px 0 32px;
+ background:#fff;color:#1d2939;font-family:Manrope,"Noto Sans KR",sans-serif;
+}
+.ms-home *{box-sizing:border-box}
+.ms-home :is(h2,p){margin:0}.ms-home a{color:inherit;text-decoration:none}
+.ms-home button{font:inherit;cursor:pointer}.ms-home [hidden]{display:none!important}
+.ms-home :is(a,button):focus-visible{outline:2px solid #b76a36;outline-offset:5px}
+.ms-home svg{display:block;width:24px;height:24px}
+.ms-home img{display:block;width:100%;height:100%;object-fit:cover}
+.ms-home>.mp-wrap{width:calc(100% - 2 * var(--page-gutter,26px));max-width:var(--page-width,1440px);margin-inline:auto}
+@media(min-width:901px){
+ .qm-enabled .ms-home>.mp-wrap{width:min(var(--page-width,1440px),calc(100% - var(--page-gutter,98px) - 148px));margin-left:auto;margin-right:max(148px,calc((100% - var(--page-width,1440px))/2))}
+}
+.ms-layout{--ms-consult-row:100px;display:grid;grid-template-columns:minmax(0,.34fr) minmax(0,.66fr);gap:clamp(54px,5vw,84px);align-items:stretch}
+.ms-intro,.ms-results,.ms-panel{min-width:0}
+.ms-heading{margin-bottom:22px}.ms-intro{display:flex}.ms-results{display:flex;flex-direction:column}.ms-panel{display:flex;flex-direction:column;flex:1}
+.ms-kicker{font-size:13px;font-weight:600;line-height:1.6;letter-spacing:.1em;color:#bf622b;margin-bottom:12px!important}
+.ms-heading h2{font-size:clamp(30px,2.7vw,42px);font-weight:700;line-height:1.4;letter-spacing:-.05em;word-break:keep-all}
+.ms-heading-copy{font-size:15px;line-height:1.8;color:#627185;margin-top:11px!important;letter-spacing:-.025em}
+.ms-tabs{display:grid;grid-template-rows:repeat(3,minmax(0,1fr)) var(--ms-consult-row);width:100%;border-top:1px solid #d4dce4}
+.ms-tab{display:grid;grid-template-columns:20px 27px minmax(0,1fr) 19px;align-items:center;gap:13px;width:100%;min-height:86px;padding:16px 0;text-align:left;color:#607185;background:transparent;border:0;border-bottom:1px solid #dbe1e7;border-radius:0;box-shadow:none;transition:color .2s,border-color .2s}
+.ms-tab strong{display:block;font-size:19px;font-weight:550;line-height:1.5;letter-spacing:-.035em;word-break:keep-all}
+.ms-tab small{display:block;font-size:12px;line-height:1.5;color:#7a8998;margin-top:5px}
+.ms-tab-index{font:500 11px/1.4 Manrope,sans-serif;color:#94a0ad}
+.ms-tab-icon{display:flex;color:#7e8e9e}
+.ms-tab-icon svg{width:25px;height:25px}
+.ms-tab-arrow{font-size:19px;color:#a7b1bb;transition:transform .2s}
+.ms-tab[aria-selected=true]{color:#192b3d;border-bottom-color:#bd7b4a}
+.ms-tab[aria-selected=true] strong{font-weight:650}
+.ms-tab[aria-selected=true] :is(.ms-tab-index,.ms-tab-icon,.ms-tab-arrow){color:#b66b36}
+.ms-tab:hover{color:#a5663a}.ms-tab:hover .ms-tab-arrow{transform:translateX(3px)}
+.ms-results-head{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:18px}
+.ms-results-head>p{font-size:12px;line-height:1.6;color:#718195;letter-spacing:.015em}
+.ms-results-head>p>span{font:500 11px/1 Manrope,sans-serif;display:inline-block;margin-left:13px;border-left:1px solid #d6dde5;padding-left:13px;color:#a46e48}
+.ms-all-link{display:inline-flex;align-items:center;gap:24px;flex:none;font-size:12px;font-weight:550;line-height:1.6;padding:7px 0;border-bottom:1px solid #aeb9c6;white-space:nowrap}
+.ms-all-link>span{font-size:17px;color:#ae6b3c}
+.ms-cards{flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px;align-items:stretch}
+.ms-card{display:flex;flex-direction:column;min-width:0;width:100%;padding:0;text-align:left;border:0;border-radius:0;background:transparent;color:#1d2939;box-shadow:none}
+.ms-card-image{display:block;position:relative;width:100%;height:clamp(160px,20vh,198px);overflow:hidden;border-radius:14px;background:#eef1f4}
+.ms-card-image img{object-position:center;transition:transform .4s,filter .4s;filter:saturate(.8)}
+.ms-card-blog .ms-card-image img{object-fit:contain;background:#f1f3f5}
+.ms-card:hover .ms-card-image img{transform:scale(1.035);filter:saturate(1)}
+.ms-card-body{display:flex;flex-direction:column;flex:1;padding:15px 0 0;min-width:0}
+.ms-card-source{display:flex;align-items:center;gap:6px;min-width:0;font-size:10px;font-weight:550;line-height:1.5;white-space:nowrap;color:#526980}
+.ms-source-icon{display:inline-grid;place-items:center;flex:none;width:18px;height:18px;border-radius:3px;background:#1b344a;color:#fff;font:700 10px/1 Manrope,sans-serif}
+.ms-source-blog{background:#168258}.ms-source-video{background:#c54640;font-size:9px}
+.ms-card-topic{border-left:1px solid #d7dfe8;padding-left:6px;font-size:9px;color:#64758a;overflow:hidden;text-overflow:ellipsis}
+.ms-card-title{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:18px;font-weight:600;line-height:1.55;letter-spacing:-.04em;min-height:calc(1.55em * 2);margin-top:11px}
+.ms-card:hover .ms-card-title{color:#a5673c}
+.ms-card-footer{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-top:auto;padding-top:15px;font-size:10px;line-height:1.6;color:#617287}
+.ms-card-meta{display:flex;flex-wrap:wrap;gap:3px 7px;min-width:0}
+.ms-card-action{font-weight:550;color:#a5673c;white-space:nowrap}
+.ms-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:43px;height:43px;border:1px solid #ffffffb3;background:#ffffffed;border-radius:50%;color:#ae483f;font-size:14px;padding-left:2px}
+.ms-duration{position:absolute;right:8px;bottom:8px;background:#0c1c2cdd;color:#fff;padding:2px 5px;border-radius:2px;font:500 10px/1.4 Manrope,sans-serif}
+.ms-consult{display:flex;align-items:center;gap:13px;min-height:var(--ms-consult-row);padding:16px 0 0;border:0;border-top:1px solid #d7dfe7;border-radius:0;background:transparent;margin-top:0}
+.ms-consult-icon{display:flex;align-items:center;justify-content:center;flex:none;width:30px;color:#9a7559}
+.ms-consult-icon svg{width:28px;height:28px}
+.ms-consult p{font-size:13px;line-height:1.8;letter-spacing:-.025em;color:#687b8e;flex:1;min-width:0;word-break:keep-all}
+.ms-consult p strong{display:block;font-weight:650;color:#24394d}
+.ms-consult-actions{display:flex;align-items:center;gap:17px;flex:none}
+.ms-service-link{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;padding:8px 0;border:0;border-bottom:1px solid #aab7c5;border-radius:0;font-size:11px;font-weight:550;line-height:1.65;white-space:nowrap}
+.ms-service-link>span{color:#a56c44;font-size:16px}
+.ms-phone{display:inline-flex;align-items:center;gap:8px;padding:11px 13px;background:#c9662d;border:1px solid #c9662d;border-radius:2px;color:#fff!important;font-size:11px;font-weight:600;white-space:nowrap}
+.ms-phone svg{width:14px;height:14px}
+.ms-channels{display:flex;align-items:center;gap:25px;border-top:1px solid #e0e5eb;margin-top:24px;padding-top:16px}
+.ms-channels-label{font-size:11px;font-weight:500;color:#7d8b9b;margin-right:auto}
+.ms-channels>a{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:0;background:transparent;font-size:11px;font-weight:550;line-height:1.7;padding:3px 0;white-space:nowrap;color:#4d637a}
+.ms-channels>a svg{width:15px;height:15px}
+.ms-channels>a>span:last-child:not(.ms-source-icon){font-size:13px;color:#9c775b}
+.ms-note{font-size:9px!important;line-height:1.7;color:#8795a4;margin-top:9px!important}
+.ms-sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media(min-width:901px){.ms-card-title{min-height:calc(1.55em * 3)}}
+@media(min-width:1600px){
+ .ms-heading h2{font-size:42px}.ms-layout{gap:84px}.ms-tab{min-height:94px}.ms-tab strong{font-size:21px}.ms-tab small{font-size:13px}.ms-card-title{font-size:20px}.ms-card-footer{font-size:11px}.ms-consult p{font-size:14px}.ms-service-link,.ms-phone{font-size:12px}
+}
+@media(min-width:901px) and (max-height:820px){
+ .ms-home,.home-page #home-insights.ms-home{padding:116px 0 21px}.ms-layout{--ms-consult-row:86px}.ms-heading{margin-bottom:18px}.ms-kicker{font-size:10px;line-height:1.5;margin-bottom:8px!important}.ms-heading h2{font-size:34px;line-height:1.35}.ms-heading-copy{font-size:12px;line-height:1.6;margin-top:8px!important}.ms-tab{min-height:72px;padding:12px 0;gap:12px}.ms-tab strong{font-size:18px}.ms-tab small{font-size:11px;margin-top:3px}.ms-tab-icon svg{width:23px;height:23px}.ms-results-head{margin-bottom:16px}.ms-all-link>span{line-height:1}.ms-card-image{height:153px}.ms-card-body{padding-top:12px}.ms-card-title{font-size:17px;margin-top:9px}.ms-card-source{font-size:10px}.ms-card-topic{font-size:9px}.ms-card-footer{padding-top:12px;font-size:10px}.ms-consult{margin-top:0;padding-top:14px;gap:11px}.ms-consult p{font-size:12px}.ms-consult-actions{gap:14px}.ms-phone{padding:10px 12px}.ms-channels{margin-top:18px;padding-top:12px}.ms-note{font-size:8px!important}
+}
+@media(max-width:1200px) and (min-width:901px){
+ .ms-layout{gap:44px;grid-template-columns:minmax(0,.35fr) minmax(0,.65fr);--ms-consult-row:112px}.ms-heading h2{font-size:31px}.ms-heading-copy{font-size:13px}.ms-tab{grid-template-columns:17px 22px minmax(0,1fr) 14px;gap:9px;padding-block:14px}.ms-tab strong{font-size:16px}.ms-tab small{font-size:11px}.ms-tab-icon svg{width:22px;height:22px}.ms-cards{gap:14px}.ms-card-title{font-size:15px}.ms-card-topic{display:none}.ms-card-source{font-size:9px}.ms-card-footer{font-size:9px;flex-wrap:wrap;gap:5px}.ms-card-image{height:153px}.ms-consult{flex-wrap:wrap}.ms-consult p{min-width:calc(100% - 45px);font-size:12px}.ms-consult p strong{display:inline}.ms-consult-actions{width:100%;justify-content:flex-end;margin-top:3px}.ms-channels{gap:18px}.ms-channels-label{font-size:10px}.ms-channels>a{font-size:10px}
+}
+@media(max-width:900px){
+ .ms-home,.home-page #home-insights.ms-home{padding:108px 0 65px}.ms-layout{grid-template-columns:1fr;gap:31px;--ms-consult-row:auto}.ms-intro,.ms-results,.ms-panel{display:block}.ms-heading{margin-bottom:18px}.ms-heading h2{font-size:35px}.ms-heading-copy{font-size:14px}.ms-heading-copy br{display:none}.ms-tabs{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto;column-gap:26px}.ms-tab{min-height:83px;grid-template-columns:18px 24px minmax(0,1fr) 16px;gap:10px}.ms-tab strong{font-size:16px}.ms-tab small{font-size:11px}.ms-results-head{margin-bottom:20px}.ms-cards{gap:20px}.ms-card-image{height:160px}.ms-card-title{font-size:17px}.ms-card-topic{display:none}.ms-consult{margin-top:25px}.ms-consult p{font-size:13px}.ms-channels{flex-wrap:wrap;gap:12px 25px}.ms-channels-label{width:100%;margin:0 0 2px}
+}
+@media(max-width:600px){
+ .ms-home,.home-page #home-insights.ms-home{padding:91px 0 65px}.ms-heading h2{font-size:31px;line-height:1.4}.ms-kicker{font-size:11px;margin-bottom:14px!important}.ms-heading-copy{font-size:13px;line-height:1.85;margin-top:15px!important}.ms-tabs{column-gap:20px}.ms-tab{grid-template-columns:15px minmax(0,1fr) 13px;gap:8px;min-height:98px;padding:15px 0}.ms-tab-icon{display:none}.ms-tab strong{font-size:14px;line-height:1.6}.ms-tab small{font-size:10px;margin-top:5px}.ms-tab-index{font-size:10px}.ms-tab-arrow{font-size:15px}.ms-results-head>p{font-size:11px}.ms-all-link{font-size:11px;gap:15px}.ms-cards{grid-template-columns:1fr;gap:0}.ms-card{display:grid;grid-template-columns:111px minmax(0,1fr);gap:17px;padding:19px 0;border-bottom:1px solid #e0e5eb}.ms-card:first-child{padding-top:0}.ms-card-image{height:122px;border-radius:11px}.ms-card-body{padding:1px 0 0}.ms-card-source{font-size:9px;gap:5px}.ms-card-title{font-size:16px;min-height:0;-webkit-line-clamp:3;margin-top:9px}.ms-card-footer{font-size:9px;padding-top:12px;flex-wrap:wrap;gap:3px}.ms-card-action{font-size:10px}.ms-play{width:32px;height:32px;font-size:11px}.ms-duration{font-size:8px;right:6px;bottom:6px}.ms-consult{flex-wrap:wrap;margin-top:0;padding-top:23px;gap:10px}.ms-consult-icon{width:27px}.ms-consult p{min-width:calc(100% - 40px);font-size:13px}.ms-consult p strong{display:inline}.ms-consult-actions{width:100%;justify-content:space-between;margin-top:8px;gap:14px}.ms-service-link{font-size:11px;gap:15px}.ms-phone{font-size:11px;padding:11px 14px}.ms-channels{margin-top:28px;padding-top:20px;gap:13px 20px}.ms-channels>a{font-size:11px}.ms-note{font-size:9px!important;margin-top:12px!important}
+}
+/* Center the slightly taller list against the complete recommendation area. */
+@media(min-width:901px){
+ .ms-layout{row-gap:0}
+ .ms-results,.ms-panel{display:contents}
+ .ms-intro{grid-column:1;grid-row:1 / 4;align-self:center}
+ .ms-tabs{height:auto;grid-template-rows:repeat(4,minmax(0,1fr))}
+ .ms-tab{min-height:90px;padding-block:12px}
+ .ms-results-head{grid-column:2;grid-row:1}
+ .ms-cards{grid-column:2;grid-row:2;min-height:0}
+ .ms-consult{grid-column:2;grid-row:3}
+}
+@media(min-width:901px) and (max-height:820px){.ms-tab{min-height:82px}}
+@media(prefers-reduced-motion:reduce){.ms-tab,.ms-card img,.ms-tab-arrow{transition:none}}
+
+/* 상황별 인사이트 — 현재 스타일 유지 + 개선 */
+/* 1. 선택된 상황을 더 분명하게 */
+#home-insights .ms-tab{position:relative;transition:background .2s}
+#home-insights .ms-tab:hover{background:#faf7f4}
+#home-insights .ms-tab[aria-selected="true"]{background:#fdf6f1}
+#home-insights .ms-tab[aria-selected="true"]::before{content:'';position:absolute;left:0;top:14px;bottom:14px;width:3px;background:#c97b45}
+#home-insights .ms-tab[aria-selected="true"] .ms-tab-icon{color:#b86c39}
+#home-insights .ms-tab[aria-selected="true"] .ms-tab-index{color:#b86c39;font-weight:700}
+#home-insights .ms-tab-copy small{font-size:14px!important}
+/* 2. 작은 글씨(11~12px) → 13~14px */
+#home-insights .ms-card-source{font-size:13px!important;gap:8px}
+#home-insights .ms-card-meta,#home-insights .ms-card-action{font-size:13px!important}
+#home-insights .ms-results-head p,#home-insights .ms-all-link{font-size:15px!important}
+#home-insights .ms-heading-copy{font-size:17px!important}
+/* 3. 카드: 제목과 날짜 사이 빈 공간 줄이고 하단 정렬 */
+#home-insights .ms-card-body{gap:10px}
+#home-insights .ms-card-title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.9em}
+#home-insights .ms-card-footer{margin-top:6px!important;padding-top:10px;border-top:1px solid #e8ebee}
+#home-insights .ms-card:hover .ms-card-title{color:#b86c39}
+#home-insights .ms-card-image img{transition:transform .4s}
+#home-insights .ms-card:hover .ms-card-image img{transform:scale(1.04)}
+/* 4. 상담 안내 한 줄로 */
+#home-insights .ms-consult p{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;font-size:16px!important}
+#home-insights .ms-consult p strong{display:inline!important}
+/* 5. 내부 메모 숨김 */
+#home-insights .ms-note,#home-insights [class*="note"]{display:none!important}
+/* 6. 결과 머리말: 선택 상황 이름 */
+#home-insights .cs-picked{color:#b86c39;font-weight:700}
+#home-insights .ms-results-head p,#home-insights .ms-results-head p *{font-size:15px!important}
+#home-insights .ms-card-topic{font-size:12px!important}
+#home-insights .ms-tab[aria-selected="true"]::before{left:-12px}
+#home-insights .ms-service-link,#home-insights .ms-phone{font-size:15px!important}
+/* --- 2차: 왼쪽 목록·카드 높이 키움, 상담 줄 축소, 포인트 요소 --- */
+#home-insights .ms-tab{min-height:104px!important;padding-block:22px!important}
+#home-insights .ms-tab-copy strong{font-size:21px!important}
+#home-insights .ms-tab-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:50%;background:#f3f4f5;transition:background .2s}
+#home-insights .ms-tab[aria-selected="true"] .ms-tab-icon{background:#b86c39;color:#fff!important}
+#home-insights .ms-tab[aria-selected="true"] .ms-tab-arrow{color:#b86c39;transform:translateX(4px)}
+
+/* 첫 카드 '추천' 배지 */
+#home-insights .ms-panel:not([hidden]) .ms-card:first-child .ms-card-image::after{content:'추천';position:absolute;left:12px;top:12px;padding:4px 10px;background:#b86c39;color:#fff;font:700 12px/1.4 'Noto Sans KR',sans-serif;letter-spacing:.04em}
+#home-insights .ms-card-image{position:relative}
+/* 상담 줄: 작게, 오른쪽 정렬 한 줄 */
+#home-insights .ms-consult{margin-top:18px!important;padding:12px 16px!important;min-height:0!important;border:1px solid #ecd9cb;background:#fdf8f4}
+#home-insights .ms-consult-icon{display:none!important}
+#home-insights .ms-consult p{font-size:15px!important}
+#home-insights .ms-service-link{min-height:36px!important;padding:0!important}
+#home-insights .ms-phone{min-height:38px!important;padding:0 16px!important}
+#home-insights .ms-tab-icon{margin-right:14px;flex:none}
+#home-insights .ms-tab-icon{visibility:hidden!important;width:0!important;height:0!important;margin:0!important;padding:0!important;overflow:hidden}
+#home-insights .ms-tab{column-gap:18px}
+#home-insights .ms-consult{margin-top:32px!important}
+#home-insights .ms-card-blog .ms-card-image img{width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:50% 20%!important}
+#home-insights .ms-card-blog .ms-card-image{background:none!important;padding:0!important}
+#home-insights .ms-card-blog .ms-card-image img{object-position:50% 72%!important}
+#home-insights .ms-card-blog .ms-card-image img{object-position:50% 100%!important}
+#home-insights .ms-card-title{font-size:16px!important;line-height:1.5!important}
+#home-insights .ms-consult p,#home-insights .ms-consult p strong{font-size:14px!important}
+#home-insights .ms-service-link,#home-insights .ms-phone{font-size:14px!important}
+
+/* 하단 채널 줄은 퀵메뉴로 옮겨 숨김 */
+#home-insights .ms-channels,#home-insights .ms-note{display:none!important}
+#home-insights .ms-consult{margin-top:32px!important}
+/* Selected plan 2: channels beside the heading. */
+#home-insights .cs-head-split{display:grid!important;grid-template-columns:minmax(0,1fr) auto;column-gap:40px;align-items:end}
+#home-insights .cs-head-split>:not(.cs-head-ch){grid-column:1}
+#home-insights .cs-head-ch{grid-column:2;grid-row:1/span 3;align-self:end;text-align:right}
+#home-insights .cs-head-label{display:block;margin-bottom:10px;font:600 12px/1.4 Manrope,sans-serif;letter-spacing:.1em;color:#a5663a}
+#home-insights .cs-head-ch div{display:grid;grid-template-columns:repeat(2,auto);gap:8px}
+#home-insights .cs-hc{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 14px;border:1px solid #e3e6ea;background:#fff;color:#182632;font-size:14px;font-weight:700;text-decoration:none;transition:border-color .2s,transform .2s}
+#home-insights .cs-hc:hover{border-color:#b86c39;transform:translateY(-2px)}
+#home-insights .cs-hc span{display:grid;place-items:center;width:24px;height:24px;color:#fff;font:800 12px/1 Manrope,sans-serif}
+#home-insights .cs-hc-b span{background:#03a94d}#home-insights .cs-hc-y span{background:#e5342b;font-size:10px}#home-insights .cs-hc-n span{background:#182632}
+#home-insights .cs-hc-a{background:#182632;color:#fff;border-color:#182632}#home-insights .cs-hc-a span{background:#b86c39}
+@media(max-width:1000px){#home-insights .cs-head-split{grid-template-columns:minmax(0,1fr)}#home-insights .cs-head-ch{grid-column:1;grid-row:auto;text-align:left;margin-top:16px}}
+#home-insights .cs-head-ch div{grid-template-columns:repeat(4,auto)!important;gap:6px}
+#home-insights .cs-hc{padding:0 12px;font-size:13px;white-space:nowrap}
+#home-insights .cs-hc-a{background:#fff!important;color:#182632!important;border-color:#e3e6ea!important}
+#home-insights .cs-hc-a span{background:#eef1f4!important;color:#182632!important}
+#home-insights #ms-home-title{font-size:clamp(28px,2.6vw,38px)!important}
+@media(min-width:1001px){#home-insights #ms-home-title{white-space:nowrap;font-size:clamp(26px,2.3vw,34px)!important}}
+.header .cs-nav-story{font-weight:700!important;letter-spacing:-.01em!important;font-size:15px!important}
+
+/* Keep the approved desktop composition usable on narrow phones. */
+@media(max-width:600px){
+ #home-insights .cs-head-ch div{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #home-insights .cs-hc{padding-inline:9px;font-size:12px;white-space:normal}
+ #home-insights .ms-results-head p{line-height:1.7}
+ #home-insights .ms-tab-icon{display:none!important}
+ #home-insights .ms-tab{column-gap:8px;min-height:104px!important;padding-block:16px!important}
+ #home-insights .ms-tab-copy strong{font-size:16px!important}
+ #home-insights .ms-tab-copy small{font-size:11px!important}
+ #home-insights .ms-consult-actions{flex-direction:column;align-items:stretch;gap:12px}
+ #home-insights .ms-service-link{white-space:normal}
+ #home-insights .ms-phone{justify-content:center}
+}

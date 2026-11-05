@@ -1,0 +1,78 @@
+/* A compact milestone index beside the existing recovery photographs. */
+.home-page #national-experience.home-pride{display:flex;align-items:center;min-height:100dvh;padding:126px 0 38px;background:#f7f8fa;color:#1d2939}
+.pride-layout{display:grid;grid-template-columns:.94fr 1.06fr;gap:clamp(42px,4.5vw,80px);align-items:start}
+.pride-kicker{margin:0 0 19px;color:#aa683b;font:600 .875rem/1.5 Manrope,sans-serif;letter-spacing:.12em}
+.pride-heading h2{font-size:clamp(27px,2.3vw,37px);font-weight:650;line-height:1.5;letter-spacing:-.045em;margin:0;color:#223144;word-break:keep-all}
+.pride-heading h2 em{font-style:normal;color:#b86b39}
+.pride-description{font-size:14px;line-height:1.85;color:#738092;margin:16px 0 0;word-break:keep-all}
+.pride-milestones{display:grid;margin-top:24px;border-top:1px solid #d9dfe6}
+.pride-milestones button{display:grid;grid-template-columns:78px 1fr 25px;gap:10px;align-items:center;min-height:40px;padding:8px 0;border:0;border-bottom:1px solid #e1e5eb;background:transparent;text-align:left;color:#727f8f;font-family:inherit;cursor:pointer;transition:color .2s}
+.pride-milestone-year{font:500 12px/1.5 Manrope,sans-serif;white-space:nowrap;letter-spacing:.02em}
+.pride-milestone-label{font-size:14px;line-height:1.5;font-weight:500;word-break:keep-all}
+.pride-milestone-arrow{font-size:23px;font-weight:400;line-height:1;text-align:right;opacity:0;transform:translateX(-4px);transition:opacity .2s,transform .2s}
+.pride-milestones button[aria-pressed=true]{color:#b86b39;border-bottom-color:#c4865d}
+.pride-milestones button[aria-pressed=true] .pride-milestone-label{font-weight:650}
+.pride-milestones button[aria-pressed=true] .pride-milestone-arrow,.pride-milestones button:hover .pride-milestone-arrow{opacity:1;transform:none}
+.pride-milestones button:hover{color:#a35f31}
+.pride-company-link{display:inline-flex;align-items:center;gap:34px;margin-top:16px;min-height:32px;font-size:13px;font-weight:550;color:#41536b;border-bottom:1px solid #b5bfcb}
+.pride-company-link span{color:#b86b39;font-size:18px}
+.pride-company-link:hover{color:#a35f31;border-color:#a35f31}
+.pride-milestones button:focus-visible,.pride-company-link:focus-visible{outline:2px solid #b86b39;outline-offset:4px}
+.pride-gallery{min-width:0;padding-top:0;overflow-anchor:none}
+.home-pride .national-panel[hidden]{display:none}
+.home-pride .national-recovery-photo{aspect-ratio:16/9;height:auto;padding:0;margin:0 0 30px;background:transparent;overflow:visible}
+.home-pride .national-photo-window{border-radius:8px;background:#e9edf2;isolation:isolate}
+.pride-concept-label{position:absolute;z-index:3;right:12px;bottom:12px;max-width:calc(100% - 24px);padding:7px 10px;border:1px solid #ffffff24;border-radius:3px;background:#0b1629d9;color:#dce4ec;font-size:12px;font-weight:400;line-height:1.5;letter-spacing:-.02em;pointer-events:none}
+.home-pride .national-photo-window img{inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center}
+.home-pride .national-recovery-photo figcaption{display:block;top:100%;left:0;right:0;bottom:auto;padding:8px 0;font-size:10px;line-height:1.6;color:#909aa7;text-align:left}
+.home-pride .pride-photo-contain .national-photo-window{background:#e7ebf0}
+.home-pride .pride-photo-contain .national-photo-window img{object-fit:contain;padding:14px}
+/* Preserve the CCTV source ratio while framing the recordings below its banner. */
+.home-pride .photo-sewol-crop .national-photo-window img{inset:auto;left:-8.130081%;top:-39.747064%;width:130.081301%;height:auto;object-fit:contain}
+.home-pride #pride-case-0 .national-photo-window img{object-position:50% 62%}
+.home-pride #pride-case-4 .national-photo-window img{object-position:50% 46%}
+.home-pride .national-panel-copy{display:block;padding:18px 0 0;min-height:215px;border-top:1px solid #d9dfe6}
+.home-pride .national-panel-copy>div:first-child{display:flex;align-items:baseline;gap:16px}
+.home-pride .national-year{font:500 13px/1.5 Manrope,sans-serif;color:#ad7048;white-space:nowrap}
+.home-pride .national-panel-copy h3{margin:0;font-size:clamp(24px,2vw,30px);line-height:1.45;color:#25364b;letter-spacing:-.04em}
+.home-pride .national-recovery-result{margin-top:17px}
+.home-pride .national-recovery-result>span{font-size:11px;margin-bottom:6px;color:#8c98a7}
+.home-pride .national-recovery-result>strong{font-size:17px;line-height:1.6;color:#3c4b5e}
+.home-pride .national-recovery-result>p{font-size:14px;line-height:1.85;margin-top:8px;color:#748193;word-break:keep-all}
+@media(min-width:801px) and (max-height:740px){
+ .home-page #national-experience.home-pride{padding-top:116px;padding-bottom:26px}
+ .pride-kicker{margin-bottom:12px}.pride-heading h2{font-size:28px}.pride-description{margin-top:12px;font-size:13px}
+ .pride-milestones{margin-top:18px}.pride-milestones button{min-height:37px;padding-block:7px}.pride-milestone-label{font-size:13px}
+ .pride-company-link{margin-top:13px}.home-pride .national-panel-copy{min-height:205px}
+}
+@media(min-width:801px) and (max-width:1100px){
+ .pride-layout{gap:35px}.pride-heading h2{font-size:25px}.pride-description br{display:none}
+ .pride-milestones button{grid-template-columns:68px 1fr 20px;gap:7px}.pride-milestone-label{font-size:12px}.pride-milestone-year{font-size:11px}
+ .home-pride .national-panel-copy h3{font-size:23px}.home-pride .national-recovery-result>strong{font-size:16px}.home-pride .national-recovery-result>p{font-size:13px}
+}
+@media(max-width:800px){
+ .home-page #national-experience.home-pride{min-height:0;padding:108px 0 64px}
+ .pride-layout{grid-template-columns:1fr;gap:34px}.pride-heading h2{font-size:30px}.pride-kicker{margin-bottom:16px}
+ .pride-milestones{margin-top:24px}.pride-milestones button{min-height:46px;grid-template-columns:78px 1fr 24px}
+ .pride-gallery{padding-top:0}.home-pride .national-panel-copy{min-height:220px}.home-pride .national-panel-copy h3{font-size:25px}
+}
+@media(max-width:520px){
+ .pride-heading h2{font-size:27px}.pride-description{font-size:13px}.pride-description br{display:none}
+ .pride-milestones button{grid-template-columns:73px 1fr 20px;gap:8px}.pride-milestone-label{font-size:13px}.pride-milestone-year{font-size:11px}
+ .home-pride .national-panel-copy>div:first-child{gap:12px}.home-pride .national-panel-copy h3{font-size:22px}.home-pride .national-recovery-result>strong{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){.pride-milestones button,.pride-milestone-arrow{transition:none}}
+
+/* Balance the milestone index against a larger visual. */
+@media(min-width:801px){
+ .home-pride .pride-layout{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(36px,4vw,68px);align-items:stretch}
+ .pride-overview{display:flex;flex-direction:column;align-items:flex-start}
+ .pride-milestones{margin-top:auto;padding-top:28px;width:100%;border-top:0}
+ .pride-milestones button:first-child{border-top:1px solid #d9dfe6}
+ .home-pride .national-recovery-photo{aspect-ratio:16/9;height:auto;margin-bottom:30px}
+ .home-pride .national-panel-copy{min-height:190px;padding-top:16px}
+ .home-pride .national-recovery-result{margin-top:10px}
+ .home-pride .national-recovery-result>p{margin-top:6px;line-height:1.7}
+ .home-pride .pride-gallery{padding-top:0;width:100%;max-width:min(100%,calc((100dvh - 350px)*1.777778));justify-self:end}
+ .home-pride .pride-heading h2{font-size:clamp(26px,2.1vw,35px)}
+}

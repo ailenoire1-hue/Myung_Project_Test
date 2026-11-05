@@ -1,0 +1,15 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const read=p=>readFile(new URL(p,import.meta.url),'utf8');
+let html=await read('dist/index.html');
+for(const name of ['ASSETS','DIALOG'])html=html.replace(new RegExp(`<!--QUOTE_ESTIMATE_${name}_START-->[\\s\\S]*?<!--QUOTE_ESTIMATE_${name}_END-->`,'g'),'');
+html=html.replace('<button class="button nav-contact" data-contact>상담 안내</button>','<button class="button nav-contact home-quote-nav" type="button" data-qe-open aria-haspopup="dialog" aria-controls="qe-dialog">견적/문의</button>');
+html=html.replace(/<div class="calm-actions">[\s\S]*?<\/div>/,block=>block.replace('<button data-contact>','<button class="home-quote-cta" type="button" data-qe-open aria-haspopup="dialog" aria-controls="qe-dialog">').replace('<span>전문가 상담</span>','<span>견적/문의</span>'));
+html=html.replace(/<aside[^>]*class="[^"]*qm-widget[\s\S]*?<\/aside>/,block=>block.replace('class="qm-action qm-contact" data-contact','class="qm-action qm-contact qm-quote" data-qe-open aria-haspopup="dialog" aria-controls="qe-dialog"').replace('<span>상담 안내</span>','<span>견적/문의</span>'));
+if((html.match(/data-qe-open/g)||[]).length!==3)throw new Error('Expected the three approved homepage quote entry points.');
+const version=createHash('sha256').update((await Promise.all(['dist/assets/quote-estimate.css','dist/assets/quote-estimate.js','dist/assets/home-quote-entry.css'].map(read))).join('')).digest('hex').slice(0,12);
+html=html.replace('</head>',`<!--QUOTE_ESTIMATE_ASSETS_START--><link rel="stylesheet" href="assets/quote-estimate.css?v=${version}"><link rel="stylesheet" href="assets/home-quote-entry.css?v=${version}"><script defer src="assets/quote-estimate.js?v=${version}"></script><!--QUOTE_ESTIMATE_ASSETS_END--></head>`);
+const dialog=(await read('quote-estimate-snippet.html')).replace(/^<button class="qe-launcher"[^\n]*\r?\n/,'');
+html=html.replace('</body>',`<!--QUOTE_ESTIMATE_DIALOG_START-->${dialog}<!--QUOTE_ESTIMATE_DIALOG_END--></body>`);
+await writeFile(new URL('dist/index.html',import.meta.url),html,'utf8');
+console.log('Integrated quote modal and three homepage entry points.');

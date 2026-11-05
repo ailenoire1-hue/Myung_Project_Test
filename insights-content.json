@@ -1,0 +1,55 @@
+{
+  "blogUrl": "https://blog.naver.com/myungit2",
+  "feedUrl": "https://rss.blog.naver.com/myungit2.xml",
+  "retrievedAt": "2026-10-07",
+  "posts": [
+    {
+      "title": "문자 링크를 잘못 눌렀다면 해킹된 걸까? 스미싱 링크 클릭 후 확인해야 할 것",
+      "url": "https://blog.naver.com/myungit2/224427149379?fromRss=true&trackingCode=rss",
+      "date": "2026.09.30",
+      "image": "assets/insights/blog-1.png",
+      "sourceImage": "https://blogthumb.pstatic.net/MjAyNjA5MzBfMjQz/MDAxNzkwNzQ3MTc1MjEx.tnJlLq9F-y4pjVjQ3dsCrMgsUUNNb8e8GrXNSxpjGNgg.jk_LzTJDkhSqq6IJ45bfhCAyf0F0IgzWS7jHe0c-A44g.PNG/%C1%A6%B8%F1%C0%BB_%C0%D4%B7%C2%C7%D8%C1%D6%BC%BC%BF%E4.png?type=s3"
+    },
+    {
+      "title": "RAW로 변한 하드디스크 복구 방법｜포맷 없이 데이터 살리는 방법",
+      "url": "https://blog.naver.com/myungit2/224425878241?fromRss=true&trackingCode=rss",
+      "date": "2026.09.29",
+      "image": "assets/insights/blog-2.png",
+      "sourceImage": "https://blogthumb.pstatic.net/MjAyNjA5MjlfMTU2/MDAxNzkwNjU3MDA5ODQ5.WjENGT_2kS-Ju1qHSC5PdmrZHtmTZcSC9HuN8bCQdQ0g.0ldrk6C6srYlU3v2snl44AsVsk5nwT2yt0g3c1NtSO0g.PNG/%C1%A6%B8%F1%C0%BB_%C0%D4%B7%C2%C7%D8%C1%D6%BC%BC%BF%E4.png?type=s3"
+    },
+    {
+      "title": "SSD 펌웨어 손상 복구 방법｜SSD 인식 불가·0GB 오류 원인과 데이터복구",
+      "url": "https://blog.naver.com/myungit2/224424947097?fromRss=true&trackingCode=rss",
+      "date": "2026.09.28",
+      "image": "assets/insights/blog-3.png",
+      "sourceImage": "https://blogthumb.pstatic.net/MjAyNjA5MjhfODEg/MDAxNzkwNTc2ODExNTE1.69xsARO6RUFJhijMEMogox9euEkyuqVV8TFxJ7E3i-gg.Q5wEN2sX4p2KEravBhtaQ1GcRKyh4u4gpGu0n_iFhEIg.PNG/%C1%A6%B8%F1%C0%BB_%C0%D4%B7%C2%C7%D8%C1%D6%BC%BC%BF%E4.png?type=s3"
+    }
+  ],
+  "videos": [
+    {
+      "id": "jDyYMMCdByM",
+      "title": "[디지털포렌식] 스마트폰 1분 1초 흔적이 남기는데,,,이럴때?",
+      "date": "2024.07.15",
+      "duration": "4:07",
+      "url": "https://www.youtube.com/watch?v=jDyYMMCdByM",
+      "image": "assets/insights/youtube-jDyYMMCdByM.jpg"
+    },
+    {
+      "id": "1y__SccDxAs",
+      "title": "[디지털포렌식] 증거인멸 사건,,,아무도 믿지마라!",
+      "date": "2024.11.26",
+      "duration": "4:31",
+      "url": "https://www.youtube.com/watch?v=1y__SccDxAs",
+      "image": "assets/insights/youtube-1y__SccDxAs.jpg"
+    },
+    {
+      "id": "DpVNx8eIbKM",
+      "title": "[IT 정보] 데이터 복구 VS 디지털 포렌식 컨퍼런스 강의 (놓치지 마세요!)",
+      "date": "2025.05.30",
+      "duration": "52:03",
+      "url": "https://www.youtube.com/watch?v=DpVNx8eIbKM",
+      "image": "assets/insights/youtube-DpVNx8eIbKM.jpg"
+    }
+  ],
+  "youtubeUrl": "https://www.youtube.com/channel/UC7P1LyBxStJkKxAb_yx5DKw"
+}

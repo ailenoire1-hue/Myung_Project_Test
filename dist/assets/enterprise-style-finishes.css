@@ -1,0 +1,83 @@
+/* Three finishes for the same reference composition. No layout overrides. */
+.es-page.es-restyle{
+ --orange:#cf8654;--orange-soft:#f3e8de;--orange-ink:#996441;
+ --blue:#718fa4;--blue-soft:#e8eef3;--blue-ink:#526f83;
+ --green:#718fa4;--green-soft:#e8eef3;--green-ink:#526f83;
+ --shadow:none;
+}
+.es-page.es-restyle .pa-card{border-radius:4px;box-shadow:none;background:#fff;border-color:#dce5eb}
+.es-page.es-restyle .pa-card:before{background:#b18a69}
+.es-page.es-restyle :is(.pa-card__icon,.pa-card__tag,.ip-result,.ip-signs li,.ip-signs li>span){border-radius:4px}
+.es-page.es-restyle .pa-card__icon{background:#f0f4f7}
+.es-page.es-restyle .pa-card__tag{background:#f3f6f8;color:#6b7d89}
+.es-page.es-restyle .ip-result{background:#f3f6f8;color:#344f61;border-color:#dce5eb}
+.es-page.es-restyle .ip-result small{color:#a17655}
+.es-page.es-restyle .pa-ch:not(.es-overview){background:#fff;border-color:#e5ebef}
+.es-page.es-restyle .pa-ch__art{border:1px solid transparent;border-radius:4px;box-shadow:none}
+.es-page.es-restyle .pa-ch__art svg{filter:none}
+
+/* Preserve every illustration path, recoloring only its original paint values. */
+.es-page.es-restyle :is(.pa-hero__art,.pa-ch__art,.pa-card__icon,.ip-result,.pa-chip,.ip-trust__icon) :is([fill="#5d9184"],[fill="#2fb37f"]){fill:#718fa4}
+.es-page.es-restyle :is(.pa-hero__art,.pa-ch__art,.pa-card__icon,.ip-result,.pa-chip,.ip-trust__icon) [stroke="#5d9184"]{stroke:#718fa4}
+.es-page.es-restyle :is(.pa-hero__art,.pa-ch__art,.pa-card__icon,.ip-result,.pa-chip,.ip-trust__icon) [fill="#e4efeb"]{fill:#e8eef3}
+.es-page.es-restyle :is(.pa-hero__art,.pa-ch__art,.pa-card__icon,.ip-result,.pa-chip,.ip-trust__icon) [fill="#b1cfc4"]{fill:#b9c8d3}
+.es-page.es-restyle :is(.pa-hero__art,.pa-ch__art,.pa-card__icon,.ip-result,.pa-chip,.ip-trust__icon) [stroke="#b1cfc4"]{stroke:#b9c8d3}
+.es-page.es-restyle :is(.pa-hero__art,.pa-ch__art,.pa-card__icon,.ip-result,.pa-chip,.ip-trust__icon) [fill="#e0a100"]{fill:#c49a70}
+.es-page.es-restyle :is(.pa-hero__art,.pa-ch__art,.pa-card__icon,.ip-result,.pa-chip,.ip-trust__icon) [fill="#fdf0d0"]{fill:#f1e9df}
+.es-page.es-restyle :is(.pa-hero__art,.pa-ch__art,.pa-card__icon,.ip-result,.pa-chip,.ip-trust__icon) [fill="#e5484d"]{fill:#ac7967}
+.es-page.es-restyle :is(.pa-hero__art,.pa-ch__art,.pa-card__icon,.ip-result,.pa-chip,.ip-trust__icon) [stroke="#e5484d"]{stroke:#ac7967}
+.es-page.es-restyle :is(.pa-hero__art,.pa-ch__art,.pa-card__icon,.ip-result,.pa-chip,.ip-trust__icon) [fill="#fde2e2"]{fill:#f0e5df}
+
+/* A — white page, original illustration, a fine edge on the detail panels. */
+.es-page.es-restyle.es-style-a .es-overview{background:#fff;border-color:#e6ecef}
+.es-page.es-restyle.es-style-a .es-overview .pa-ch__art{background:transparent;border-color:transparent}
+.es-page.es-restyle.es-style-a .es-overview .pa-ch__no b{color:#b9845d}
+.es-page.es-restyle.es-style-a .es-overview .pa-ch__q{color:#577387}
+.es-page.es-restyle.es-style-a .es-overview .ip-signs li{background:#fff;border-color:#dde5eb;color:#435d6f}
+.es-page.es-restyle.es-style-a .pa-card:before{background:#c39a79}
+
+/* B — a quiet gray mat gives the original illustration its own surface. */
+.es-page.es-restyle.es-style-b .es-overview{background:#f9fbfc;border-color:#e0e7ec}
+.es-page.es-restyle.es-style-b .es-overview .pa-ch__art{background:#f0f4f7;border-color:#dfe7ec}
+.es-page.es-restyle.es-style-b .es-overview .pa-ch__no b{color:#718c9e}
+.es-page.es-restyle.es-style-b .es-overview .pa-ch__q{color:#4b697f}
+.es-page.es-restyle.es-style-b .es-overview .ip-signs li{background:#fff;border-color:#dbe4eb;color:#435d6f}
+.es-page.es-restyle.es-style-b .es-overview .ip-signs li>span{background:#edf2f6;color:#6c879b}
+.es-page.es-restyle.es-style-b .pa-card{background:#fff;border-color:#d4e0e8}
+.es-page.es-restyle.es-style-b .pa-card:before{background:#8da5b5}
+.es-page.es-restyle.es-style-b .ip-result{background:#edf3f7}
+
+/* C — navy overview chapters, followed by the same white detail panels. */
+.es-page.es-restyle.es-style-c .es-overview{background:#101e2b;border-color:#2d4455;color:#e8f0f5}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art{background:transparent;border-color:transparent}
+.es-page.es-restyle.es-style-c .es-overview h2{color:#eff4f7}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__no{color:#8da6b8}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__no b{color:#d7986a}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__q{color:#dbb495}
+.es-page.es-restyle.es-style-c .es-overview .ip-lead{color:#a9bdcb}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__label{color:#91aabd}
+.es-page.es-restyle.es-style-c .es-overview .ip-signs li{background:#192e3e;border-color:#3d5668;color:#d6e2eb}
+.es-page.es-restyle.es-style-c .es-overview .ip-signs li>span{background:#2b4354;color:#d0a27c}
+.es-page.es-restyle.es-style-c .es-overview .ip-note{color:#8fa7b8}
+.es-page.es-restyle.es-style-c .es-overview .es-screen-footer{border-color:#395060;color:#a3b6c3}
+.es-page.es-restyle.es-style-c .es-overview .es-screen-footer strong{color:#c99d7b}
+.es-page.es-restyle.es-style-c .es-overview .es-screen-footer>p>span{color:#a3b6c3}
+.es-page.es-restyle.es-style-c .es-overview .es-screen-footer a{border-color:#476172;color:#b1c6d3}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art :is([fill="#f6e7d9"],[fill="#e5edf2"],[fill="#e4efeb"],[fill="#edf1f6"]){fill:#223847}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art [fill="#192f41"]{fill:#47677e}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art [stroke="#192f41"]{stroke:#92adbf}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art [fill="#355066"]{fill:#65849b}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art :is([fill="#3a4862"],[fill="#4a5d80"]){fill:#66869d}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art [stroke="#3a4862"]{stroke:#89a5b9}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art [fill="#f7f9fc"]{fill:#e1eaf1}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art :is([fill="#fff"],[fill="#ffffff"]){fill:#e8eef3}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art [fill="rgba(255,255,255,.8)"]{fill:#dde9f0cc}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art [fill="#cf8654"]{fill:#c59068}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art [stroke="#cf8654"]{stroke:#cda17e}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art [fill="#deb391"]{fill:#ad8466}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art [stroke="#deb391"]{stroke:#ad8466}
+.es-page.es-restyle.es-style-c .es-overview .pa-ch__art :is([stroke="#d3dce7"],[stroke="#b1c6d3"],[stroke="#b1cfc4"]){stroke:#617e92}
+.es-page.es-restyle.es-style-c .pa-card{background:#fff;border-color:#dce5eb}
+.es-page.es-restyle.es-style-c .pa-card:before{background:#9b775a}
+.es-page.es-restyle.es-style-c .pa-card__icon{background:#edf2f6}
+.es-page.es-restyle.es-style-c .ip-result{background:#f3f6f8}

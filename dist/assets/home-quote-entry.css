@@ -1,0 +1,8 @@
+/* Visible homepage entry points, using the existing MDFC orange accent. */
+body.home-page .header #navigation .button.nav-contact.home-quote-nav{background:#f58b46!important;border-color:#f58b46!important;color:#142333!important;font-weight:700;min-width:108px;box-shadow:0 4px 17px #f58b4620}
+body.home-page .header #navigation .button.nav-contact.home-quote-nav:hover{background:#ffa46b!important;border-color:#ffa46b!important;color:#142333!important}
+.home-page .calm-actions .home-quote-cta{font-weight:700;min-width:166px;box-shadow:0 6px 24px #f58b4626}
+.home-page .qm-b.qm-services .qm-action.qm-quote{background:#f58b46;color:#142333;border-top:3px solid #ffc297;font-size:14px;font-weight:750}
+.home-page .qm-b.qm-services .qm-action.qm-quote svg{color:#243e52;width:25px;height:25px}
+.home-page .qm-b.qm-services .qm-action.qm-quote:hover{background:#ffa46b;color:#142333}
+.home-page :is(.home-quote-nav,.home-quote-cta,.qm-quote):focus-visible{outline:3px solid #f8ae7c;outline-offset:4px}

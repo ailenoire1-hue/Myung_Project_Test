@@ -1,0 +1,36 @@
+/* Preview only: selectable analysis fields on a light editorial surface. */
+.home-page .home-forensics-focus{display:flex;align-items:center;min-height:100dvh;padding:126px 0 44px;background:#fff;color:#1d2939}
+.video-home-page #home-digital-forensics.home-forensics-focus{background:#fff}
+.forensics-focus-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:32px}
+.forensics-focus-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid #dce2e9}
+.forensics-focus-tabs button{position:relative;display:flex;align-items:center;gap:14px;min-width:0;min-height:62px;padding:13px 20px;border:0;background:#fff;color:#788390;text-align:left;font-family:inherit;font-size:19px;font-weight:600;line-height:1.5;cursor:pointer;transition:color .2s,background .2s}
+.forensics-focus-tabs button span{font:500 12px/1.5 Manrope,sans-serif;color:#94a0ad}
+.forensics-focus-tabs button i{margin-left:auto;font-size:18px;font-style:normal;color:#a5b0bc}
+.forensics-focus-tabs button::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:3px;background:transparent}
+.forensics-focus-tabs button[aria-selected="true"]{background:#f4f6f8;color:#1d2939}
+.forensics-focus-tabs button[aria-selected="true"]::after{background:#ca7a46}
+.forensics-focus-tabs button[aria-selected="true"] :is(span,i){color:#ae622f}
+.forensics-focus-tabs button:hover{color:#a65f31;background:#f7f8fa}
+.forensics-focus-panel{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;background:#f4f6f8;min-height:300px}
+.forensics-focus-panel[hidden]{display:none}
+.forensics-focus-copy{padding:28px 38px}
+.forensics-focus-label{margin:0 0 12px;font:500 11px/1.5 Manrope,sans-serif;letter-spacing:.13em;color:#9b663f}
+.forensics-focus-copy h3{margin:0 0 12px;font-size:clamp(25px,2.2vw,34px);line-height:1.4;font-weight:650;letter-spacing:-.04em;color:#203248}
+.forensics-focus-summary{margin:0;font-size:16px;line-height:1.8;color:#5c6b7d;word-break:keep-all}
+.forensics-focus-tags{display:flex;flex-wrap:wrap;gap:0;margin:17px 0 22px;padding:0;list-style:none;color:#697889;font-size:12px;line-height:1.6}
+.forensics-focus-tags li+li{margin-left:10px;padding-left:10px;border-left:1px solid #cdd6df}
+.forensics-focus-copy>a{display:inline-flex;align-items:center;gap:24px;padding:7px 0;border-bottom:1px solid #afbac6;color:#283f58;font-size:14px;font-weight:600;line-height:1.6}
+.forensics-focus-copy>a span{font-size:22px;line-height:1;color:#b66c3a}
+.forensics-focus-copy>a:hover{color:#a65f31;border-color:#a65f31}
+.forensics-focus-photo{position:relative;aspect-ratio:1.5;margin:0;overflow:hidden;background:#e8edf2}
+.forensics-focus-photo img{position:absolute;left:0;top:0;width:200%;height:200%;max-width:none;object-fit:cover;filter:saturate(.75)}
+.forensics-focus-photo .focus-quadrant-1{left:-100%}
+.forensics-focus-photo .focus-quadrant-2{top:-100%}
+.forensics-focus-photo .focus-quadrant-3{left:-100%;top:-100%}
+.forensics-focus-panel:not([hidden]) .forensics-focus-copy{animation:focus-field-enter .25s ease both}
+.forensics-focus-tabs button:focus-visible,.forensics-focus-panel:focus-visible,.forensics-focus-copy>a:focus-visible{outline:2px solid #b56a36;outline-offset:3px;z-index:1}
+@keyframes focus-field-enter{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(min-width:801px) and (max-height:750px){.home-page .home-forensics-focus{padding-top:116px;padding-bottom:32px}.forensics-focus-heading{margin-bottom:24px}.home-forensics-focus .home-offering-kicker{margin-bottom:14px}.forensics-focus-copy{padding:24px 30px}.forensics-focus-tabs button{min-height:56px}.forensics-focus-panel{min-height:280px}}
+@media(min-width:801px) and (max-width:1100px){.forensics-focus-tabs button{font-size:16px;padding-inline:13px;gap:9px}.forensics-focus-copy{padding:24px}.forensics-focus-summary{font-size:14px}.forensics-focus-summary br{display:none}.forensics-focus-heading .varied-service-more{font-size:13px;gap:15px}.forensics-focus-panel{min-height:280px}}
+@media(max-width:800px){.home-page .home-forensics-focus{min-height:0;padding:110px 0 64px}.forensics-focus-heading{display:block;margin-bottom:28px}.forensics-focus-heading .varied-service-more{margin-top:16px}.forensics-focus-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#dce2e9}.forensics-focus-tabs button{min-height:58px;font-size:16px;padding:12px 13px;gap:10px}.forensics-focus-panel{grid-template-columns:1fr}.forensics-focus-copy{padding:28px 24px}.forensics-focus-summary br{display:none}.forensics-focus-copy h3{font-size:27px}.forensics-focus-photo{width:100%}.forensics-focus-heading h2{font-size:32px}.forensics-focus-tags{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.forensics-focus-tabs button{transition:none}.forensics-focus-panel:not([hidden]) .forensics-focus-copy{animation:none}}

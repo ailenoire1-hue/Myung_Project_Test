@@ -1,0 +1,58 @@
+/* A안 · 일러스트 카드형 */
+.pa-hero{padding:48px 0 60px;background:linear-gradient(180deg,#f3f6fb 0%,#fff 85%)}
+.pa-hero__grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:48px;align-items:center}
+.pa-hero__art svg{width:100%;max-width:470px;height:auto;display:block;margin-inline:auto}
+.pa-hero__chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.pa-chip{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:6px 18px 6px 8px;border-radius:999px;border:1.5px solid var(--line);background:#fff;text-decoration:none;font-size:16px;font-weight:800;color:var(--ink);transition:border-color .2s,transform .2s}
+.pa-chip:hover{transform:translateY(-2px)}
+.pa-chip svg{width:38px;height:38px;padding:4px;border-radius:50%}
+.pa-chip--orange svg{background:var(--orange-soft)}.pa-chip--blue svg{background:var(--blue-soft)}.pa-chip--green svg{background:var(--green-soft)}
+.pa-chip--orange:hover{border-color:var(--orange)}.pa-chip--blue:hover{border-color:var(--blue)}.pa-chip--green:hover{border-color:var(--green)}
+
+.pa-ch{padding:84px 0 92px;scroll-margin-top:calc(var(--ip-header) + 60px)}
+.pa-ch--orange{background:linear-gradient(180deg,#fff8f2,#fff 70%)}
+.pa-ch--blue{background:linear-gradient(180deg,#f3f8ff,#fff 70%)}
+.pa-ch--green{background:linear-gradient(180deg,#f1faf5,#fff 70%)}
+.pa-ch__top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.pa-ch__top.is-flip .pa-ch__art{order:2}
+.pa-ch__art svg{width:100%;max-width:500px;height:auto;display:block;margin-inline:auto}
+.pa-ch__no{display:flex;align-items:baseline;gap:12px;font:800 14px/1 Manrope,sans-serif;letter-spacing:.12em;color:var(--sub)}
+.pa-ch__no b{font-size:48px;letter-spacing:-.03em}
+.pa-ch--orange .pa-ch__no b{color:var(--orange)}.pa-ch--blue .pa-ch__no b{color:var(--blue)}.pa-ch--green .pa-ch__no b{color:var(--green)}
+.pa-ch h2{margin-top:10px}
+.pa-ch__q{margin-top:14px;font-size:22px;font-weight:800;line-height:1.45}
+.pa-ch--orange .pa-ch__q{color:var(--orange-ink)}.pa-ch--blue .pa-ch__q{color:var(--blue-ink)}.pa-ch--green .pa-ch__q{color:var(--green-ink)}
+.pa-ch__label{margin:24px 0 12px!important;font-size:16px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:10px}
+.pa-ch__label::before{content:'';width:22px;height:3px;border-radius:3px;background:currentColor;opacity:.4}
+.pa-ch__label--center{justify-content:center;margin:56px 0 22px!important;font-size:20px}
+.pa-ch__label--center::after{content:'';width:22px;height:3px;border-radius:3px;background:currentColor;opacity:.4}
+
+.pa-cards{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:20px}
+.pa-card{position:relative;display:flex;flex-direction:column;padding:28px 26px 24px;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}
+.pa-card::before{content:'';position:absolute;inset:0 0 auto 0;height:6px}
+.pa-ch--orange .pa-card::before{background:var(--orange)}.pa-ch--blue .pa-card::before{background:var(--blue)}.pa-ch--green .pa-card::before{background:var(--green)}
+.pa-card__head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pa-card__icon{display:grid;place-items:center;width:88px;height:88px;border-radius:24px}
+.pa-ch--orange .pa-card__icon{background:var(--orange-soft)}.pa-ch--blue .pa-card__icon{background:var(--blue-soft)}.pa-ch--green .pa-card__icon{background:var(--green-soft)}
+.pa-card__tag{padding:6px 12px;border-radius:999px;background:var(--soft);font-size:14px;font-weight:800;color:var(--ink)}
+.pa-card h3{margin-top:20px}
+.pa-card>p{margin-top:8px;font-size:16px;color:var(--sub);line-height:1.65}
+.pa-card .ip-result{margin-top:auto;padding-top:12px}
+.pa-card .ip-steps{margin-bottom:18px}
+
+@media(max-width:1000px){
+ .pa-hero__grid,.pa-ch__top{grid-template-columns:minmax(0,1fr);gap:28px}
+ .pa-hero__art{order:-1}.pa-hero__art svg{max-width:360px}
+ .pa-ch__top.is-flip .pa-ch__art{order:0}
+ .pa-ch__art svg{max-width:420px}
+ .pa-cards{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:800px){
+ .pa-hero{padding:28px 0 40px}
+ .pa-ch{padding:56px 0 64px}
+ .pa-ch__no b{font-size:40px}
+ .pa-ch__q{font-size:20px}
+ .pa-card{padding:22px 18px 20px}
+ .pa-card__icon{width:72px;height:72px;border-radius:20px}
+ .pa-chip{flex:1 1 100%}
+}

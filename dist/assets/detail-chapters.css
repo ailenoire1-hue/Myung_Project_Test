@@ -1,0 +1,145 @@
+.sub-page{--detail-chapter-height:calc(100dvh - var(--ir-header-height,95px) - var(--ir-jump-height,70px))}
+.sub-page [data-detail-chapter]{scroll-margin-top:0}
+.detail-chapter-heading{text-align:center;margin:0 auto 32px;max-width:960px}
+.detail-chapter-heading .detail-kicker{color:#8a7566;margin-bottom:12px}
+.detail-chapter-heading h2{font-size:clamp(27px,2.7vw,38px);line-height:1.45;font-weight:650}
+.chapter-more{border-top:1px solid #dbe1e8;border-bottom:1px solid #dbe1e8;margin-top:18px}
+.chapter-more>summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;list-style:none;padding:14px 0;font-size:.875rem;font-weight:550;color:#55667b}
+.chapter-more>summary::-webkit-details-marker{display:none}.chapter-more>summary>span{font-size:1.25rem;color:#b37d54;font-weight:400}.chapter-more[open]>summary>span{transform:rotate(45deg)}
+.chapter-more>summary:focus-visible{outline:2px solid #c98755;outline-offset:3px}
+.chapter-more>ul{padding-bottom:20px}
+.sub-page .detail-section[data-detail-chapter],.sub-page .detail-related[data-detail-chapter],.sub-page .ir-results[data-detail-chapter],.sub-page .ir-preparation[data-detail-chapter]{min-height:var(--detail-chapter-height);padding-block:36px;display:flex;align-items:center}
+.sub-page [data-detail-chapter] .detail-section-heading{margin-bottom:32px}
+.sub-page [data-detail-chapter] .detail-section-heading h2{font-size:clamp(27px,2.7vw,38px)}
+.sub-page .detail-related[data-detail-chapter]>.container{padding-top:0;border:0}
+.sub-page .detail-services{padding:0}
+.sub-page .detail-service-layout{min-height:var(--detail-chapter-height);padding-block:34px;gap:70px;align-items:center}
+.sub-page .detail-item-number{margin-bottom:12px;font-size:.875rem}
+.sub-page .detail-service-intro h2{margin-bottom:16px}
+.sub-page .detail-service-intro>p{line-height:1.8}
+.enterprise-situations{margin:22px 0}
+.sub-page .detail-work-list li{padding-block:14px}
+.sub-page .detail-deliverables{margin-top:20px;padding:18px 22px}
+.sub-page .detail-deliverables .detail-kicker{display:none}
+.sub-page .detail-deliverables h3{font-size:1rem;margin-bottom:10px}
+.sub-page .detail-deliverables li{font-size:.875rem}
+.sub-page .detail-scope-note{padding-block:20px}
+/* Analysis selection occupies one chapter, followed by a second method chapter. */
+.sub-page .forensic-analysis[data-detail-chapter]{padding:0;display:block}
+.forensic-selector{padding-top:26px}
+.forensic-selector .detail-chapter-heading{margin-bottom:20px}
+.forensic-selector .detail-chapter-heading h2{font-size:clamp(26px,2.5vw,34px)}
+.forensic-tabs .resource-tablist{margin-bottom:0;gap:12px}
+.forensic-tabs .resource-tablist button{padding:12px 18px;position:relative;min-height:74px}
+.forensic-tabs .forensic-tab-number{float:right;padding-left:8px;font-size:.75rem}
+.forensic-tabs .resource-tablist strong{font-size:1rem}
+.forensic-tabs .resource-tablist small{font-size:.75rem;margin-top:3px}
+.sub-page .forensic-panel{scroll-margin-top:0}
+.forensic-field-overview{min-height:calc(var(--detail-chapter-height) - var(--field-selector-height,185px));padding:24px 0 28px;display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}
+.forensic-field-overview .resource-figure>div{height:clamp(200px,30vh,270px);min-height:0}
+.forensic-field-overview .resource-figure img{object-fit:cover}
+.forensic-field-overview .resource-media img,.forensic-field-overview .resource-messenger img{object-fit:contain}
+.forensic-field-overview .resource-figure figcaption{margin-top:8px;font-size:.75rem}
+.forensic-field-overview .resource-field-photo img{display:block;width:100%;max-width:none;height:100%;max-height:none;padding:0;object-fit:cover}
+.forensic-field-overview .resource-pc-photo img{object-position:50% 55%}
+.forensic-field-overview .resource-phone-photo img{object-position:65% 88%}
+.forensic-field-overview .resource-chat-photo img{object-position:center top}
+.forensic-field-overview .resource-copy .detail-kicker{margin-bottom:9px}
+.forensic-field-overview .resource-copy h3{font-size:clamp(23px,2.3vw,30px);line-height:1.45}
+.forensic-field-overview .resource-copy>p{margin:14px 0;font-size:1rem;line-height:1.8}
+.forensic-targets{padding:0;list-style:none;margin:14px 0 0}
+.forensic-targets li{position:relative;padding-left:13px;font-size:.875rem;color:#69798c;line-height:1.8}
+.forensic-targets li:before{content:'';position:absolute;width:3px;height:3px;background:#cb9165;left:0;top:.8em}
+.forensic-field-depth{min-height:var(--detail-chapter-height);padding:32px 0;display:flex;flex-direction:column;justify-content:center;border-top:1px solid #dde3e9}
+.forensic-field-depth .detail-chapter-heading{margin-bottom:28px}
+.forensic-analysis-map{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;list-style:none;padding:0;margin:0}
+.forensic-analysis-map li{border-top:2px solid #c9d3df;background:#f5f7f9;padding:20px 18px;position:relative}
+.forensic-analysis-map li:first-child{border-color:#d18b59}
+.forensic-analysis-map li>span{font:600 .875rem/1.4 Manrope,sans-serif;color:#b9845c}
+.forensic-analysis-map h3{font-size:1.0625rem;line-height:1.5;margin:13px 0 9px;font-weight:650}
+.forensic-analysis-map p{font-size:.875rem;color:#708092;line-height:1.7}
+.forensic-result-line{display:grid;grid-template-columns:140px 1fr;gap:24px;padding:22px 0 5px;align-items:start}
+.forensic-result-line>strong{font-size:.9375rem;font-weight:600;color:#33465c}
+.forensic-result-line ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.forensic-result-line .detail-clean-list li{font-size:.875rem;line-height:1.7;margin:0}
+.forensic-limit{font-size:.8125rem;line-height:1.8;color:#6d7b8d;margin-top:16px}
+.forensic-expanded{padding:10px 0 22px}.forensic-expanded-questions{display:flex;gap:30px;padding:16px 20px;background:#f5f7fa}
+.forensic-expanded-questions p{font-size:.9375rem}.forensic-expanded-work{display:grid;grid-template-columns:1fr 1fr;gap:22px 40px;margin-top:24px}
+.forensic-expanded-work h4{font-size:1rem;margin:0 0 8px}.forensic-expanded-work p{font-size:.9375rem;line-height:1.85}
+/* A connected, numbered process diagram shared by all three services. */
+.detail-process-chapter{min-height:var(--detail-chapter-height);padding:36px 0;display:flex;align-items:center;background:#f4f6f8}
+.detail-process-chapter .detail-chapter-heading{margin-bottom:40px}
+.service-process-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;list-style:none;padding:0;margin:0;text-align:center}
+.service-process-flow li{position:relative;min-width:0}
+.service-process-flow li:not(:last-child):before{content:'';position:absolute;top:43px;left:calc(50% + 45px);width:calc(100% - 58px);height:1px;background:#c3ccd6}
+.service-process-flow li:not(:last-child):after{content:'';position:absolute;right:-20px;top:40px;width:6px;height:6px;border-top:1px solid #bd916c;border-right:1px solid #bd916c;transform:rotate(45deg)}
+.process-node{position:relative;width:88px;height:88px;border:1px solid #b9c6d4;border-radius:50%;display:grid;place-items:center;background:#fff;color:#536980;margin:0 auto 21px}
+.service-process-flow li:first-child .process-node{border-color:#ce8b59;color:#b77345}
+.process-step{position:absolute;left:-5px;top:-5px;border-radius:50%;width:28px;height:28px;display:grid;place-items:center;background:#132235;color:#eef2f7;font:600 .75rem Manrope,sans-serif}
+.service-process-flow li:first-child .process-step{background:#c58250}
+.process-node svg{width:36px;height:36px}
+.service-process-flow h3{font-size:1.125rem;line-height:1.5;font-weight:650;margin-bottom:11px}
+.service-process-flow p{font-size:.9375rem;line-height:1.8;color:#6b7c90;max-width:230px;margin:0 auto;min-height:54px}
+.process-output{display:block;padding:13px 10px;border-top:1px solid #dce2e9;margin-top:18px;color:#41566e;font-size:.8125rem}
+.process-footnote{font-size:.8125rem;color:#7a8796;text-align:center;margin-top:26px}
+/* Incident overview and example each receive their own reading screen. */
+.sub-page .ir-services{padding:0}.sub-page .ir-service-list{border:0}
+.sub-page .ir-service{padding:0;border:0;margin:0}
+.sub-page .ir-service+.ir-service{margin:0;border-top:1px solid #cdd6e0}
+.ir-service-screen{min-height:var(--detail-chapter-height);padding:34px 0;display:flex;flex-direction:column;justify-content:center}
+.ir-service-screen .ir-service-intro{gap:70px;align-items:center}
+.ir-service-screen .ir-service-title-row{margin-bottom:30px}
+.detail-case-chapter{min-height:var(--detail-chapter-height);padding:30px 0;display:flex;flex-direction:column;justify-content:center;border-top:1px solid #d6dfe8}
+.detail-case-heading{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.detail-case-heading .detail-kicker{margin-bottom:10px;color:#98775c}
+.detail-case-heading h3{font-size:clamp(24px,2.4vw,32px);line-height:1.5;font-weight:650}
+.detail-case-badge{font-size:.8125rem;color:#876951;padding:6px 12px;background:#f8f3ed;white-space:nowrap}
+.detail-case-lead{font-size:1rem;line-height:1.8;color:#6b7b8e;margin:16px 0 22px;max-width:930px}
+.case-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;list-style:none;padding:0;margin:0}
+.case-flow li{border-top:2px solid #c8d2df;padding:18px 20px;background:#f4f6f9;min-width:0;position:relative}
+.case-flow li:first-child{border-color:#cc8b5c}.case-flow-step{float:right;font-size:.8125rem;color:#92a0b1}
+.case-flow-time{font:600 .8125rem/1.5 Manrope,sans-serif;color:#a17251}
+.case-flow h4{font-size:1.125rem;margin:10px 0 7px;font-weight:650}.case-flow p{font-size:.875rem;line-height:1.7;color:#6e8094}
+.case-flow code{display:block;font-size:.8125rem;color:#40566e;padding-top:13px;margin-top:13px;border-top:1px solid #dbe2eb;overflow-wrap:anywhere;line-height:1.7}
+.detail-case-note{font-size:.8125rem;color:#6d7d90;margin-top:19px;padding-left:14px;border-left:2px solid #c7946b;line-height:1.8}
+.detail-case-chapter .chapter-more>.ir-example{margin:0 0 20px;border:0}
+.sub-page .ir-preparation .ir-faq{margin-top:28px;padding-top:25px}
+.sub-page .ir-report{padding:25px 30px}.sub-page .ir-report li{padding-block:17px}
+.sub-page .resource-report-items article{padding-block:20px}
+@media(min-width:801px) and (max-height:760px){
+ .detail-chapter-heading{margin-bottom:22px}.detail-chapter-heading h2{font-size:30px}
+ .sub-page .detail-section[data-detail-chapter],.sub-page .detail-related[data-detail-chapter],.sub-page .ir-results[data-detail-chapter],.sub-page .ir-preparation[data-detail-chapter]{padding-block:24px}
+ .sub-page .forensic-analysis[data-detail-chapter]{padding:0}
+ .forensic-selector{padding-top:18px}.forensic-selector .detail-chapter-heading{margin-bottom:15px}.forensic-selector .detail-kicker{margin-bottom:8px}
+ .forensic-field-overview{padding-block:20px}.forensic-field-overview .resource-figure>div{height:220px}
+ .forensic-field-depth{padding-block:24px}.forensic-field-depth .detail-chapter-heading{margin-bottom:20px}.forensic-analysis-map li{padding:16px}
+ .detail-process-chapter{padding-block:26px}.detail-process-chapter .detail-chapter-heading{margin-bottom:30px}
+ .detail-case-chapter{padding-block:24px}.detail-case-heading h3{font-size:27px}.detail-case-lead{margin:12px 0 18px}.case-flow li{padding:14px 18px}
+}
+@media(max-width:1000px) and (min-width:801px){.forensic-field-overview{gap:28px;grid-template-columns:.8fr 1.2fr}.forensic-analysis-map{gap:12px}.forensic-analysis-map h3{font-size:1rem}.service-process-flow{gap:20px}.forensic-result-line{grid-template-columns:110px 1fr;gap:16px}.forensic-result-line ul{gap:12px}.case-flow{gap:14px}.detail-case-badge{white-space:normal;max-width:145px}}
+@media(max-width:800px){
+ .sub-page .detail-section[data-detail-chapter],.sub-page .detail-related[data-detail-chapter],.sub-page .ir-results[data-detail-chapter],.sub-page .ir-preparation[data-detail-chapter]{min-height:0;padding-block:50px}
+ .sub-page .forensic-analysis[data-detail-chapter]{padding:0}
+ .detail-chapter-heading{margin-bottom:26px}.detail-chapter-heading h2{font-size:27px}
+ .forensic-selector{padding-top:38px}.forensic-selector .detail-chapter-heading{text-align:left}
+ .forensic-tabs .resource-tablist{gap:8px}.forensic-tabs .resource-tablist button{padding:12px;min-height:76px}.forensic-tabs .resource-tablist small{font-size:.75rem}
+ .forensic-field-overview{min-height:0;grid-template-columns:1fr;gap:24px;padding:26px 0 40px}
+ .forensic-field-overview .resource-figure>div{height:230px}.forensic-field-overview .resource-copy h3{font-size:26px}
+ .forensic-field-depth{min-height:0;padding-block:42px}.forensic-analysis-map{grid-template-columns:1fr 1fr;gap:12px}.forensic-analysis-map li{padding:16px}
+ .forensic-result-line{display:block;padding-top:24px}.forensic-result-line ul{grid-template-columns:1fr;gap:10px;margin-top:14px}
+ .forensic-expanded-work{grid-template-columns:1fr}.forensic-expanded-questions{display:block}.forensic-expanded-questions p+p{margin-top:12px}
+ .detail-process-chapter{min-height:0;padding-block:50px}.detail-process-chapter .detail-chapter-heading{text-align:left;margin-bottom:35px}
+ .service-process-flow{display:flex;flex-direction:column;gap:28px;text-align:left}
+ .service-process-flow li{display:grid;grid-template-columns:64px 1fr;column-gap:22px}
+ .process-node{grid-row:1/4;width:64px;height:64px;margin:0}.process-node svg{width:29px;height:29px}.process-step{width:24px;height:24px;font-size:.6875rem}
+ .service-process-flow li:not(:last-child):before{top:67px;left:32px;width:1px;height:calc(100% - 43px)}.service-process-flow li:not(:last-child):after{display:none}
+ .service-process-flow h3{grid-column:2;font-size:1.125rem;margin:0 0 6px}.service-process-flow p{grid-column:2;min-height:0;max-width:none;margin:0}.process-output{grid-column:2;margin-top:11px;padding:10px 0 0}
+ .process-footnote{text-align:left;margin-top:32px}
+ .sub-page .detail-service-layout{min-height:0;padding-block:45px;gap:28px}.sub-page .ir-service-screen{min-height:0;padding-block:45px}
+ .ir-service-screen .ir-service-intro{gap:24px}.ir-service-screen .ir-service-title-row{margin-bottom:24px}
+ .detail-case-chapter{min-height:0;padding-block:40px}.detail-case-heading{display:block}.detail-case-badge{display:inline-block;margin-top:15px}.detail-case-heading h3{font-size:25px}
+ .case-flow{grid-template-columns:1fr;gap:14px}.case-flow li{padding:18px 20px}.case-flow h4{font-size:1.125rem}.detail-case-lead{font-size:.9375rem}
+ .sub-page .detail-related-links{margin-top:20px}.sub-page .ir-report{padding:24px}
+}
+@media(prefers-reduced-motion:reduce){html:has(.sub-page){scroll-behavior:auto}}
+@media(max-width:800px){.forensic-field-overview .resource-field-photo>div{height:auto;min-height:0;aspect-ratio:1.9}.forensic-field-overview .resource-field-photo img{aspect-ratio:1.9}.forensic-field-overview .resource-phone-photo img{object-position:65% 88%}}

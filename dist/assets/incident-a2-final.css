@@ -1,0 +1,10 @@
+/* Selected A2: initial response first, highlighted with A3's warm orange. */
+.irx-a2-final .ira-entry-quick{border-top:0}
+.irx-a2-final .ira-entry-quick>a.ira2-urgent-guide{margin-top:0;margin-bottom:14px;border:1px solid #e5a477;background:#e5a477;color:#192e3e}
+.irx-a2-final .ira-entry-quick>a.ira2-urgent-guide:hover{background:#f0b68e;border-color:#f0b68e}
+.irx-a2-final .ira-entry-quick .ira2-urgent-guide strong{color:#192e3e}
+.irx-a2-final .ira-entry-quick .ira2-urgent-guide span{color:#344d5b}
+.irx-a2-final .ira-entry-quick .ira2-urgent-guide :is(svg,small,b){color:#75573f}
+.irx-a2-final .ira-final-preview>span{padding:6px 9px;font-size:10px;line-height:1.5;color:#9a6948;border-right:1px solid #e1e7ea}
+@media(min-width:1100px) and (max-height:780px){.irx-a2-final .ira-entry-quick>a.ira2-urgent-guide{margin-top:0;margin-bottom:11px}}
+@media(max-width:760px){.irx-a2-final .ira-entry-quick>a.ira2-urgent-guide{margin-top:0;margin-bottom:15px}}

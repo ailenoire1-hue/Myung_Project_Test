@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" role="img" aria-labelledby="title desc">
+<title id="title">서울고등법원 감정 수행 이력</title><desc id="desc">2018년과 2022년 감정촉탁 및 감정인 지정 수행 이력을 요약한 그래픽</desc>
+<rect width="1120" height="560" fill="#e9edf2"/><rect x="104" y="62" width="912" height="436" rx="6" fill="#fdfdfd"/>
+<path d="M150 121h60" stroke="#bb794a" stroke-width="3"/><text x="231" y="128" fill="#8b735f" font-size="19" font-family="Arial,sans-serif" letter-spacing="3">FORENSIC APPRAISAL</text>
+<text x="150" y="224" fill="#25364b" font-size="46" font-family="sans-serif" font-weight="600">서울고등법원</text>
+<text x="150" y="285" fill="#687689" font-size="27" font-family="sans-serif">감정촉탁 · 감정인 지정 수행</text>
+<path d="M150 329h820" stroke="#dde3ea"/>
+<text x="150" y="412" fill="#b47649" font-size="48" font-family="Arial,sans-serif">2018</text><circle cx="306" cy="395" r="3" fill="#b7c0cb"/><text x="340" y="412" fill="#b47649" font-size="48" font-family="Arial,sans-serif">2022</text>
+<text x="150" y="457" fill="#8692a2" font-size="17" font-family="sans-serif">디지털포렌식 감정 수행 이력</text>
+</svg>

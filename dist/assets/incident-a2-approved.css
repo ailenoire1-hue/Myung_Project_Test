@@ -1,0 +1,4 @@
+/* Old links land at the new chapter heading, clear of the fixed navigation. */
+.ir-live-a2 main>section{position:relative}
+.ir-live-a2 .ir-live-anchor{position:absolute;top:0;left:0;width:0;height:0;pointer-events:none;scroll-margin-top:calc(var(--dp-header-height,94px) + var(--fr-topbar-height,58px))}
+.ir-live-a2 #top .ir-live-anchor{scroll-margin-top:var(--dp-header-height,94px)}
