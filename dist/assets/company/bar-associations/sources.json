@@ -1,0 +1,57 @@
+{
+  "verifiedDate": "2026-10-14",
+  "assets": [
+    {
+      "names": [
+        "강원지방변호사회",
+        "충북지방변호사회"
+      ],
+      "file": "bar-emblem-ppt.png",
+      "size": [
+        79,
+        75
+      ],
+      "kind": "Shared provincial-bar emblem visibly used beside all four requested associations in the supplied cooperation deck",
+      "sourceFile": "참고 자료 및 사진/[디지털포렌식 업무협약 제안] (주)명정보기술 디지털포렌식센터.pptx",
+      "slide": 26,
+      "pptMedia": "ppt/media/image145.png",
+      "sourceImage": "reference-new-partnerships/image145.png",
+      "preservedSourceImage": "bar-associations-mou-ppt.png",
+      "crop": [
+        333,
+        471,
+        412,
+        546
+      ],
+      "processing": "Native-resolution rectangular logo art extraction only. Original orange colors and white background preserved. No recreation or background removal. Names must be typeset separately in HTML.",
+      "officialWebsiteChecks": {
+        "강원": "http://www.gwbar.or.kr/ returned 403; association URL confirmed in https://www.kjbar.or.kr/?channel=42",
+        "충북": "https://www.cbbar.or.kr/ returned 403; association URL confirmed by Cheongju District Court public legal-advice listing"
+      }
+    },
+    {
+      "name": "제주지방변호사회",
+      "file": "jeju-logo.png",
+      "svgOriginal": "jeju-logo.svg",
+      "size": [
+        1698,
+        309
+      ],
+      "sourcePage": "https://www.jejubar.or.kr/",
+      "sourceURL": "https://www.jejubar.or.kr/images/site_info/_20240529152849_7S9Aitoo.svg",
+      "processing": "Official original SVG rasterized using Chromium. No artwork changes."
+    },
+    {
+      "name": "전북지방변호사회",
+      "file": "jeonbuk-logo.png",
+      "size": [
+        234,
+        47
+      ],
+      "sourcePage": "https://www.jbbar.or.kr/",
+      "sourceURL": "https://www.jbbar.or.kr/theme/eb_busi_003/img/site_logo.png",
+      "visibleWordmark": "전라북도지방변호사회",
+      "processing": "Official original PNG downloaded unchanged. Website serves the longer provincial-name wordmark; use 전북지방변호사회 for the HTML card label."
+    }
+  ]
+}

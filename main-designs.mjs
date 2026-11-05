@@ -1,0 +1,19 @@
+export const mainDesigns = [
+  {id:'a',name:'다크 타이포',summary:'검정 배경, 중앙의 큰 문구, 가장자리의 절제된 빛. 브랜드의 인상을 선명하게 남기는 방향입니다.',color:'#101114'},
+  {id:'b',name:'화이트 에디토리얼',summary:'넓은 흰 여백, 정돈된 문구, 정교한 데이터 오브젝트. 밝고 명료한 기업 홈페이지 방향입니다.',color:'#f5f6f8'},
+  {id:'c',name:'랩 & 테크',summary:'분석 공간 이미지와 짙은 네이비, 하단의 서비스 메뉴. 센터의 전문성을 직관적으로 보여주는 방향입니다.',color:'#101d2b'}
+];
+const heading = '<h1><span>기업 보안사고,</span><span><em>조사·예방·대응</em>까지.</span></h1>';
+const description = '<p class="design-description">(주)명정보기술 디지털포렌식센터가 함께합니다.</p>';
+const actions = '<div class="design-actions"><button class="design-button" data-contact>전문가 상담</button><a class="design-button secondary" href="#services">서비스 살펴보기</a></div>';
+const serviceLinks = (services, detailed=false) => `<nav class="design-service-nav" aria-label="주요 서비스">${services.map((s,i)=>`<a href="${s.slug}.html"><span class="design-service-number">0${i+1}</span><div><strong>${s.name}</strong>${detailed?`<span class="design-service-note">${['PC · 모바일 · 디지털 증거 분석','랜섬웨어 · 해킹 · 정보 유출 조사','포렌식 · 보안 · 데이터 저장'][i]}</span>`:''}</div><span class="design-service-plus" aria-hidden="true">+</span></a>`).join('')}</nav>`;
+export function mainDesignMarkup(id, services) {
+  const art = id==='a'?'<div class="design-art a-art" aria-hidden="true"><img src="assets/main-a-art.jpg" alt="" width="1672" height="941"></div>':id==='b'?'<div class="design-art b-art" aria-hidden="true"><img src="assets/main-b-art.jpg" alt="" width="1254" height="1254"><span class="b-art-caption">DIGITAL FORENSICS & SECURITY</span></div>':'<div class="design-art c-art" aria-hidden="true"><img src="assets/main-c-art.jpg" alt="" width="1672" height="941"></div>';
+  return `<section class="design-hero design-${id}">${art}<div class="design-content"><span class="design-eyebrow">${id==='c'?'MYUNG DIGITAL FORENSIC CENTER':'DIGITAL FORENSICS & SECURITY'}</span>${heading}${description}${actions}</div>${serviceLinks(services,id!=='a')}<div class="design-scroll" aria-hidden="true"><span>SCROLL TO EXPLORE</span><i></i></div></section>`;
+}
+export function mainDesignTools(id) {
+  return `<nav class="main-design-tools" aria-label="메인 디자인 시안"><span>MAIN DESIGN</span>${mainDesigns.map(v=>`<a href="main-${v.id}.html?skip=1" ${id===v.id?'aria-current="page"':''}>${v.id.toUpperCase()}안</a>`).join('')}<a class="all-designs" href="main-previews.html">3안 비교</a></nav>`;
+}
+export function mainComparisonPage() {
+  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>메인 디자인 3안 | 명디지털포렌식센터</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/main-designs.css"><script src="assets/main-designs.js" defer></script></head><body class="main-comparison-page"><main class="main-comparison"><header class="main-comparison-heading"><a class="comparison-brand" href="index.html">MDFC<span>명디지털포렌식센터</span></a><span class="comparison-label">MAIN PAGE · 3 DESIGN DIRECTIONS</span><h1>메인 화면, 세 가지 새로운 방향.</h1><p>같은 서비스 문구에 서로 다른 배경과 배치를 적용했습니다.<br>각 시안을 전체 화면으로 열어 비교해 보세요.</p></header><div class="main-comparison-grid">${mainDesigns.map(v=>`<article class="main-option"><div class="main-option-heading"><span>OPTION ${v.id.toUpperCase()}</span><i style="background:${v.color}" aria-hidden="true"></i></div><div class="main-option-frame"><iframe src="main-${v.id}.html?skip=1&gallery=1" title="${v.id.toUpperCase()}안 메인 디자인" tabindex="-1" loading="eager"></iframe></div><div class="main-option-copy"><h2>${v.name}</h2><p>${v.summary}</p><div class="main-option-links"><a class="main-option-open" href="main-${v.id}.html?skip=1">${v.id.toUpperCase()}안 전체 화면</a><a href="main-${v.id}.html?intro=1">인트로부터 보기</a></div></div></article>`).join('')}</div><p class="comparison-footnote">공통 서비스: 디지털포렌식 · 침해사고 조사 · 기업 보안 관리 서비스</p></main></body></html>`;
+}

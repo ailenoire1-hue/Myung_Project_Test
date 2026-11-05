@@ -1,0 +1,60 @@
+/* White, spacious service sections inspired by the requested Theori reference. */
+.home-page .home-expertise,.home-page .home-service-section,.home-page .home-foundation{background:#fff;color:#1a2029;padding:110px 0}
+.home-section-heading{text-align:center;max-width:1000px;margin:0 auto 58px}
+.section-eyebrow{display:block;color:#89919b;font-size:14px;font-weight:600;margin-bottom:22px;letter-spacing:.015em}
+.home-section-heading h2{font-size:clamp(30px,3.45vw,46px);font-weight:650;line-height:1.55;letter-spacing:-.055em;color:#1a2029}
+.home-section-heading>p{color:#7a8390;font-size:17px;line-height:1.9;margin-top:25px;letter-spacing:-.03em}
+.home-page .home-expertise{position:relative;isolation:isolate;padding-top:110px;padding-bottom:115px;overflow:hidden}
+.home-expertise:before{position:absolute;content:'';z-index:-1;inset:45% -10% 0 40%;background:#f7f8fa;transform:skewY(14deg)}
+.expertise-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;max-width:1130px;margin:auto}
+.expertise-card{display:flex;flex-direction:column;align-items:flex-start;padding:40px 34px 31px;background:#fff;border:1px solid #e0e3e8;min-height:337px;transition:border-color .25s,box-shadow .25s}
+.expertise-card:hover{border-color:#cb9673;box-shadow:0 5px 20px #b0866610}
+.expertise-icon{width:43px;height:43px;color:#8a919b;display:block;margin-bottom:30px;transition:color .2s}
+.expertise-icon svg{width:100%;height:100%}
+.expertise-card:hover .expertise-icon{color:#b37951}
+.expertise-card h3{font-size:25px;letter-spacing:-.055em;font-weight:650;color:#202731}
+.expertise-card p{font-size:16px;line-height:1.8;color:#7a8290;margin:22px 0 29px}
+.expertise-more{font-size:12px;line-height:1.8;color:#404a58;margin-top:auto;border-bottom:1px solid #cdd2d9;padding-bottom:3px}
+.home-page .home-service-section{padding:105px 0 110px}
+.home-page .home-service-section.subtle-section{background:#fafbfc}
+.home-service-section .home-section-heading{margin-bottom:65px}
+.service-feature{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:90px;max-width:1130px;margin:auto}
+.feature-reverse .service-art{order:2}.feature-reverse .service-feature-copy{order:1}
+.service-art{position:relative;width:100%;aspect-ratio:1.18;background:#f4f6f8;border:1px solid #e9ecf0;display:flex;justify-content:center;align-items:center;overflow:hidden}
+.service-art svg{width:86%;height:86%}
+.art-label{position:absolute;top:26px;left:28px;color:#8b96a5;font-size:9px;letter-spacing:.14em}
+.art-orbit{fill:none;stroke:#d8dfe7;stroke-width:.6}
+.art-equipment{fill:#f4f6f8;stroke:#5f6d80;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.art-accent{fill:none;stroke:#b97d53;stroke-width:1.6}
+.art-footnote{position:absolute;bottom:23px;left:0;right:0;text-align:center;color:#9ca5b2;font-size:8px;letter-spacing:.15em}
+.service-feature-copy h3{font-size:31px;font-weight:650;letter-spacing:-.055em}
+.service-feature-copy>p{font-size:16px;color:#828b97;line-height:1.9;margin-top:17px;max-width:420px}
+.service-feature-copy ul{list-style:none;margin:25px 0 29px;padding:0;max-width:400px}
+.service-feature-copy li+li{margin-top:11px}
+.service-feature-copy li a{font-size:15px;color:#5f6d7f;position:relative;padding-left:18px;display:inline-block}
+.service-feature-copy li a:before{content:'';position:absolute;top:.83em;left:0;width:5px;height:1px;background:#bc9478}
+.service-feature-copy li a:hover{color:#a66940}
+.home-page .service-explore{background:#fff;border:1px solid #cfd5de;color:#313c4c;border-radius:0;padding:10px 22px;min-height:43px;font-size:13px}
+.home-page .service-explore:hover{background:#f3f5f8;transform:none}
+.home-page .home-foundation{background:#f5f7f9;padding-bottom:110px}
+.foundation-feature{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:80px;max-width:1130px;margin:auto}
+.foundation-photo{overflow:hidden}.foundation-photo img{height:360px;width:100%;object-fit:cover;filter:grayscale(1);opacity:.85}
+.foundation-caption{font-size:9px;letter-spacing:.15em;color:#8a94a2;display:block;margin-bottom:15px}
+.foundation-copy h3{font-size:25px;line-height:1.6;font-weight:600}
+.foundation-copy>p{font-size:15px;line-height:1.95;color:#7a8492;margin-top:16px}
+.national-experience{margin:25px 0;padding-left:18px;border-left:1px solid #cbd2dc}
+.national-experience>span{font-size:11px;color:#8d97a5}
+.national-experience p{font-size:16px;color:#536074;margin-top:6px}
+.foundation-link{font-size:12px;color:#465267;border-bottom:1px solid #b6bfca;padding-bottom:5px;display:inline-block}
+.home-page .contact-band{background:#0a0e16}.home-page .contact-band .eyebrow{color:#919dac}.home-page .footer{background:#070b12}.home-page .contact-actions p{color:#8895a7}
+@media(max-width:1100px){.expertise-card{padding:34px 25px 28px}.expertise-card h3{font-size:23px}.expertise-card p{font-size:15px}.service-feature,.foundation-feature{gap:50px}.service-feature-copy h3{font-size:28px}.foundation-copy h3{font-size:23px}}
+@media(max-width:800px){
+ .home-page .home-expertise,.home-page .home-service-section,.home-page .home-foundation{padding:74px 0}
+ .home-section-heading{margin-bottom:36px}.home-section-heading h2{font-size:clamp(25px,5.8vw,38px);line-height:1.55}.section-eyebrow{font-size:12px;margin-bottom:20px}.home-section-heading>p{font-size:14px;line-height:1.9;margin-top:21px}
+ .expertise-grid{grid-template-columns:1fr;gap:17px}.expertise-card{padding:28px;min-height:0}.expertise-icon{width:34px;height:34px;margin-bottom:18px}.expertise-card h3{font-size:24px}.expertise-card p{font-size:15px;margin:13px 0 20px}.expertise-more{font-size:11px}
+ .home-service-section .home-section-heading{margin-bottom:37px}.service-feature,.foundation-feature{grid-template-columns:1fr;gap:30px}.feature-reverse .service-art,.feature-reverse .service-feature-copy{order:initial}
+ .service-art{max-width:500px;margin:auto}.art-label{font-size:7px;top:20px;left:22px}.art-footnote{font-size:6px;bottom:18px}
+ .service-feature-copy h3{font-size:26px}.service-feature-copy>p{font-size:14px;margin-top:14px}.service-feature-copy ul{margin:20px 0 24px}.service-feature-copy li a{font-size:14px}
+ .foundation-photo img{height:250px}.foundation-copy h3{font-size:23px}.foundation-copy>p{font-size:14px}.national-experience p{font-size:14px}
+}
+@media(max-width:380px){.home-section-heading h2{font-size:23px}.expertise-card h3{font-size:22px}.expertise-card{padding:25px}.foundation-copy h3{font-size:21px}}

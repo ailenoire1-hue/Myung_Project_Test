@@ -1,0 +1,95 @@
+.is-b{--ir-ink:#edf4f7;--ir-muted:#adc0cf;--ir-line:#2b4051;--ir-accent:#dfa783;background:#0d1824}
+.is-b .ir-section{background:#0d1824;color:#edf4f7}
+.is-b .ir-heading h2{color:#f0f5f8}
+.is-b .ir-heading .ir-eyebrow{color:#dca581}
+.is-b .ir-heading .ir-lead{color:#adc0cf}
+.is-b .ir-preparation{background:#192d3e}
+.is-b .ir-section-caption{color:#96aebf;border-color:#293e4f}
+.is-b .isb-service-explorer{width:100%;min-width:0}
+.is-b .isb-phase-tabs{display:grid;grid-template-columns:repeat(var(--isb-phase-count),minmax(0,1fr));gap:12px;margin-bottom:16px}
+.is-b .isb-phase-tabs button{position:relative;display:flex;align-items:center;text-align:left;gap:14px;padding:16px 20px;border:1px solid #30485b;border-radius:5px;background:#132333;color:#e1edf2;cursor:pointer;font-family:inherit;transition:background .2s,border-color .2s}
+.is-b .isb-phase-tabs button:hover{background:#1b3445;border-color:#638fa5}
+.is-b .isb-phase-tabs button[aria-selected=true]{background:#244457;border-color:#7eb8c7}
+.is-b .isb-phase-tabs button[aria-selected=true]:after{content:'';position:absolute;bottom:-1px;left:20px;right:20px;height:2px;background:#e0ac85}
+.is-b .isb-phase-number{color:#7898ae;font-size:13px;font-weight:500;font-family:'Manrope',sans-serif;align-self:flex-start;margin-top:4px}
+.is-b .isb-phase-tabs button[aria-selected=true] .isb-phase-number{color:#e2b08e}
+.is-b .isb-phase-label{flex:1;min-width:0}
+.is-b .isb-phase-label strong{display:block;font-size:18px;font-weight:650;letter-spacing:-.025em;line-height:1.45;word-break:keep-all}
+.is-b .isb-phase-label small{display:block;color:#a8c0ce;font-size:13px;line-height:1.5;margin-top:5px;word-break:keep-all}
+.is-b .isb-phase-arrow{font-size:22px;color:#8bb7c8;font-weight:400;margin-left:auto}
+.is-b .isb-phase-panel{display:grid;grid-template-columns:1.05fr 1fr;min-height:302px;border:1px solid #2b4557;border-radius:6px;overflow:hidden;background:#122636}
+.is-b .isb-phase-panel[hidden]{display:none!important}
+.is-b .isb-visual{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:17px 26px 15px;background:radial-gradient(ellipse at 50% 38%,#213e50 0,#142c3c 56%,#112433 100%);border-right:1px solid #304b5e;margin:0;min-width:0}
+.is-b .isb-visual-kicker{position:absolute;left:22px;top:17px;font-size:10px;letter-spacing:.14em;color:#83a7bd;font-family:'Manrope',sans-serif;font-weight:600}
+.is-b .isb-visual .isb-illustration{display:block;width:min(100%,370px);height:228px;flex:none;margin:0 auto;overflow:visible}
+.is-b .isb-visual figcaption{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;color:#c0d7e2;font-size:13px;line-height:1.5;margin-top:2px}
+.is-b .isb-visual figcaption b{font-weight:400;font-size:16px;color:#749eb3}
+.is-b .isb-service-detail{padding:20px 30px;align-self:center;min-width:0}
+.is-b .isb-detail-kicker{color:#dfa983;font-size:12px;line-height:1.5;letter-spacing:.01em;margin:0 0 8px}
+.is-b .isb-service-detail h3{margin:0 0 16px;color:#f0f6fa;font-size:26px;line-height:1.45;letter-spacing:-.04em;word-break:keep-all}
+.is-b .isb-service-detail ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.is-b .isb-service-detail li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#c0d1dd;line-height:1.55;word-break:keep-all}
+.is-b .isb-service-detail li>span{color:#87c3d0;font-size:12px;flex:none;line-height:1.8}
+.is-b .isb-output{display:flex;align-items:flex-start;gap:15px;border-top:1px solid #335061;margin-top:17px;padding-top:13px;font-size:13px;line-height:1.6}
+.is-b .isb-output strong{font-size:12px;font-weight:550;color:#d3a180;white-space:nowrap}
+.is-b .isb-output>span{color:#bad2df;word-break:keep-all}
+.is-b .isb-scope-note{margin:8px 0 0;color:#91aabd;font-size:12px;line-height:1.6;word-break:keep-all}
+@media(min-width:1100px) and (max-height:780px){
+ .is-b .isb-phase-tabs{gap:10px;margin-bottom:12px}
+ .is-b .isb-phase-tabs button{padding:11px 16px;gap:11px}
+ .is-b .isb-phase-number{font-size:11px;margin-top:3px}
+ .is-b .isb-phase-label strong{font-size:16px;line-height:1.35}
+ .is-b .isb-phase-label small{font-size:13px;margin-top:3px;line-height:1.4}
+ .is-b .isb-phase-arrow{font-size:19px}
+ .is-b .isb-phase-panel{min-height:248px}
+ .is-b .isb-visual{padding:14px 20px 11px}
+ .is-b .isb-visual-kicker{left:16px;top:13px;font-size:9px}
+ .is-b .isb-visual .isb-illustration{height:191px;width:min(100%,328px)}
+ .is-b .isb-visual figcaption{font-size:13px;gap:9px;margin-top:0}
+ .is-b .isb-service-detail{padding:16px 23px}
+ .is-b .isb-detail-kicker{font-size:11px;margin-bottom:5px}
+ .is-b .isb-service-detail h3{font-size:22px;margin-bottom:10px;line-height:1.35}
+ .is-b .isb-service-detail ul{gap:6px}
+ .is-b .isb-service-detail li{font-size:13px;line-height:1.45}
+ .is-b .isb-output{margin-top:10px;padding-top:9px;font-size:13px;line-height:1.45;gap:12px}
+ .is-b .isb-output strong{font-size:11px}
+ .is-b .isb-scope-note{font-size:11px;margin-top:6px;line-height:1.45}
+}
+@media(max-width:1099px){
+ .is-b .isb-phase-tabs{gap:9px}
+ .is-b .isb-phase-tabs button{padding:15px 13px;gap:9px}
+ .is-b .isb-phase-label strong{font-size:16px}
+ .is-b .isb-phase-label small{font-size:12px}
+ .is-b .isb-phase-arrow{display:none}
+ .is-b .isb-phase-panel{grid-template-columns:1fr}
+ .is-b .isb-visual{border-right:0;border-bottom:1px solid #304b5e;padding:22px 25px}
+ .is-b .isb-visual .isb-illustration{height:250px;width:min(100%,390px)}
+ .is-b .isb-service-detail{padding:28px 30px}
+ .is-b .isb-service-detail h3{font-size:26px}
+ .is-b .isb-service-detail h3 br{display:none}
+ .is-b .isb-service-detail ul{gap:11px}
+ .is-b .isb-service-detail li{font-size:15px}
+ .is-b .isb-output{font-size:14px}
+ .is-b .isb-scope-note{font-size:13px}
+}
+@media(max-width:680px){
+ .is-b .isb-phase-tabs{grid-template-columns:1fr;gap:7px;margin-bottom:14px}
+ .is-b .isb-phase-tabs button{padding:12px 14px;gap:12px}
+ .is-b .isb-phase-number{font-size:12px}
+ .is-b .isb-phase-label strong{font-size:16px}
+ .is-b .isb-phase-label small{font-size:13px;margin-top:3px}
+ .is-b .isb-phase-arrow{display:block;font-size:20px}
+ .is-b .isb-visual{padding:24px 14px 18px}
+ .is-b .isb-visual-kicker{left:14px;top:14px;font-size:9px}
+ .is-b .isb-visual .isb-illustration{width:100%;height:auto;min-height:185px;max-height:230px}
+ .is-b .isb-visual figcaption{font-size:11px;gap:6px;margin-top:3px}
+ .is-b .isb-visual figcaption b{font-size:13px}
+ .is-b .isb-service-detail{padding:23px 20px}
+ .is-b .isb-detail-kicker{font-size:12px}
+ .is-b .isb-service-detail h3{font-size:24px;margin-bottom:16px;line-height:1.45}
+ .is-b .isb-service-detail li{font-size:14px;line-height:1.7}
+ .is-b .isb-output{display:block;margin-top:18px;padding-top:14px}
+ .is-b .isb-output strong{display:block;margin-bottom:5px}
+ .is-b .isb-scope-note{font-size:12px;line-height:1.7}
+}
+@media(prefers-reduced-motion:reduce){.is-b .isb-phase-tabs button{transition:none}}

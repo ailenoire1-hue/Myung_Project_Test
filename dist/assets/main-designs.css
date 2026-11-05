@@ -1,0 +1,198 @@
+/* Three independent directions; shared copy makes the visual choices comparable. */
+.main-design-page{--main-orange:#f28643;--main-ink:#172130}
+.main-design-page .header-inner{min-height:96px}
+.main-design-page .header .brand-mark i{background:var(--main-orange)}
+.design-hero{position:relative;min-height:max(750px,100svh);overflow:hidden;color:#fff;isolation:isolate;background:#101114}
+.design-art{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.design-art img{width:100%;height:100%;object-fit:cover}
+.design-content{position:relative;z-index:1}
+.design-eyebrow{display:block;font:600 12px/1.6 'Manrope',sans-serif;letter-spacing:.16em;color:#aaadb7;margin-bottom:25px}
+.design-hero h1{font-size:clamp(46px,5.2vw,76px);line-height:1.37;letter-spacing:-.065em;font-weight:700}
+.design-hero h1 span{display:block;white-space:nowrap}
+.design-hero h1 em{color:var(--main-orange);font-style:normal}
+.design-description{color:#c8cbd0;font-size:18px;letter-spacing:-.025em;line-height:1.8;margin-top:24px}
+.design-actions{display:flex;gap:12px;margin-top:34px}
+.design-button{display:inline-flex;justify-content:center;align-items:center;background:var(--main-orange);color:#101114;padding:14px 26px;border:1px solid var(--main-orange);font-size:14px;font-weight:600;line-height:1.5;transition:background .2s,color .2s}
+.design-button:hover{background:#ffa36c;border-color:#ffa36c}
+.design-button.secondary{border-color:#ffffff40;background:transparent;color:#e5e7ec}
+.design-button.secondary:hover{background:#ffffff12}
+.design-service-nav{display:flex;position:absolute;z-index:1;left:6.25%;right:6.25%;bottom:64px}
+.design-service-nav a{display:flex;align-items:center;flex:1;gap:20px;padding:22px 30px;transition:background .25s}
+.design-service-nav a:hover{background:#ffffff08}
+.design-service-number{font:500 12px/1.6 'Manrope',sans-serif;letter-spacing:.05em;color:#858c96;align-self:flex-start;padding-top:5px}
+.design-service-nav strong{display:block;font-size:18px;line-height:1.6;font-weight:500;letter-spacing:-.04em}
+.design-service-note{display:block;font-size:13px;line-height:1.6;color:#a4adba;margin-top:6px}
+.design-service-plus{margin-left:auto;font-size:24px;font-weight:400;color:var(--main-orange)}
+.design-scroll{position:absolute;bottom:22px;left:6.25%;right:6.25%;display:flex;justify-content:flex-end;align-items:center;gap:15px;color:#6b7482;font:500 10px/1.6 'Manrope',sans-serif;letter-spacing:.12em}
+.design-scroll i{display:block;width:1px;height:18px;background:currentColor}
+
+/* A: centred typography over restrained, edge-lit glass. */
+.design-a{background:#0c0d10;display:flex;align-items:center;justify-content:center;padding:155px 6.25% 220px}
+.a-art{inset:0;opacity:.85}
+.a-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0c0d1020,#0c0d1010 70%,#0c0d1000)}
+.design-a .design-content{text-align:center;max-width:1000px}
+.design-a .design-eyebrow{color:#a1a4ae;margin-bottom:27px}
+.design-a h1{font-size:clamp(50px,5.6vw,82px);font-weight:600;line-height:1.3;letter-spacing:-.06em}
+.design-a h1 span:first-child{font-size:.86em;font-weight:500;margin-bottom:10px}
+.design-a .design-description{color:#b5b8c0;font-size:17px;margin-top:30px}
+.design-a .design-actions{justify-content:center;margin-top:32px}
+.design-a .design-button{background:transparent;color:#f49a64;border-color:#f49a6470;min-width:140px}
+.design-a .design-button:hover{background:#f2864314}
+.design-a .design-button.secondary{border-color:#ffffff30;color:#b7bbc4}
+.design-a .design-service-nav{max-width:960px;left:50%;right:auto;width:80%;transform:translateX(-50%);bottom:76px;border-top:1px solid #ffffff24}
+.design-a .design-service-nav a{padding:25px 22px;gap:17px}
+.design-a .design-service-nav a+a{border-left:1px solid #ffffff12}
+.design-a .design-service-nav strong{font-size:16px;color:#c4c7d0}
+.design-a .design-service-plus{font-size:20px;color:#bd8b6d}
+
+/* B: bright editorial grid, a single precise data object. */
+.main-design-b .header{color:var(--main-ink);border-bottom:1px solid #17213012}
+.main-design-b .header .brand-mark,.main-design-b .header .brand-name{color:var(--main-ink)}
+.main-design-b .header .brand-name small{color:#66717f}
+.main-design-b .header .nav-contact{color:var(--main-ink);border-color:#17213055}
+.main-design-b .header .menu-toggle span{background:var(--main-ink)}
+.design-b{background:#f7f8fa;color:var(--main-ink);display:flex;align-items:center;padding:155px 6.25% 235px}
+.design-b .design-content{width:60%;max-width:850px}
+.design-b .design-eyebrow{color:#78828e;padding-left:32px;position:relative;margin-bottom:30px}
+.design-b .design-eyebrow:before{content:'';position:absolute;left:0;top:9px;height:2px;width:20px;background:var(--main-orange)}
+.design-b h1{font-weight:700;font-size:clamp(43px,4.6vw,68px);line-height:1.4}
+.design-b .design-description{color:#5e6977;font-size:18px;max-width:450px;margin-top:27px}
+.design-b .design-actions{margin-top:32px}
+.design-b .design-button{background:#172130;border-color:#172130;color:#fff}
+.design-b .design-button:hover{background:#2c3c51}
+.design-b .design-button.secondary{border-color:#bcc4ce;color:#455264;background:transparent}
+.design-b .design-button.secondary:hover{background:#e9edf2}
+.b-art{inset:96px 0 175px 57%;background:#f4f5f7}
+.b-art img{object-fit:cover;object-position:center 60%}
+.b-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#f7f8fa,transparent 20%)}
+.b-art-caption{position:absolute;left:30px;bottom:23px;z-index:1;font:500 10px/1.6 'Manrope',sans-serif;letter-spacing:.15em;color:#9a9fa8}
+.design-b .design-service-nav{bottom:65px;background:#fff;border-top:2px solid var(--main-orange);border-bottom:1px solid #dce1e8}
+.design-b .design-service-nav a+a{border-left:1px solid #e2e6eb}
+.design-b .design-service-nav a:hover{background:#f4f6f9}
+.design-b .design-service-number{color:#97a1ae}
+.design-b .design-service-note{color:#75818f}
+.design-b .design-service-plus{color:#919baa}
+.design-b .design-scroll{color:#8c98a7}
+
+/* C: a photographic lab atmosphere and an architectural service band. */
+.design-c{background:#101d2b;display:flex;align-items:center;padding:160px 6.25% 245px}
+.c-art{inset:0 0 180px}
+.c-art img{object-position:center;opacity:.9}
+.c-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#081320ee,#081320b3 38%,#08132025 75%),linear-gradient(0deg,#101d2b,transparent 35%)}
+.design-c .design-content{width:75%;max-width:1000px}
+.design-c .design-eyebrow{color:#bfc8d4;font-size:11px;letter-spacing:.16em;margin-bottom:26px}
+.design-c h1{font-size:clamp(48px,5vw,72px);font-weight:600;line-height:1.35}
+.design-c h1 em{color:#f39457}
+.design-c .design-description{color:#ced5df;font-size:18px;margin-top:28px}
+.design-c .design-actions{margin-top:31px}
+.design-c .design-button{background:#fff;color:#172130;border-color:#fff}
+.design-c .design-button:hover{background:#f6e7db}
+.design-c .design-button.secondary{background:transparent;color:#d3dbe5;border-color:#bdc9d455}
+.design-c .design-service-nav{bottom:60px;border-top:1px solid #a5b7ce26;background:#101d2b;left:0;right:0;padding:0 6.25%}
+.design-c .design-service-nav a{padding:24px 0;gap:22px}
+.design-c .design-service-nav a+a{margin-left:40px;padding-left:30px;border-left:1px solid #a5b7ce22}
+.design-c .design-service-nav strong{font-size:18px}
+.design-c .design-service-number{color:#a7b2c0}
+.design-c .design-service-plus{display:none}
+.design-c .design-scroll{color:#728499}
+.main-design-page .contact-band{background:#142336}
+.main-design-page .footer{background:#0c1624}
+
+/* Small review controls stay separate from the site's service navigation. */
+.main-design-tools{position:fixed;z-index:40;left:24px;bottom:18px;display:flex;align-items:center;gap:4px;padding:6px;background:#fff;color:#172130;border:1px solid #dde2e9;box-shadow:0 4px 22px #00000016;font-size:12px;line-height:1.5}
+.main-design-tools>span{padding:4px 9px;font:600 9px/1.6 'Manrope',sans-serif;letter-spacing:.1em;color:#8c96a3}
+.main-design-tools a{padding:6px 11px}
+.main-design-tools a:hover{background:#f0f2f5}
+.main-design-tools a[aria-current]{background:#172130;color:#fff}
+.main-design-tools .all-designs{border-left:1px solid #dde2e9;margin-left:4px}
+.intro-pending .main-design-tools{visibility:hidden}
+.main-design-embed .main-design-tools{display:none}
+html.main-design-embed,html.main-design-embed body{overflow:hidden}
+
+/* Comparison gallery. */
+.main-comparison-page{background:#f1f3f6;color:#172130}
+.main-comparison{max-width:1600px;margin:auto;padding:40px 38px 35px}
+.comparison-brand{display:flex;align-items:center;gap:13px;font:800 26px/1.5 'Manrope',sans-serif;letter-spacing:-.06em;margin-bottom:30px}
+.comparison-brand span{font:600 13px/1.5 'Noto Sans KR',sans-serif;letter-spacing:-.025em}
+.comparison-label{font:600 11px/1.6 'Manrope',sans-serif;letter-spacing:.12em;color:#8a96a6}
+.main-comparison-heading h1{font-size:32px;font-weight:600;letter-spacing:-.045em;margin-top:9px}
+.main-comparison-heading p{font-size:15px;line-height:1.8;color:#798697;margin-top:14px}
+.main-comparison-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:30px}
+.main-option{background:#fff;border:1px solid #dde3eb;overflow:hidden}
+.main-option-heading{display:flex;align-items:center;justify-content:space-between;padding:13px 20px;font:600 11px/1.6 'Manrope',sans-serif;letter-spacing:.1em;color:#6c7889}
+.main-option-heading i{display:block;width:17px;height:17px;border:1px solid #dde3eb}
+.main-option-frame{position:relative;width:100%;overflow:hidden;background:#101114}
+.main-option-frame iframe{position:absolute;left:0;top:0;width:1200px;height:750px;border:0;transform-origin:top left;pointer-events:none}
+.main-option-copy{padding:24px 22px 25px}
+.main-option-copy h2{font-size:22px;font-weight:600;letter-spacing:-.04em}
+.main-option-copy p{font-size:14px;line-height:1.8;color:#7e8998;margin-top:12px;min-height:77px}
+.main-option-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:20px}
+.main-option-links a{font-size:12px;color:#8b96a3}
+.main-option-links .main-option-open{background:#182234;color:#fff;font-size:13px;padding:12px 17px;transition:background .2s}
+.main-option-open:hover{background:#33475f}
+.comparison-footnote{font-size:12px;text-align:center;margin-top:24px;color:#8994a4}
+
+@media(max-width:1100px) and (min-width:801px){
+ .design-hero h1{font-size:clamp(39px,5vw,54px)}
+ .design-a h1{font-size:clamp(47px,5.8vw,66px)}
+ .design-service-nav a{gap:13px;padding-inline:20px}
+ .design-service-nav strong{font-size:16px}
+ .design-service-note{font-size:12px}
+ .design-c .design-service-nav a+a{margin-left:20px;padding-left:20px}
+ .design-b .design-description{max-width:350px;font-size:16px}
+}
+@media(max-width:800px){
+ .design-hero{min-height:max(850px,100svh)}
+ .design-hero h1{font-size:clamp(29px,8.4vw,48px);line-height:1.4}
+ .design-hero .design-description{font-size:15px;max-width:350px;line-height:1.85}
+ .design-eyebrow{font-size:10px!important;letter-spacing:.1em;margin-bottom:22px}
+ .design-actions{margin-top:26px;gap:10px}
+ .design-button{font-size:12px;padding:12px 18px}
+ .design-a{padding:185px 6% 325px;align-items:flex-start}
+ .design-a .design-content{width:100%}
+ .design-a h1{font-size:clamp(29px,8.5vw,48px);line-height:1.4}
+ .design-a h1 span:first-child{font-size:1em;margin-bottom:2px}
+ .design-a .design-description{margin-top:25px}
+ .a-art img{object-position:58% center;opacity:.55}
+ .design-a .design-service-nav{width:88%;bottom:76px;display:block}
+ .design-a .design-service-nav a{padding:15px 5px}
+ .design-a .design-service-nav a+a{border-left:0;border-top:1px solid #ffffff12}
+ .design-a .design-service-nav strong{font-size:15px}
+ .design-b{padding:165px 6% 470px;align-items:flex-start;min-height:1050px}
+ .design-b .design-content{width:100%;max-width:none}
+ .design-b .design-eyebrow{padding-left:27px;margin-bottom:25px}
+ .design-b .design-description{margin-top:23px}
+ .design-b .design-actions{margin-top:26px}
+ .b-art{inset:425px 0 258px;opacity:.95}
+ .b-art img{object-fit:contain;object-position:center}
+ .b-art-caption{display:none}
+ .design-b .design-service-nav{bottom:65px;left:6%;right:6%;display:block}
+ .design-b .design-service-nav a{padding:15px 14px;gap:17px}
+ .design-b .design-service-nav a+a{border-left:0;border-top:1px solid #e2e6eb}
+ .design-b .design-service-note{font-size:11px;margin-top:3px}
+ .design-b .design-service-nav strong{font-size:15px}
+ .design-c{padding:185px 6% 325px;align-items:flex-start}
+ .design-c .design-content{width:100%}
+ .c-art{bottom:275px}
+ .c-art img{object-position:65% center}
+ .c-art:after{background:linear-gradient(90deg,#081320d9,#08132080),linear-gradient(0deg,#101d2b,transparent 35%)}
+ .design-c .design-description{margin-top:25px}
+ .design-c .design-actions{margin-top:27px}
+ .design-c .design-service-nav{bottom:60px;display:block;padding:0 6%}
+ .design-c .design-service-nav a{padding:16px 0;gap:18px}
+ .design-c .design-service-nav a+a{border-left:0;border-top:1px solid #a5b7ce22;margin-left:0;padding-left:0}
+ .design-c .design-service-nav strong{font-size:15px}
+ .design-c .design-service-note{font-size:11px;margin-top:3px}
+ .main-design-tools{left:14px;bottom:12px;padding:4px;gap:1px;font-size:11px}
+ .main-design-tools>span{display:none}
+ .main-design-tools a{padding:5px 10px}
+ .design-scroll{font-size:8px;bottom:24px;right:6%}
+ .main-comparison{padding:28px 20px 35px}
+ .main-comparison-heading h1{font-size:25px}
+ .main-comparison-heading p{font-size:14px}
+ .main-comparison-grid{grid-template-columns:1fr;gap:25px;margin-top:24px}
+ .main-option-copy p{min-height:0}
+ .main-option-copy{padding:22px}
+ .comparison-footnote{font-size:11px;line-height:1.8}
+}
+@media(max-width:360px){.design-hero h1,.design-a h1{font-size:29px}.design-hero .design-description{font-size:14px}.design-eyebrow{font-size:9px!important}.design-button{padding:11px 14px}}

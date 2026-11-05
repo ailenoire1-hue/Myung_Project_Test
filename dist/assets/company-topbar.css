@@ -1,0 +1,48 @@
+/* The company chapter guide follows the full-screen introduction. */
+html:has(.company-topbar-page){scroll-padding-top:0;scroll-behavior:auto}
+.company-topbar-page{--ct-header-height:var(--ir-header-height,102px);--ct-bar-height:58px;--ct-offset:calc(var(--ct-header-height) + var(--ct-bar-height));--ct-screen:calc(100svh - var(--ct-offset))}
+.company-topbar-page .company-topbar{position:sticky;top:var(--ct-header-height);height:58px;z-index:35;background:#fffffff7;border-bottom:1px solid #dfe7ec;box-shadow:0 6px 18px #132c3e05;backdrop-filter:blur(10px)}
+.company-topbar-page .company-topbar-frame{display:flex;align-items:center;gap:22px;height:100%;width:calc(100% - 120px);max-width:1440px;margin-inline:auto;min-width:0}
+.company-topbar-page .company-topbar-label{font:600 10px/1.5 'Manrope',sans-serif;letter-spacing:.11em;white-space:nowrap;color:#8b9daa}
+.company-topbar-page .company-topbar-links{display:flex;align-items:center;justify-content:center;gap:4px;overflow-x:auto;scrollbar-width:none;min-width:0;flex:1;overscroll-behavior-x:contain}
+.company-topbar-page .company-topbar-links::-webkit-scrollbar{display:none}
+.company-topbar-page .company-topbar-links>a{display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 12px;min-height:36px;white-space:nowrap;flex:none;line-height:1.5;color:#758794;border-radius:3px;position:relative;transition:background .15s,color .15s}
+.company-topbar-page .company-topbar-links>a>span{font:500 9px/1.5 'Manrope',sans-serif;color:#b38461}
+.company-topbar-page .company-topbar-links strong{font-size:13px;font-weight:500;letter-spacing:-.035em}
+.company-topbar-page .company-topbar-links>a[aria-current="location"]{background:#173547;color:#fff}
+.company-topbar-page .company-topbar-links>a[aria-current="location"]>span{color:#e7a476}
+.company-topbar-page .company-topbar-links>a[aria-current="location"]:after{content:'';position:absolute;left:12px;bottom:0;width:20px;height:2px;background:#de9665}
+.company-topbar-page .company-topbar-links>a:hover:not([aria-current]){color:#244355;background:#f0f4f6}
+.company-topbar-page .company-topbar-home{display:flex;align-items:center;gap:10px;white-space:nowrap;color:#81939f;font-size:11px;border-left:1px solid #e0e7eb;padding-left:18px;flex:none}
+.company-topbar-page .company-topbar :is(a,button):focus-visible{outline:2px solid #bc7d52;outline-offset:-3px}
+body.company-topbar-page.ct-is-reading .header{background:#fff!important;--header-ink:#172b3b;border-color:#e6edf1!important;box-shadow:none!important}
+body.company-topbar-page.ct-is-reading .header :is(.brand-mark,.brand-name,.nav-page-link,.nav-contact){color:#172b3b!important}
+body.company-topbar-page.ct-is-reading .header .brand-name small{color:#657b8b!important}
+.company-topbar-page main>.detail-section[data-detail-chapter],.company-topbar-page.company-screen-page .company-editorial,.company-topbar-page main>.contact-band.contact-with-footer{min-height:var(--ct-screen);padding-top:30px;padding-bottom:30px;scroll-margin-top:var(--ct-offset)}
+.company-topbar-page main>.detail-section[data-detail-chapter]{display:flex;align-items:center;overflow:visible}
+.company-topbar-page .company-network-anchor,.company-topbar-page #technical-recognition,.company-topbar-page .company-branch{scroll-margin-top:calc(var(--ct-offset) + 14px)!important}
+.company-topbar-page .company-identity-photo{height:clamp(400px,calc(var(--ct-screen) - 60px),600px)}
+.company-topbar-page .company-infrastructure-mosaic{height:clamp(330px,calc(var(--ct-screen) - 230px),480px)}
+.company-topbar-page .company-recovery-photo{height:clamp(270px,calc(var(--ct-screen) - 295px),390px)}
+.company-topbar-page main>.contact-band.contact-with-footer{display:flex;align-items:stretch}
+.company-topbar-page main>.contact-band.contact-with-footer>.detail-contact-frame{min-width:0;justify-content:space-between}
+@media(min-width:1101px) and (max-width:1360px){.company-topbar-page .company-topbar-label{display:none}.company-topbar-page .company-topbar-frame{gap:15px}.company-topbar-page .company-topbar-links>a{padding-inline:10px}}
+@media(min-width:801px) and (max-height:790px){
+ .company-topbar-page main>.detail-section[data-detail-chapter],.company-topbar-page.company-screen-page .company-editorial,.company-topbar-page main>.contact-band.contact-with-footer{padding-block:22px}
+ .company-topbar-page .company-editorial-heading{margin-bottom:20px}.company-topbar-page .company-editorial h2{font-size:29px;line-height:1.35}.company-topbar-page .company-editorial .detail-kicker{margin-bottom:10px}.company-topbar-page .company-editorial-heading>p{font-size:14px;line-height:1.7}
+ .company-topbar-page .company-identity-photo{height:450px}.company-topbar-page .company-identity-copy h2{margin-bottom:16px}.company-topbar-page .company-identity-copy .company-identity-lead{font-size:16px;margin-bottom:10px}.company-topbar-page .company-identity-copy>p:not(.company-identity-lead){font-size:14px;line-height:1.75}.company-topbar-page .company-identity-facts{margin-top:16px;padding-top:7px}.company-topbar-page .company-identity-facts>div{padding-block:7px}
+ .company-topbar-page .company-infrastructure-mosaic{height:340px}.company-topbar-page .infrastructure-photo h3{font-size:20px}.company-topbar-page .infrastructure-lab h3{font-size:27px}
+ .company-topbar-page .company-recovery-tablist{margin-bottom:17px}.company-topbar-page .company-recovery-tablist button{padding-block:10px}.company-topbar-page .company-recovery-photo{height:285px}.company-topbar-page .company-recovery-copy>p{line-height:1.7}.company-topbar-page .company-recovery-method{margin-top:13px;padding-top:11px;gap:7px 12px}
+ .company-topbar-page .company-training-main img{height:200px}.company-topbar-page .company-training-sub img{height:155px}.company-topbar-page .company-education-records li{padding-block:11px}.company-topbar-page .company-education-records p{line-height:1.6}.company-topbar-page .company-education-intro{margin-bottom:18px}
+ .company-topbar-page .company-partner-roster li{padding-block:16px}.company-topbar-page .company-partner-roster li>span{margin-top:6px}.company-topbar-page .company-agreements figure:nth-child(2){padding-top:48px}
+ .company-topbar-page .company-history-era-labels{padding-top:12px;margin-bottom:20px}.company-topbar-page .company-history-editorial .company-journey-line{row-gap:18px}.company-topbar-page .company-history-editorial .journey-milestone{padding-top:16px}.company-topbar-page .company-history-editorial .journey-record time{font-size:27px}
+ .company-topbar-page .contact-band.contact-with-footer>.detail-contact-frame{gap:14px}.company-topbar-page .contact-with-footer .consult-channels{padding-top:13px}.company-topbar-page .contact-with-footer .consult-preparation{margin-top:13px;padding-top:10px}.company-topbar-page .contact-with-footer .consult-footer{padding-top:11px}.company-topbar-page .contact-with-footer .consult-social>a{min-height:56px}
+}
+@media(max-width:1100px){.company-topbar-page .company-topbar-frame{width:calc(100% - 64px);gap:12px}.company-topbar-page .company-topbar-label{display:none}.company-topbar-page .company-topbar-links{justify-content:flex-start}.company-topbar-page .company-topbar-home{display:none}}
+@media(max-width:800px){
+ .company-topbar-page{--ct-bar-height:52px}.company-topbar-page .company-topbar{height:52px}.company-topbar-page .company-topbar-frame{width:calc(100% - 28px)}.company-topbar-page .company-topbar-links>a{padding-inline:11px;gap:6px}.company-topbar-page .company-topbar-links strong{font-size:12px}
+ .company-topbar-page main>.detail-section[data-detail-chapter],.company-topbar-page.company-screen-page .company-editorial,.company-topbar-page main>.contact-band.contact-with-footer{min-height:0;padding-block:38px 48px}
+ .company-topbar-page .company-identity-photo{height:370px}.company-topbar-page .company-infrastructure-mosaic{height:auto}.company-topbar-page .company-recovery-photo{height:250px}
+ .company-topbar-page main>.contact-band.contact-with-footer{padding-bottom:38px}.company-topbar-page main>.contact-band.contact-with-footer>.detail-contact-frame{gap:27px}
+}
+@media(prefers-reduced-motion:reduce){.company-topbar-page .company-topbar-links>a{transition:none}}

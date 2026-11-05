@@ -1,0 +1,11 @@
+{
+  "myung-hq-aerial.jpg": {
+    "subject": "명정보기술 청주 오창 본사 항공 전경",
+    "source": "dist/assets/video/mdfc-lab-first-51s.mp4",
+    "timestampSeconds": 46,
+    "resolution": [1280, 720],
+    "method": "Video frame extracted with OpenCV and saved as JPEG. Building and surroundings are unchanged.",
+    "presentation": "C cover preview uses CSS saturation, contrast, navy gradients, a symmetric vignette and a subtle radial light overlay. Original photograph is retained.",
+    "usedIn": "명정보기술_표지시안_C.html"
+  }
+}

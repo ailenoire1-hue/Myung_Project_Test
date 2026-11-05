@@ -1,0 +1,144 @@
+/* C refinement: two sentences, restrained color, a quiet digital backdrop. */
+.calm-main-page{--calm-bg:#0c1623;--calm-accent:#c79878}
+.calm-main-page .header{border-bottom-color:#ffffff0b}
+.calm-main-page .header nav>a{font-weight:500;color:#b8c2cf}
+.calm-main-page .header .brand-name{font-weight:600}
+.calm-main-page .header .brand-mark i{background:#ce936b}
+.calm-main-page .header .nav-contact{border-color:#ffffff26;color:#bcc6d2;font-weight:500}
+.calm-main-page .header:is(.is-scrolled,.has-open-menu,:focus-within) nav>a{color:#253248}
+@media(hover:hover){.calm-main-page .header:hover nav>a{color:#253248}}
+.calm-hero{min-height:max(720px,100svh);position:relative;overflow:hidden;isolation:isolate;background:var(--calm-bg);color:#e4e9ef;display:flex;align-items:center;padding:135px 6.25% 195px}
+.calm-copy{position:relative;z-index:1;width:100%;max-width:1320px}
+.calm-copy h1{font-size:clamp(34px,3.45vw,52px);line-height:1.6;font-weight:600;letter-spacing:-.05em;white-space:nowrap}
+.calm-copy h1 em{font-style:normal;color:var(--calm-accent);font-weight:600}
+.calm-copy p{font-size:clamp(20px,1.85vw,27px);line-height:1.8;color:#b1bdcd;letter-spacing:-.04em;font-weight:400;margin-top:13px;white-space:nowrap}
+.calm-actions{display:flex;align-items:center;gap:25px;margin-top:33px}
+.calm-actions button{border:1px solid #a6b2c334;background:transparent;color:#d3dbe6;font-size:14px;line-height:1.5;padding:13px 25px;font-weight:500;transition:background .2s,border-color .2s}
+.calm-actions button:hover{border-color:#c7987880;background:#c798780a}
+.calm-actions a{font-size:14px;line-height:1.5;color:#8292a7;padding:12px 0;border-bottom:1px solid #8292a733;transition:color .2s}
+.calm-actions a:hover{color:#c0ccd9}
+.calm-art{position:absolute;z-index:-1;inset:0;pointer-events:none}
+.calm-art img{height:100%;width:100%;object-fit:cover;filter:saturate(.45) brightness(.8)}
+.calm-art:after{content:'';position:absolute;inset:0}
+.calm-services{position:absolute;left:6.25%;right:6.25%;bottom:70px;display:flex;gap:0;border-top:1px solid #aebed018;max-width:1200px}
+.calm-services a{flex:1;padding:23px 0;font-size:16px;line-height:1.6;font-weight:400;letter-spacing:-.03em;color:#8d9caf;transition:color .2s}
+.calm-services a:hover{color:#d3dce8}
+.calm-services a+a{padding-left:35px}
+.calm-hero-1 .calm-art{opacity:.48}
+.calm-hero-1 .calm-art:after{background:linear-gradient(90deg,#0c1623 25%,#0c1623d9 57%,#0c162330 100%),linear-gradient(0deg,#0c1623,transparent 40%)}
+.calm-hero-2{justify-content:center}
+.calm-hero-2 .calm-copy{text-align:center;max-width:1120px}
+.calm-hero-2 .calm-copy h1{font-weight:500;font-size:clamp(34px,3.2vw,48px)}
+.calm-hero-2 .calm-copy h1 em{font-weight:500;color:#b99a85}
+.calm-hero-2 .calm-copy p{font-size:clamp(20px,1.8vw,26px);color:#a5b2c3;margin-top:19px}
+.calm-hero-2 .calm-actions{justify-content:center}
+.calm-hero-2 .calm-art{opacity:.32}
+.calm-hero-2 .calm-art img{object-position:65% center;filter:saturate(.3) brightness(.7)}
+.calm-hero-2 .calm-art:after{background:linear-gradient(90deg,#0c1623ed,#0c1623aa 55%,#0c162345),linear-gradient(0deg,#0c1623,transparent 50%)}
+.calm-hero-2 .calm-services{left:50%;right:auto;transform:translateX(-50%);width:82%;max-width:1050px;text-align:center}
+.calm-hero-2 .calm-services a+a{padding-left:0}
+.calm-hero-3 .calm-copy h1{font-size:clamp(33px,3.15vw,48px)}
+.calm-hero-3 .calm-copy p{font-size:clamp(20px,1.75vw,26px)}
+.calm-hero-3 .calm-art{left:61%;right:5%;top:19%;bottom:23%;opacity:.48}
+.calm-hero-3 .calm-art img{object-position:83% center;filter:saturate(.35) brightness(.75)}
+.calm-hero-3 .calm-art:after{background:linear-gradient(90deg,#0c1623,#0c1623a6 25%,#0c162325 100%),linear-gradient(0deg,#0c1623,transparent 45%,#0c162355)}
+@media(max-width:1100px) and (min-width:801px){
+ .calm-copy h1{font-size:clamp(30px,3.45vw,40px)}
+ .calm-copy p{font-size:20px}
+ .calm-hero-2 .calm-copy h1{font-size:clamp(30px,3.2vw,36px)}
+ .calm-hero-3 .calm-copy h1{font-size:clamp(30px,3.15vw,36px)}
+}
+@media(max-width:800px){
+ .calm-hero{min-height:max(790px,100svh);padding:190px 6% 285px;align-items:flex-start}
+ .calm-copy h1,.calm-hero-2 .calm-copy h1,.calm-hero-3 .calm-copy h1{font-size:clamp(25px,6.6vw,36px);line-height:1.65;letter-spacing:-.045em;white-space:normal}
+ .calm-topic,.calm-scope{display:block}
+ .calm-scope{white-space:nowrap}
+ .calm-copy p,.calm-hero-2 .calm-copy p,.calm-hero-3 .calm-copy p{font-size:16px;line-height:1.9;white-space:normal;max-width:350px;margin-top:21px}
+ .calm-actions{margin-top:29px;gap:23px}
+ .calm-actions button{font-size:12px;padding:12px 20px}
+ .calm-actions a{font-size:12px}
+ .calm-services{bottom:76px;display:block;left:6%;right:6%}
+ .calm-services a{display:block;padding:15px 0;font-size:15px}
+ .calm-services a+a{padding-left:0;border-top:1px solid #aebed010}
+ .calm-hero-1 .calm-art img{object-position:67% center}
+ .calm-hero-1 .calm-art{opacity:.3}
+ .calm-hero-1 .calm-art:after{background:linear-gradient(90deg,#0c1623f2,#0c16239c),linear-gradient(0deg,#0c1623,transparent 45%)}
+ .calm-hero-2 .calm-copy p{margin-inline:auto}
+ .calm-hero-2 .calm-services{left:6%;right:6%;transform:none;width:auto;text-align:center}
+ .calm-hero-2 .calm-art{opacity:.23}
+ .calm-hero-3 .calm-art{left:38%;right:0;top:15%;bottom:30%;opacity:.28}
+ .calm-hero-3 .calm-art:after{background:linear-gradient(90deg,#0c1623,#0c162390),linear-gradient(0deg,#0c1623,transparent 45%)}
+}
+
+/* C-1 shares the intro palette so its reveal feels like one continuous screen. */
+.calm-main-page.calm-1{
+ --home-content-width:min(1280px,calc(100% - 96px));
+ --calm-bg:#0a0e16;
+ --calm-accent:#f48642;
+ --calm-accent-end:#ffad68;
+ --calm-text:#eef0f4;
+ --calm-secondary:#d7dce4;
+ --calm-muted:#8d97a6;
+ --calm-label:#7d8999;
+}
+/* Keep the logo, hero copy, and service menu on one responsive grid. */
+.calm-1 .header .container,.calm-1 .calm-copy,.calm-1 .calm-services{width:var(--home-content-width);max-width:none;margin-inline:auto}
+.calm-1 .calm-hero{padding-inline:0}
+.calm-1 .calm-services{left:0;right:0}
+@media(max-width:1180px){.calm-main-page.calm-1{--home-content-width:calc(100% - 64px)}}
+@media(max-width:800px){.calm-main-page.calm-1{--home-content-width:calc(100% - 40px)}}
+@media(max-width:420px){.calm-main-page.calm-1{--home-content-width:calc(100% - 36px)}}
+.calm-1 .intro-curtain{background:var(--calm-bg)}
+.calm-1 .site-intro.splash-b .intro-first,
+.calm-1 .site-intro.splash-b .intro-second,
+.calm-1 .calm-copy h1{color:var(--calm-text)}
+.calm-1 .site-intro.splash-b h2 em,
+.calm-1 .calm-copy h1 em{
+ color:var(--calm-accent);
+ background:linear-gradient(100deg,var(--calm-accent),var(--calm-accent-end));
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.calm-1 .site-intro.splash-b .count-value,
+.calm-1 .calm-copy p{color:var(--calm-secondary)}
+.calm-1 .site-intro.splash-b .splash-kicker,
+.calm-1 .splash-brand-name small,
+.calm-1 .calm-actions a{color:var(--calm-muted)}
+.calm-1 .site-intro .count-label,
+.calm-1 .calm-services a{color:var(--calm-label)}
+.calm-1 .calm-services a:hover{color:var(--calm-text)}
+.calm-1 .splash-logo i,
+.calm-1 .header .brand-mark i{background:var(--calm-accent)}
+.calm-1 .calm-actions button{color:var(--calm-secondary);border-color:#d7dce42e}
+.calm-1 .calm-actions button:hover{border-color:#f4864280;background:#f486420a}
+.calm-1 .calm-actions a:hover{color:var(--calm-secondary)}
+.calm-1 .calm-art{opacity:.42}
+.calm-1 .calm-art img{filter:saturate(.28) brightness(.72)}
+.calm-1 .calm-art:after{background:linear-gradient(90deg,#0a0e16 25%,#0a0e16d9 57%,#0a0e1630 100%),linear-gradient(0deg,#0a0e16,transparent 40%)}
+@media(max-width:800px){
+ .calm-1 .calm-art{opacity:.26}
+ .calm-1 .calm-art:after{background:linear-gradient(90deg,#0a0e16f2,#0a0e169c),linear-gradient(0deg,#0a0e16,transparent 45%)}
+}
+
+/* Two-line evidence headline with a clear consultation action. */
+.calm-1 .calm-copy h1{font-size:clamp(34px,4.4vw,64px);line-height:1.4;font-weight:700;letter-spacing:-.045em;white-space:normal;word-break:keep-all}
+.calm-1 .calm-topic,.calm-1 .calm-scope{display:block;white-space:normal}
+.calm-1 .calm-trace{display:inline-block;white-space:nowrap}
+.calm-1 .calm-copy h1 em{font-weight:inherit}
+.calm-1 .calm-copy .calm-description{font-size:18px;line-height:1.9;font-weight:400;color:#aeb8c7;letter-spacing:-.025em;white-space:normal;word-break:keep-all;margin-top:30px;max-width:850px}
+.calm-description span{display:block}
+.calm-1 .calm-actions{margin-top:30px;gap:28px}
+.calm-1 .calm-actions button{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:54px;padding:14px 26px;background:linear-gradient(135deg,#f59b62,#f48642);border:1px solid #ffad74;color:#0a0e16;font-size:16px;font-weight:700;border-radius:2px;box-shadow:0 8px 24px #f4864226,inset 0 1px 0 #ffffff30;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+.calm-1 .calm-actions button svg{width:20px;height:20px;flex:none}
+.calm-1 .calm-actions button:hover{transform:translateY(-2px);background:linear-gradient(135deg,#ffb07c,#f79658);border-color:#ffc69f;box-shadow:0 12px 30px #f486423d,inset 0 1px 0 #ffffff40}
+.calm-1 .calm-actions button:focus-visible{outline:2px solid #eef0f4;outline-offset:4px}
+.calm-1 .calm-actions button:active{transform:translateY(0);box-shadow:0 4px 14px #f4864226}
+@media(max-width:800px){
+ .calm-1 .calm-hero{min-height:max(900px,100svh);padding:166px 0 292px}
+ .calm-1 .calm-copy h1{font-size:clamp(26px,5.3vw,36px);line-height:1.5;letter-spacing:-.045em;white-space:normal}
+ .calm-1 .calm-scope{white-space:normal;word-break:keep-all}
+ .calm-1 .calm-copy .calm-description{font-size:16px;line-height:1.9;margin-top:26px;max-width:100%}
+ .calm-1 .calm-actions{margin-top:27px;gap:20px;flex-wrap:wrap}
+ .calm-1 .calm-actions button{min-height:50px;padding:13px 18px;font-size:15px;gap:9px}
+ .calm-1 .calm-actions button svg{width:19px;height:19px}
+}
+@media(prefers-reduced-motion:reduce){.calm-1 .calm-actions button{transition:none}.calm-1 .calm-actions button:hover{transform:none}}

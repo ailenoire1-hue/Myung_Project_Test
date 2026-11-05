@@ -1,0 +1,47 @@
+{
+  "reviewed": "2026-10-14",
+  "rationale": "Use three verified branch building photographs. Captions use branch names only as requested; alt text and provenance retain actual building identity.",
+  "branchPhotos": [
+    {
+      "alt": "강남지점이 입주한 나라키움삼성동A빌딩 외관",
+      "sourceDate": "2026-09-07",
+      "name": "강남지점",
+      "asset": "branch-gangnam",
+      "position": "center 60%",
+      "imageUrl": "https://imagedelivery.net/klDhLIO79A9QiZxi8iy62w/bulidng/bulidng-OqZqD4OZlqsO/public",
+      "address": "서울 강남구 테헤란로83길 32",
+      "source": "https://drawingoffice.co.kr/insights/1026",
+      "path": "dist/assets/company/branches/gangnam-narakium-building.jpg",
+      "building": "나라키움삼성동A빌딩"
+    },
+    {
+      "path": "dist/assets/company/branches/yongsan-etland-building.jpg",
+      "position": "center 62%",
+      "address": "서울 용산구 청파로 74",
+      "changes": "Resized and cropped slightly to fit the photo frame.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "용산지점 입주 건물인 용산전자랜드의 외관 기록 사진",
+      "asset": "branch-yongsan",
+      "imageUrl": "https://data.si.re.kr/sites/default/files/photos6/06U04305Dc50054.jpg",
+      "source": "https://data.si.re.kr/photo/06U04305Dc50054",
+      "sourceDate": "2019-03",
+      "license": "CC BY 4.0 / 공공누리 제1유형",
+      "credit": "서울특별시 · 서울연구데이터서비스(서울연구원)",
+      "name": "용산지점",
+      "building": "용산전자랜드"
+    },
+    {
+      "alt": "수원지점이 입주한 영통 이노플렉스 전경",
+      "credit": "이랜드건설",
+      "position": "center 44%",
+      "name": "수원지점",
+      "asset": "branch-suwon",
+      "imageUrl": "https://www.elandconst.co.kr/admin/data/bbs/business/S2205180302543_1.jpg",
+      "address": "경기 수원시 영통구 신원로 306 이노플렉스1동 710호",
+      "addressEvidence": "https://www.myung.co.kr/about/contact?contact=5",
+      "source": "https://www.elandconst.co.kr/about/business.php?category=7&code=business&code_page=about&ptype=list",
+      "path": "dist/assets/company/branches/suwon-innoplex-building.jpg",
+      "building": "수원 영통 이노플렉스 1단지"
+    }
+  ]
+}

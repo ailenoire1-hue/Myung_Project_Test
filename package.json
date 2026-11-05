@@ -1,0 +1,1 @@
+{"name":"mdfc-homepage-draft","private":true,"version":"1.0.0","scripts":{"build":"node build.mjs","start":"node preview.mjs"},"type":"module"}

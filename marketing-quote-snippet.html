@@ -1,0 +1,70 @@
+<dialog class="mq-dialog" id="mp-quote-dialog" aria-labelledby="mq-title" aria-describedby="mq-description">
+  <div class="mq-layout">
+    <aside class="mq-sidebar" aria-label="의뢰 가이드 진행 단계">
+      <div class="mq-side-intro">
+        <span class="mq-wordmark">MDFC <span>CONSULTATION GUIDE</span></span>
+        <p class="mq-side-title">무엇을 확인하고<br>싶으신가요?</p>
+        <p class="mq-side-copy">필요한 서비스를 찾고,<br>상담할 내용을 함께 정리합니다.</p>
+      </div>
+      <ol class="mq-steps">
+        <li><button type="button" data-mq-step="0" aria-current="step"><span class="mq-step-number">01</span><span><strong>서비스 선택</strong><small>현재 상황에 맞는 분야</small></span></button></li>
+        <li><button type="button" data-mq-step="1" disabled><span class="mq-step-number">02</span><span><strong>의뢰 범위</strong><small>대상 · 목적 · 일정</small></span></button></li>
+        <li><button type="button" data-mq-step="2" disabled><span class="mq-step-number">03</span><span><strong>맞춤 안내</strong><small>준비 자료와 확인 사항</small></span></button></li>
+        <li><button type="button" data-mq-step="3" disabled><span class="mq-step-number">04</span><span><strong>상담 입력</strong><small>상담 양식 미리보기</small></span></button></li>
+      </ol>
+      <div class="mq-side-note"><span>상담 전에 알아두세요</span><p>비용은 대상 수량과 자료 상태,<br>분석 범위를 확인한 후 안내합니다.</p><a href="tel:1577-4872">전화 상담 <strong>1577-4872</strong><span aria-hidden="true">↗</span></a></div>
+    </aside>
+    <div class="mq-main">
+      <button class="mq-close" type="button" data-mq-close aria-label="견적·의뢰 가이드 닫기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <header class="mq-header">
+        <div class="mq-header-top"><span class="mq-kicker">견적·의뢰 가이드</span><span class="mq-count" id="mq-step-count">01 / 04</span></div>
+        <h2 id="mq-title" tabindex="-1">필요한 서비스를 선택해 주세요.</h2>
+        <p id="mq-description">상황과 가장 가까운 항목을 골라 주세요.</p>
+        <progress class="mq-progress" id="mq-progress" value="1" max="4" aria-label="의뢰 가이드 진행률">1 / 4</progress>
+      </header>
+      <div class="mq-content" id="mq-content">
+        <section class="mq-panel" data-mq-panel="0" aria-label="서비스 선택">
+          <fieldset class="mq-fieldset"><legend class="mq-field-label">서비스 분야</legend><div class="mq-service-grid" id="mq-services"></div></fieldset>
+          <fieldset class="mq-fieldset mq-topic-fieldset" id="mq-topic-fieldset" hidden><legend class="mq-field-label">어떤 도움이 필요하신가요?</legend><div class="mq-topic-grid" id="mq-topics"></div></fieldset>
+          <div class="mq-selection-hint" id="mq-selection-hint"><span aria-hidden="true">↗</span><p>서비스를 선택하면 예상 확인 범위와<br>상담 전에 준비할 자료를 안내합니다.</p></div>
+        </section>
+        <section class="mq-panel" data-mq-panel="1" aria-label="의뢰 범위" hidden>
+          <div class="mq-selected-service"><span class="mq-mini-label">선택한 서비스</span><strong data-mq-selection></strong><button class="mq-text-button" type="button" data-mq-edit-service>변경</button></div>
+          <form id="mq-details-form" class="mq-details-form" method="dialog">
+            <div class="mq-field"><label for="mq-target">확인할 대상</label><select id="mq-target" name="target" required></select></div>
+            <div class="mq-field"><label for="mq-quantity">대상 수량</label><select id="mq-quantity" name="quantity" required><option value="">선택해 주세요</option><option value="1개">1개</option><option value="2–5개">2–5개</option><option value="6–20개">6–20개</option><option value="21개 이상">21개 이상</option><option value="상담하며 확인">상담하며 확인하고 싶어요</option></select></div>
+            <div class="mq-field mq-field-full"><label for="mq-purpose">가장 먼저 확인하고 싶은 내용</label><select id="mq-purpose" name="purpose" required></select></div>
+            <div class="mq-field"><label for="mq-condition" id="mq-condition-label">자료 상태</label><select id="mq-condition" name="condition" required></select></div>
+            <div class="mq-field"><label for="mq-timeline">희망 일정</label><select id="mq-timeline" name="timeline" required><option value="">선택해 주세요</option><option value="가능한 빠른 상담 필요">가능한 빠른 상담이 필요해요</option><option value="일정이 정해져 있음">예정된 일정이 있어요</option><option value="상담 후 일정 협의">상담 후 일정을 정하고 싶어요</option></select></div>
+            <p class="mq-field-help mq-field-full">대상의 종류와 개수를 정확히 모르셔도 괜찮습니다. “상담하며 확인”을 선택해 주세요.</p>
+          </form>
+          <div class="mq-info-note"><span aria-hidden="true">i</span><p>실제 확인 가능 범위와 진행 일정은 자료 확보 여부, 접근 권한, 대상 상태를 확인한 후 정합니다.</p></div>
+        </section>
+        <section class="mq-panel" data-mq-panel="2" aria-label="맞춤 의뢰 안내" hidden>
+          <div class="mq-result-heading"><div><span class="mq-mini-label">YOUR REQUEST</span><h3 id="mq-result-title"></h3></div><button class="mq-copy-button" type="button" id="mq-copy-summary"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M12 4H4v8"/></svg>요약 복사</button></div>
+          <dl class="mq-summary" id="mq-summary"></dl>
+          <p class="mq-copy-status" id="mq-copy-status" role="status"></p>
+          <div class="mq-copy-fallback" id="mq-copy-fallback" hidden><label for="mq-copy-text">아래 요약을 선택해 복사해 주세요.</label><textarea id="mq-copy-text" readonly rows="6"></textarea></div>
+          <div class="mq-guide-grid" id="mq-guide"></div>
+          <div class="mq-cost-note"><span class="mq-mini-label">비용 안내</span><h3>대상 수량·자료 상태·분석 범위 확인 후 안내</h3><p id="mq-cost-factors"></p></div>
+        </section>
+        <section class="mq-panel" data-mq-panel="3" aria-label="상담 양식 미리보기" hidden>
+          <div class="mq-preview-notice"><span class="mq-preview-badge">미리보기</span><div><strong>현재 화면에서는 상담이 접수되지 않습니다.</strong><p>입력한 내용은 저장·전송되지 않으며, 가이드를 닫으면 지워집니다. 실제 상담은 <a href="tel:1577-4872">1577-4872</a>로 문의해 주세요.</p></div></div>
+          <form class="mq-contact-form" id="mq-contact-form" method="dialog" autocomplete="off">
+            <div class="mq-field"><label for="mq-name">성함 <span class="mq-required">필수</span></label><input id="mq-name" name="name" type="text" placeholder="성함을 입력해 주세요" maxlength="40" required autocomplete="off"></div>
+            <fieldset class="mq-field mq-contact-method"><legend>연락 수단 <span class="mq-required">필수</span></legend><div class="mq-method-options"><label><input type="radio" name="contactMethod" value="phone" checked><span>전화</span></label><label><input type="radio" name="contactMethod" value="email"><span>이메일</span></label></div></fieldset>
+            <div class="mq-field mq-field-full"><label for="mq-contact-value" id="mq-contact-label">연락처 <span class="mq-required">필수</span></label><input id="mq-contact-value" name="contact" type="tel" inputmode="tel" placeholder="010-0000-0000" maxlength="100" required autocomplete="off"></div>
+            <div class="mq-field mq-field-full"><label for="mq-request">요청 내용 <span class="mq-optional">선택</span></label><textarea id="mq-request" name="request" rows="4" maxlength="1200" placeholder="추가로 확인하고 싶은 내용이나 일정이 있다면 적어 주세요."></textarea><p class="mq-field-help">계정 비밀번호, 주민등록번호, 사건 관련 원본 자료는 입력하지 마세요.</p></div>
+            <div class="mq-consent mq-field-full"><label><input id="mq-consent" name="consent" type="checkbox" required><span>미리보기 입력 안내를 확인했습니다. <span class="mq-required">필수</span></span></label><p>입력 정보는 이 화면에서 형식을 확인하는 용도로만 사용합니다. 실제 상담 접수 및 개인정보 수집·이용 동의는 정식 접수 단계에서 별도로 진행합니다.</p></div>
+          </form>
+          <div class="mq-complete" id="mq-complete" hidden tabindex="-1"><span class="mq-complete-icon" aria-hidden="true">✓</span><span class="mq-mini-label">PREVIEW COMPLETE</span><h3>입력 확인 완료</h3><p><strong>미리보기이므로 접수되지 않았습니다.</strong><br>입력한 내용은 저장하거나 전송하지 않았습니다.</p><a class="mq-button mq-button-primary" href="tel:1577-4872">실제 전화 상담 <span>1577-4872 ↗</span></a><button class="mq-text-button" type="button" id="mq-review-summary">의뢰 요약 다시 보기</button></div>
+        </section>
+      </div>
+      <footer class="mq-footer">
+        <button class="mq-button mq-button-back" id="mq-back" type="button" hidden><span aria-hidden="true">←</span> 이전</button>
+        <span class="mq-footer-hint" id="mq-footer-hint">개인정보는 마지막 단계에서만 입력합니다.</span>
+        <button class="mq-button mq-button-primary" id="mq-next" type="button" disabled>의뢰 범위 선택 <span aria-hidden="true">→</span></button>
+      </footer>
+    </div>
+  </div>
+</dialog>

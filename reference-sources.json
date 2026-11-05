@@ -1,0 +1,162 @@
+{
+  "reviewed": "2026-10-02",
+  "references": [
+    {
+      "file": "[법무법인] 디지털포렌식 제안서 _최종.html",
+      "used": [
+        "PC·저장매체·모바일·메신저 분석",
+        "기업·법무 검토용 산출물",
+        "클린룸·기판 사진"
+      ],
+      "excluded": [
+        "개별 사례 수치",
+        "법적 효력 보장",
+        "제휴 가격·응답시간"
+      ]
+    },
+    {
+      "file": "MYCRO Mobile 소개자료.html",
+      "used": [
+        "v1.1.0 제품 기능과 지원 범위",
+        "개인정보 없는 합성 미디어 이미지"
+      ],
+      "developer": "㈜디지털재난대응센터"
+    },
+    {
+      "file": "디지털재난대응센터 사업소개자료_v4.html",
+      "used": [
+        "조사 방식과 보고서 구성",
+        "가상 시나리오",
+        "음성·영상 분석 구성 예시",
+        "MYCRO 수집 화면 구성 예시",
+        "DDRC RAPID 수집 설정과 SW v0.1.0 기능"
+      ],
+      "excluded": [
+        "DDRC 회사·조직·연락처를 MDFC 정보로 전용",
+        "AI 도입·성능 실적",
+        "미구현 기능을 현행 기능으로 소개"
+      ]
+    }
+  ],
+  "companyReferences": {
+    "history": "https://mdfc-myung.co.kr/default/company/sub02.php",
+    "recentHistory": "https://myung.co.kr/about/history",
+    "branches": "https://myung.co.kr/about/contact",
+    "branchScope": "청주 본사와 8개 지점, 총 9개 국내 직영 접수망",
+    "historyPhotos": "공식 연혁의 2019·2017·2014·2013·2012·2010·2008·2003·1990 사진 9종. 이미지 원본을 보존하고 빈 영역은 CSS로 크롭.",
+    "headquartersAndFacilities": "사용자 제공 법무법인 제안서의 본사 전경·클린룸 작업·MDFC 센터 사진",
+    "yearScope": "1990 회사 설립·하드디스크 수리·데이터복구 시작, 1993 데이터복구 사업 본격화. 2026-10-03 인트로와 회사소개를 SINCE 1990으로 통일. 업력은 2026년 기준 36년이며 포렌식 서비스의 시작연도로 확대 해석하지 않음."
+  },
+  "assets": {
+    "forensic-lab.png": "법무제안서 assets/mdfc-lab.png",
+    "mobile-board.png": "법무제안서 assets/mobile-step03-chip.png",
+    "mobile-media.png": "MYCRO 소개자료 img2; 개인정보 없는 합성 이미지",
+    "media-analysis.webp": "DDRC 소개자료 img8; 합성 파형",
+    "mycro-acquisition.webp": "DDRC 소개자료 img16; 수집 화면 구성 예시",
+    "rapid-acquisition.webp": "DDRC 소개자료 img20; 수집 설정 화면"
+  },
+  "companyExpansion": {
+    "nationalResponse": [
+      "천안함·3·20·세월호 복구",
+      "2014 창원 버스 블랙박스 복원",
+      "1999 Y2K 비상대책위",
+      "2005·2006 정부·정보기관 교육",
+      "2022.08 경찰청 디지털포렌식팀 교육",
+      "2022년 이후 국방부 검찰단 과학수사과 교육",
+      "국가사이버위기관리단 민간 기술지원"
+    ],
+    "educationSource": "[법무법인] 디지털포렌식 제안서 _최종.html / resource-58.js 643·645 및 resource-59.js 1224",
+    "cyberSupportYear": "동일 자료의 요약 2022~와 상세2023~ 표기가 상충해 공개 페이지에서 연도 생략",
+    "partnerships": "충북(2023), 전북·제주(2024), 강원(연도 생략) 지방변호사회 / 법무법인 로고스(2022) / SK쉴더스 MOU(연도 생략) / ACELab·Ontrack·Stellar 기술협력",
+    "partnershipSource": "명정보기술 공식 history/partner 및 사용자 제공 법무법인 제안서. SK 일반 로고를 SK쉴더스 로고로 사용하지 않음.",
+    "trainingPhoto": "법무법인 제안서 resource-39.png 실제 포렌식 동향 강의. 국가기관 교육 현장으로 특정하지 않음.",
+    "jejuMouPhoto": "법무법인 제안서 resource-37.png / 제주지방변호사회 2024년 협약식",
+    "video": {
+      "file": "2019_명정보기술.mp4",
+      "frameSize": "1920x708",
+      "frames": {
+        "video2019-cleanroom.png": "00:45 클린룸 전경",
+        "video2019-precision.png": "01:18 현미경 아래 회로 작업",
+        "video2019-specialist.png": "01:22 기술 담당자"
+      },
+      "note": "원본 정지 프레임 사용. CSS로 하단 영상 자막을 크롭, 2019 홍보영상 출처 표시. 원본 동영상 전체는 배포하지 않음."
+    },
+    "messengerVisual": "imagegen 신규 제작, 대화·첨부파일·시간 흐름을 나타내는 개념 이미지"
+  },
+  "companyPhotoRevision": {
+    "referenceFolder": "D:\\Macro\\develop\\homepage\\참고 자료 및 사진",
+    "partnershipPresentation": "[디지털포렌식 업무협약 제안] (주)명정보기술 디지털포렌식센터.pptx",
+    "assets": {
+      "national-cheonan-recovery.png": "사용자 첨부 천안함 CCTV 침수 회로 사진. 메인·회사 소개에 반영.",
+      "company/chungbuk-bar-mou-2023.png": "사용자 첨부 2023 충북지방변호사회 업무협약 사진.",
+      "company/kbs-recovery-recognition.jpeg": "업무협약 제안 PPT 11쪽 image92.jpeg 원본. 3·20 복구 지원 KBS 감사패 전달 장면.",
+      "company/jeju-bar-mou-wide-2024.png": "업무협약 제안 PPT image143.png. 2024 제주지방변호사회 업무협약 단체 사진.",
+      "company/recovery-equipment-work.png": "사용자 제공 YTN 강소기업이 힘이다 63회 영상 11:38 정지 프레임. 얼굴 클로즈업을 대체하고 CSS로 장비 중심 크롭."
+    },
+    "publicActivityCaption": "KBS 감사패와 충북 협약 사진은 교육 현장으로 소개하지 않고 실제 장면 설명을 표시.",
+    "legalPartners": "사용자 요청으로 SK쉴더스 법률 협력 카드 제거. 법무법인 일선 추가, 체결 연도는 미표기.",
+    "headquartersMotion": "뷰포트 진입 시 본사 사진을 8초 동안 천천히 확대. 동작 줄이기 설정에서는 효과 비활성."
+  },
+  "companyRefinement": {
+    "educationPhotos": {
+      "training-chungbuk-2023.png": "업무협약 제안 PPT 35쪽 image156.png. 2023.06 충북지방변호사회 디지털포렌식 전문연수.",
+      "training-forensics-practice.png": "동일 PPT 29쪽 image158.png. 모바일 자료 획득과 칩오프 실무 강의. 개별 행사 날짜 미표기."
+    },
+    "recognition": {
+      "recipient": "이명재 대표이사",
+      "designation": "2011년 7월 제55호 이달의 기능한국인",
+      "source": "https://meister.hrdkorea.or.kr/bbs/6/6/1/20160822132910426100_view.do?article_id=20161021120034591100",
+      "photo": "사용자 제공 업무협약 제안 PPT 6쪽 image18.jpeg 상패. 대한민국명장으로 번역하지 않음."
+    },
+    "layout": "협약 사진은 작은 보조 기록으로 우측 배치. 글로벌 협력 별도 영역 제거.",
+    "home": "국가적 재난 사례에 회사 더 알아보기 링크 추가. 최하단 회사 슬로건 챕터 제거."
+  },
+  "incidentServiceExamples": {
+    "date": "2026-10-02",
+    "source": "디지털재난대응센터 사업소개자료_v4.html",
+    "sections": "8–9쪽 침해사고 조사, 15–16쪽 A그룹 랜섬웨어, 17–18쪽 자료 유출 방법, 19–20쪽 C그룹 이메일 침해",
+    "presentation": "랜섬웨어·이메일 분석은 가상 시나리오로 표시. 상세 로그는 설명용 합성 데이터로 표시하고 펼침 패널로 구성. 별도 실제 해킹 사례나 개인정보 유출 성과를 만들지 않음.",
+    "technicalChecks": [
+      "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon",
+      "https://learn.microsoft.com/windows/security/threat-protection/auditing/event-4624",
+      "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/new-inboxrule",
+      "https://learn.microsoft.com/en-us/defender-xdr/alert-grading-playbook-inbox-forwarding-rules"
+    ],
+    "limits": "원자료의 DDRC 회사 정체성·AI 역량·실적을 MDFC로 전용하지 않음. 법무법인 제안서의 불일치 유출 건수는 인용하지 않음. 서비스·예약 작업 등 자동 실행 확인은 분석 방법을 구체화한 항목이며 실제 수행 사례로 소개하지 않음."
+  },
+  "homeServiceRefresh": {
+    "date": "2026-10-02",
+    "content": "상세 페이지의 분석 대상·사고 유형·보안 관리 항목과 결과물에 맞춰 메인 서비스 3개 챕터 재구성.",
+    "images": [
+      "기존 사용자 제공 클린룸 사진",
+      "기존 침해사고 조사 이미지",
+      "기존 업무 환경 이미지"
+    ],
+    "navigation": "우측 위치 표시 및 챕터 이동. 모바일은 페이지 목차 펼침 방식.",
+    "credits": "사용자 요청에 따라 화면의 출처 표기·원문 링크 제거. 출처 기록은 이 파일에 보관."
+  },
+  "forensicServiceRefresh": {
+    "date": "2026-10-02",
+    "naming": "주 메뉴·메인 챕터·상세 페이지·하단 메뉴를 디지털포렌식 서비스로 통일",
+    "removed": "포렌식 솔루션의 제품 소개·메뉴·연결 CTA 노출을 중단. 소스는 향후 검토용으로 유지.",
+    "content": [
+      "법무법인 제안서: 휴지통·파일시스템·이전 버전·USB 연결, M4A 구조·인코더·비교자료 검토",
+      "MYCRO 소개자료: 메모·일정·웹 활동·앱 기록, 메신저 출처·캐시·원본 상태 구분을 조건부 분석 범위로 구성"
+    ],
+    "limits": "제품 기능이 모든 기기·앱에서 가능한 서비스라는 보장으로 전용하지 않음. 새로운 실적 수치·법적 효력·복구 성공 보장 미사용.",
+    "social": {
+      "placement": "메인 푸터 로고 아래 버튼 2개",
+      "source": "https://myung.co.kr/forensic/myung",
+      "naver": "https://blog.naver.com/myungit2",
+      "youtube": "https://www.youtube.com/channel/UC7P1LyBxStJkKxAb_yx5DKw",
+      "scope": "명정보기술 본사 공식 채널로 확인. 센터 전용 채널로 특정하지 않음."
+    }
+  },
+  "nationwideMap": {
+    "source": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_0_countries.geojson",
+    "license": "Public domain",
+    "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "branchCoordinates": "Existing official branch data in company-data.mjs (https://myung.co.kr/about/contact)",
+    "scope": "Geographic overview with separate capital-area labels; exact addresses are available in branch details."
+  }
+}

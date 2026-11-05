@@ -1,0 +1,28 @@
+/* The selected detail page reuses the homepage consultation and legal footer. */
+.fr-a1 #contact.fr-shared-contact{min-height:calc(100svh - var(--fr-header-height));padding:36px 0 22px;align-items:stretch;scroll-margin-top:var(--fr-a1-header-height,var(--fr-header-height));background:#101b29;color:#f3f5f7}
+.fr-a1 #contact>.detail-contact-frame{width:calc(100% - 120px);max-width:1320px;gap:24px;justify-content:flex-start}
+.fr-a1 #contact>.detail-contact-frame>.detail-contact-main,.fr-a1 #contact>.detail-contact-frame>.consult-footer{margin-top:auto}
+.fr-a1 #contact .detail-contact-main{grid-template-columns:minmax(0,1.65fr) minmax(290px,1fr)}
+.fr-a1 #contact h2{color:#f3f5f7}
+.fr-a1 #contact .detail-contact-lead{color:#b6c1ce}
+.fr-a1 #contact .consult-preparation p{color:#99a7b8}
+.fr-a1 #contact .detail-contact-hours{color:#bfcbda}
+.fr-a1 #contact .detail-contact-note{color:#97a6b9}
+.fr-a1 #contact .consult-channels-heading p{color:#96a5b7}
+.fr-a1 #contact .consult-call svg{width:18px;height:18px}
+.fr-a1 #contact .consult-youtube svg{width:26px;height:20px}
+@media(min-width:1100px) and (max-height:780px){
+ .fr-a1 #contact.fr-shared-contact{padding-block:22px 18px}
+ .fr-a1 #contact>.detail-contact-frame{gap:18px}
+ .fr-a1 #contact h2{font-size:30px!important;line-height:1.4!important}
+ .fr-a1 #contact .detail-contact-channel{padding-block:8px}
+}
+@media(max-width:1099px){
+ .fr-a1 #contact>.detail-contact-frame{width:calc(100% - 64px)}
+ .fr-a1 #contact .detail-contact-main{gap:28px;grid-template-columns:minmax(0,1.5fr) minmax(270px,1fr)}
+}
+@media(max-width:800px){
+ .fr-a1 #contact.fr-shared-contact{min-height:calc(100svh - var(--fr-header-height));padding-block:40px 48px}
+ .fr-a1 #contact>.detail-contact-frame{width:calc(100% - 40px);gap:28px}
+ .fr-a1 #contact .detail-contact-main{grid-template-columns:1fr;gap:32px}
+}

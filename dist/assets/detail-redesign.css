@@ -1,0 +1,316 @@
+/* Company network: the map and real facilities lead; contact details disclose on demand. */
+.company-screen-page #center :is(h2,h3,strong){color:#182b3b}
+.company-screen-page #center .detail-section-heading{max-width:none}
+.company-screen-page #center .detail-section-heading p{text-align:left;margin-left:0}
+.company-screen-page #center .detail-section-heading p,.company-screen-page #center .company-branch p{color:#607486}
+.company-screen-page #center .company-map-north{fill:#d6e0e8}
+.company-screen-page #center .company-map-south{fill:#aabbca;stroke:#8ea4b6}
+.company-screen-page #center .company-map-label{color:#263e52;text-shadow:0 1px #ffffffaa;font-weight:600}
+.company-screen-page #center .company-map-label.is-headquarters{color:#ad5728}
+.company-screen-page #center .company-map-legend{color:#546d81}
+.company-screen-page #center .network-facilities strong{color:white}
+.company-screen-page #center{background:#f5f7f9}
+.company-screen-page #center .detail-section-heading{text-align:left;margin-bottom:24px}
+.company-screen-page #center .detail-section-heading h2{font-size:clamp(26px,2.25vw,36px);line-height:1.35}
+.company-screen-page #center .detail-section-heading h2 br{display:none}
+.company-screen-page #center .detail-section-heading p{margin-top:10px}
+.company-screen-page .company-network-unified-grid{grid-template-columns:minmax(0,.43fr) minmax(0,.57fr);gap:clamp(24px,3vw,50px);align-items:center}
+.network-map-stage{position:relative;min-width:0;background:#e9eef2;border:1px solid #dde5eb;border-radius:4px;overflow:hidden}
+.network-map-heading{position:absolute;left:25px;top:24px;z-index:1;display:flex;flex-direction:column;pointer-events:none}
+.network-map-heading>span{font-size:10px;letter-spacing:.14em;color:#596f81}
+.network-map-heading>strong{display:none}
+.network-map-heading>strong>span{display:none}
+.company-screen-page .company-network-unified .company-network-map{width:100%;max-width:415px;margin:0 auto;padding:0 12px;background:transparent;border:0}
+.company-screen-page .company-network-unified .company-network-map figcaption{padding:0 7px 15px;font-size:11px;gap:8px}
+.company-screen-page .company-network-unified .company-network-map figcaption>span:last-child{display:none}
+.network-facilities{height:230px;display:grid;grid-template-columns:1.65fr 1fr;gap:10px;margin-bottom:22px}
+.network-facilities figure{position:relative;margin:0;overflow:hidden;background:#1b2d3c;border-radius:3px}
+.network-facilities img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.network-facilities figure:after{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(transparent,rgba(7,19,31,.85))}
+.network-facilities figcaption{position:absolute;inset:auto 18px 18px;z-index:1;color:white;line-height:1.5;display:grid;gap:5px}
+.network-facilities small{font-size:10px;letter-spacing:.15em;color:#e5b489}
+.network-facilities strong{font-size:19px;font-weight:600;word-break:keep-all}
+.network-facilities figcaption>span,.network-lab figcaption{font-size:12px;color:#d4dee7}
+.network-directory-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 13px}
+.network-directory-heading h3{font-size:17px}.network-directory-heading>span{font-size:11px;color:#647687}
+.company-screen-page .company-network-unified .company-branches{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:start}
+.company-screen-page .company-network-unified .company-branch{padding:0;background:#fff;border:1px solid #dce4ea;border-radius:3px}
+.company-screen-page .company-network-unified .company-branch summary{padding:13px 12px;gap:7px;align-items:center}
+.company-screen-page .company-network-unified .company-branch summary>span{font-size:10px;color:#8394a3}
+.company-screen-page .company-network-unified .company-branch strong{font-size:14px}
+.company-screen-page .company-network-unified .company-branch summary i{font-size:16px;margin-left:auto;color:#b77748}
+.company-screen-page .company-network-unified .company-branch[open]{grid-column:1/-1;border-color:#c88b5a;background:#fffaf6}
+.company-screen-page .company-network-unified .company-branch>div{padding:0 14px 14px}
+.company-screen-page .company-network-unified .company-branch p{font-size:13px}
+.company-screen-page .company-network-unified .company-branch a{font-size:17px;font-weight:650;color:#172a3d}
+.company-network-visit-note{font-size:11px;margin-top:12px;color:#65788b}
+@media(min-width:801px) and (max-height:760px){
+ .company-screen-page .company-network-unified .company-network-map{max-width:330px}
+ .company-screen-page #center .detail-section-heading{margin-bottom:18px}
+ .network-facilities{height:180px;margin-bottom:16px}
+ .company-screen-page .company-network-unified .company-branch summary{padding-block:10px}
+ .network-map-heading{left:15px;top:15px}.network-map-heading>strong{font-size:52px}
+ .network-map-heading>strong>span{display:none}
+}
+
+/* Service openings: shared identity with an image-led introduction and useful entry points. */
+.service-redesign{--service-ink:#162c3e;--service-muted:#607285;--service-line:#dce4eb;--service-accent:#c87a42;color:var(--service-ink)}
+.service-redesign .service-opening{background:#091522;overflow:hidden}
+.service-opening-photo{position:absolute;inset:0 0 0 38%;z-index:-1;overflow:hidden}
+.service-opening-photo img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.service-opening-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#091522 0%,#09152218 80%),linear-gradient(0deg,#091522 0%,transparent 65%)}
+.service-opening-photo>span{position:absolute;right:10%;top:30%;writing-mode:vertical-rl;letter-spacing:.2em;color:#ffffff60;font-size:11px;z-index:1}
+.service-enterprise-security .service-opening-photo img{opacity:.65}
+.service-redesign .service-opening .detail-hero-frame{grid-template-rows:auto 1fr auto auto;gap:16px;padding-top:calc(var(--ir-header-height,88px) + 26px);padding-bottom:18px}
+.service-opening-content{align-self:center;max-width:760px;padding:18px 0 24px}
+.service-redesign .service-opening .detail-kicker{font-size:11px;letter-spacing:.15em;margin-bottom:17px;color:#ccdae6}
+.service-opening .detail-kicker b{font-weight:500;margin-left:15px;color:#eaa06b}
+.service-redesign .service-opening .detail-page-label{color:#f3a772;font-size:18px;font-weight:600;margin-bottom:14px}
+.service-redesign .service-opening h1{font-size:clamp(32px,3.25vw,52px);line-height:1.38;font-weight:650;letter-spacing:-.05em}
+.service-redesign .service-opening .detail-hero-description{max-width:570px;font-size:15px;line-height:1.8;margin:19px 0;color:#bbc9d6}
+.service-opening-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:21px}
+.service-opening-tags>span{padding:5px 10px;border:1px solid #ffffff24;color:#cbd6df;font-size:11px;border-radius:2px}
+.service-opening-areas{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border-top:1px solid #ffffff35;border-bottom:1px solid #ffffff25;background:#142332ad;backdrop-filter:blur(6px)}
+.service-opening-areas>a{min-height:82px;display:flex;align-items:center;gap:16px;padding:15px 20px;color:#eaf0f5;border-right:1px solid #ffffff20;transition:background .2s}
+.service-opening-areas>a:last-child{border:0}.service-opening-areas>a:hover{background:#ffffff0c}.service-opening-areas>a:focus-visible{outline:2px solid #f7a469;outline-offset:-3px}
+.service-opening-areas svg{width:28px;height:28px;flex:none;color:#c4916b}
+.service-opening-areas small{display:block;font-size:9px;color:#a0b1c1;letter-spacing:.1em;margin-bottom:4px}
+.service-opening-areas strong{font-size:14px;font-weight:550;word-break:keep-all}
+.service-opening-areas i{font-style:normal;font-size:16px;color:#91a4b6;margin-left:auto}
+.service-redesign .service-opening .detail-hero-bottom{padding-top:0;border:0}
+.service-redesign .service-opening .detail-scroll-link{font-size:11px;min-height:30px}
+.service-redesign .service-opening .detail-scroll-track{height:18px}
+.service-redesign .service-opening .detail-hero-bottom-label{font-size:9px}
+
+/* Digital forensics: visual evidence workbench, followed by an analysis map. */
+.service-digital-forensics .forensic-analysis{background:#fafbfc}
+.service-digital-forensics .forensic-selector .detail-chapter-heading{text-align:left;max-width:none;margin-bottom:23px;display:flex;align-items:center;gap:24px}
+.service-digital-forensics .forensic-selector .detail-chapter-heading .detail-kicker{font-size:10px;letter-spacing:.15em;margin:0;flex:none}
+.service-digital-forensics .forensic-selector .detail-chapter-heading h2{font-size:26px;letter-spacing:-.035em}
+.service-digital-forensics .forensic-tabs .resource-tablist{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-bottom:1px solid #cfdbe4}
+.service-digital-forensics .forensic-tabs .resource-tablist button{border:0;border-bottom:3px solid transparent;background:transparent;text-align:left;padding:15px 18px;min-height:88px;color:#526b81;display:grid;grid-template-columns:30px 1fr;gap:3px 12px;align-content:center;position:relative;transition:background .2s,color .2s}
+.service-digital-forensics .forensic-tabs .resource-tablist button:hover{background:#eaf0f4}
+.service-digital-forensics .forensic-tabs .resource-tablist button[aria-selected=true]{background:#e8eff4;color:#152e43;border-bottom-color:#ce8148;box-shadow:none}
+.service-digital-forensics .forensic-tabs .resource-tablist svg{grid-row:1/3;width:30px;height:32px;align-self:center}
+.service-digital-forensics .forensic-tabs .resource-tablist strong{font-size:16px;font-weight:650}
+.service-digital-forensics .forensic-tabs .resource-tablist small{font-size:11px;color:#718396;display:block}
+.service-digital-forensics .forensic-tab-number{position:absolute;right:14px;top:11px;font-size:9px;opacity:.6}
+.service-digital-forensics .forensic-field-overview{grid-template-columns:1.12fr 1fr;gap:clamp(28px,4.5vw,70px);padding-block:28px 36px}
+.service-digital-forensics .forensic-field-overview .resource-figure{margin:0;padding:0;background:transparent;border:0;box-shadow:none;align-self:center}
+.service-digital-forensics .forensic-field-overview .resource-figure>div{height:clamp(250px,34vh,380px);position:relative;border:1px solid #d3dde5;overflow:hidden;background:#e7edf2;border-radius:3px}
+.service-digital-forensics .forensic-field-overview .resource-figure figcaption{font-size:10px;letter-spacing:.02em;color:#6e8293;margin:9px 0 0;padding:0}
+.service-digital-forensics .resource-copy .forensic-field-name{display:block;font-size:12px;font-weight:650;color:#a86232;margin-bottom:10px}
+.service-digital-forensics .resource-copy .detail-kicker{display:none}
+.service-digital-forensics .forensic-field-overview .resource-copy h3{font-size:clamp(24px,2.2vw,34px);line-height:1.45;font-weight:650;letter-spacing:-.05em;margin:0}
+.service-digital-forensics .forensic-field-overview .resource-copy>p{font-size:14px;line-height:1.8;color:#607285;margin:15px 0}
+.service-digital-forensics .forensic-targets{border-top:1px solid #d8e2e9;padding-top:12px;margin-top:16px}
+.service-digital-forensics .forensic-targets li{font-size:12px;line-height:1.65;margin:6px 0;color:#435c72;padding-left:17px}
+.service-digital-forensics .forensic-targets li:before{content:'✓';width:auto;height:auto;background:transparent;top:0;color:#bd7741;font-size:11px}
+.forensic-method-link{display:inline-flex;gap:34px;border-bottom:1px solid #bd8c67;margin-top:15px;padding:0 0 8px;font-size:12px;font-weight:650;color:#263e54}
+.forensic-method-link span{color:#b47647}
+.service-digital-forensics .forensic-field-depth .detail-chapter-heading{text-align:left;max-width:none;margin:0 0 34px}
+.service-digital-forensics .forensic-analysis-map{gap:0;background:#fff;border:1px solid #dce4eb;border-radius:4px}
+.service-digital-forensics .forensic-analysis-map li{background:none;border:0;border-right:1px solid #dce4eb;padding:28px 22px}
+.service-digital-forensics .forensic-analysis-map li:last-child{border:0}
+.service-digital-forensics .forensic-analysis-map li>span{font-size:32px;font-weight:400;color:#b98054}
+.service-digital-forensics .forensic-analysis-map h3{font-size:17px;margin-top:18px;min-height:48px}
+.service-digital-forensics .forensic-analysis-map p{font-size:12px;color:#657b8e}
+.service-digital-forensics .forensic-result-line{background:#eaf0f4;padding:20px 22px;margin-top:20px;border-left:2px solid #bd8a60;grid-template-columns:110px 1fr;gap:24px}
+.service-digital-forensics .forensic-result-line>strong{font-size:13px}
+.service-digital-forensics .forensic-result-line .detail-clean-list li{font-size:12px}
+.service-digital-forensics .forensic-limit{font-size:11px}
+
+/* Incident investigation: large service numbers, evidence sources and a clear review sequence. */
+.service-incident-response .ir-services{background:#fff;padding:0}
+.service-incident-response .investigation-screen{isolation:isolate;position:relative}
+.service-incident-response .investigation-screen:before{content:'';position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:#f6f8fa;z-index:-1}
+.service-incident-response .ir-service{padding:0;border:0}
+.service-incident-response .investigation-screen{display:flex;flex-direction:column;justify-content:center;gap:28px;padding-top:calc(var(--ir-header-height,88px) + 30px);padding-bottom:34px;min-height:100dvh}
+.investigation-heading{display:flex;align-items:center;gap:30px}
+.investigation-number{font:400 clamp(64px,6vw,96px)/1 Manrope,sans-serif;letter-spacing:-.065em;color:#b7835e;min-width:120px;position:relative}
+.investigation-number>span{display:block;font-size:8px;letter-spacing:.13em;margin-top:11px;color:#7b8a98}
+.investigation-heading .detail-kicker{font-size:10px;letter-spacing:.15em;margin-bottom:8px;color:#61798e}
+.investigation-heading h2{font-size:clamp(29px,2.8vw,43px);font-weight:650;line-height:1.35;letter-spacing:-.05em;margin:0}
+.investigation-heading p{font-size:14px;color:#607487;max-width:760px;margin-top:13px;line-height:1.7}
+.investigation-layout{display:grid;grid-template-columns:.44fr .56fr;gap:clamp(28px,4vw,60px);align-items:stretch}
+.investigation-evidence{background:#102333;color:#dce7ee;border-radius:4px;padding:26px 28px;position:relative;overflow:hidden;background-image:radial-gradient(ellipse at 110% 0,#284b62 0,transparent 60%)}
+.investigation-panel-label{font-size:9px;letter-spacing:.18em;color:#9cafc0}
+.investigation-evidence h3{font-size:23px;font-weight:500;letter-spacing:-.025em;line-height:1.5;margin:15px 0 22px;color:white}
+.investigation-sources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.investigation-sources>div{display:flex;flex-direction:column;align-items:flex-start;gap:11px}
+.investigation-sources svg{width:29px;height:29px;color:#d7a17b}
+.investigation-sources span{font-size:11px;line-height:1.5;color:#cbd9e4;word-break:keep-all}
+.investigation-signal{border-top:1px solid #ffffff24;margin-top:24px;padding-top:17px}
+.investigation-signal small{font-size:10px;color:#c89974}
+.investigation-signal p{font-size:12px;line-height:1.7;color:#b8c9d6;margin-top:6px}
+.investigation-scope{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;justify-content:center}
+.investigation-scope li{display:grid;grid-template-columns:38px 1fr;gap:20px;padding:23px 0;border-bottom:1px solid #d6e0e8;position:relative}
+.investigation-scope li:first-child{border-top:1px solid #c0cdd8}
+.investigation-scope li>span{font-size:11px;border:1px solid #cedbe5;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#a76b40;background:#fff}
+.investigation-scope h3{font-size:21px;line-height:1.4;margin:0 0 9px;font-weight:650}
+.investigation-scope p{font-size:13px;line-height:1.75;margin:0;color:#61778b;max-width:490px}
+.investigation-bottom{display:flex;justify-content:space-between;gap:25px;align-items:center;font-size:12px;color:#657b8f;padding-top:4px}
+.investigation-bottom>a{font-weight:650;color:#203c53;border-bottom:1px solid #c39068;padding-bottom:7px;white-space:nowrap}
+.investigation-bottom>a span{margin-left:24px;color:#ad6f40}
+.service-incident-response .detail-case-chapter{border-top:0;background:#fff;position:relative}
+.service-incident-response .case-flow{gap:18px}
+.service-incident-response .case-flow>li{border:1px solid #d9e2e9;border-top:3px solid #bd875e;background:#f6f9fb;border-radius:3px;padding:24px}
+.service-incident-response .case-flow code{background:#102435;color:#d2e1ec;border:0;border-radius:3px;padding:13px 15px;font-size:12px}
+
+/* Enterprise management: five practical services, each with its own operation diagram. */
+.service-enterprise-security .management-chapter{background:#fff;padding-top:calc(var(--ir-header-height,88px) + 30px);padding-bottom:38px;min-height:100dvh;display:flex;align-items:center}
+.service-enterprise-security .management-chapter:nth-child(even){background:#f4f7f9}
+.management-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:30px}
+.management-heading .detail-kicker{font-size:11px;letter-spacing:.15em;color:#a06c46;margin-bottom:13px}
+.management-heading .detail-kicker b{font-weight:500;margin-left:18px;color:#8b9baa}
+.management-heading h2{font-size:clamp(30px,2.8vw,43px);font-weight:650;line-height:1.35;letter-spacing:-.05em}
+.management-heading>p{font-size:18px;line-height:1.55;letter-spacing:-.025em;color:#657a8d;padding-left:30px;border-left:1px solid #d4dfe8;margin:0}
+.management-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4vw,70px);align-items:center}
+.management-visual{position:relative;border-radius:5px;background:#e9f0f4;overflow:hidden;border:1px solid #d8e3eb;min-width:0}
+.management-visual-top{display:flex;justify-content:space-between;padding:20px 22px;font-size:9px;letter-spacing:.12em;color:#657f93;border-bottom:1px solid #cfdee8}
+.management-visual-top small{font-size:10px;letter-spacing:0}
+.management-orbit{position:relative;height:290px;background:radial-gradient(ellipse at center,#d4e2ec 0,transparent 60%)}
+.management-orbit:before{content:'';position:absolute;inset:40px 65px;border:1px solid #becedb;border-radius:50%}
+.management-orbit:after{content:'';position:absolute;inset:72px 104px;border:1px dashed #b8cbd9;border-radius:50%;opacity:.6}
+.management-hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#18344a;color:white;box-shadow:0 15px 35px #28435a25;width:124px;height:124px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;z-index:1}
+.management-hub svg{width:35px;height:35px;color:#e4ae83}.management-hub strong{font-size:14px;font-weight:550}
+.management-node{position:absolute;min-width:110px;padding:10px 12px;border:1px solid #c4d4e0;border-radius:3px;background:#fff;box-shadow:0 4px 15px #24456508;color:#2c4b63;font-size:12px;z-index:2;text-align:center}
+.management-node>span{font-size:9px;color:#b78155;margin-right:8px}
+.management-node.node-0{left:22px;top:38px}.management-node.node-1{right:22px;top:38px}.management-node.node-2{left:22px;bottom:38px}.management-node.node-3{right:22px;bottom:38px}
+.management-visual-result{padding:17px 22px;display:flex;gap:15px;align-items:center;background:#dce7ef;border-top:1px solid #cbdbe7}
+.management-visual-result>span{font-size:8px;letter-spacing:.1em;color:#6b8295}.management-visual-result>strong{font-size:12px;font-weight:550;color:#29475e;word-break:keep-all}
+.management-route{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:24px;margin:0;min-height:290px}
+.management-route li{background:white;border:1px solid #cbdae5;border-radius:4px;padding:15px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;position:relative}
+.management-route li>span{position:absolute;top:10px;right:12px;font-size:9px;color:#94a8b8}
+.management-route svg{width:32px;height:32px;color:#9e754f}.management-route strong{font-size:14px;font-weight:600;color:#23425a}
+.management-visual-server-nas{background:#142b3d;border-color:#244056}
+.management-visual-server-nas .management-visual-top{border-color:#ffffff20;color:#9eb5c7}
+.management-visual-server-nas .management-route li{background:#203b50;border-color:#395164}
+.management-visual-server-nas .management-route strong{color:#e1eaf0}
+.management-visual-server-nas .management-visual-result{background:#203b50;border-color:#395164}
+.management-visual-server-nas .management-visual-result>strong{color:#d7e3ed}
+.management-copy .management-lead{font-size:15px;line-height:1.8;color:#566e82;margin:0 0 15px;word-break:keep-all}
+.management-scope{list-style:none;padding:0;margin:0}
+.management-scope li{display:grid;grid-template-columns:25px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid #dce5ec}
+.management-scope li>span{font-size:10px;color:#b77c50;padding-top:4px}
+.management-scope h3{font-size:17px;font-weight:650;line-height:1.4;margin:0 0 5px}
+.management-scope p{font-size:12px;line-height:1.75;color:#637b8f;margin:0;word-break:keep-all}
+.management-copy .chapter-more{margin-top:0;border-top:0}
+.management-copy .chapter-more>summary{font-size:12px;padding:12px 0}
+.management-extra{font-size:13px;padding-bottom:18px;line-height:1.8;color:#60768a}
+.management-extra h4{color:#1b354a;font-weight:650;margin-top:12px}
+.management-extra ul{list-style:none;padding:0;margin-top:8px}
+.management-extra li{padding:4px 0}
+.management-consult{font-size:12px;min-height:40px;margin-top:17px;padding:10px 18px;gap:30px}
+
+/* A common process language connects all services without repeating dense paragraphs. */
+.service-redesign .detail-process-chapter{background:#edf2f6}
+.service-redesign .detail-process-chapter .detail-chapter-heading{text-align:left;max-width:none;margin-bottom:40px}
+.service-redesign .service-process-flow{display:grid;gap:20px;text-align:left}
+.service-redesign .service-process-flow li{display:block;padding:27px 22px;background:#fff;border:1px solid #d7e1e9;border-radius:4px;box-shadow:0 5px 20px #253b4e04}
+.service-redesign .service-process-flow li:before{display:none}
+.service-redesign .service-process-flow li:not(:last-child):after{z-index:1;top:50%;right:-14px;width:7px;height:7px;background:none;border-color:#ab7b57}
+.service-redesign .process-node{width:auto;height:52px;background:none;border:0;border-radius:0;display:flex;justify-content:space-between;align-items:center;margin:0 0 26px;box-shadow:none}
+.service-redesign .service-process-flow .process-node .process-step{position:static;transform:none;background:none;border-radius:0;font:400 37px/1 Manrope,sans-serif;color:#b37c51;width:auto;height:auto;display:block}
+.service-redesign .process-node svg{width:35px;height:35px;color:#44647e}
+.service-redesign .service-process-flow h3{font-size:18px;line-height:1.4;margin:0 0 10px;font-weight:650}
+.service-redesign .service-process-flow p{font-size:12px;line-height:1.8;color:#667d8f}
+.service-redesign .process-output{display:block;border:0;border-top:1px solid #dfe7ed;border-radius:0;padding:16px 0 0;margin-top:23px;font-size:11px;color:#47657c;background:transparent;word-break:keep-all}
+.service-redesign .process-footnote{text-align:left;font-size:11px;margin-top:22px}
+.service-redesign .detail-faq-layout h2{font-size:clamp(28px,2.6vw,40px);line-height:1.45;letter-spacing:-.04em}
+.service-redesign .detail-faq details{background:#f5f8fa;border:1px solid #dde5eb;margin-bottom:10px;padding-inline:20px;border-radius:3px}
+.service-redesign .detail-faq summary{font-size:15px;padding-block:19px}
+.service-redesign .detail-faq details p{font-size:13px;padding-bottom:18px;line-height:1.85}
+
+@media(min-width:801px) and (max-height:760px){
+ .service-opening-content{padding:6px 0 12px}
+ .service-redesign .service-opening h1{font-size:38px}
+ .service-redesign .service-opening .detail-hero-description{font-size:13px;margin:13px 0;max-width:550px}
+ .service-redesign .service-opening .detail-kicker{margin-bottom:11px}
+ .service-redesign .service-opening .detail-page-label{margin-bottom:10px;font-size:16px}
+ .service-opening-tags{margin-bottom:15px}
+ .service-opening-areas>a{min-height:72px;padding:12px 16px;gap:12px}
+ .service-opening-areas strong{font-size:12px}
+ .service-digital-forensics .forensic-selector .detail-chapter-heading{margin-bottom:15px}
+ .service-digital-forensics .forensic-field-overview .resource-figure>div{height:285px}
+ .service-digital-forensics .forensic-field-overview .resource-copy h3{font-size:27px}
+ .service-digital-forensics .forensic-field-overview .resource-copy>p{font-size:13px;margin:12px 0}
+ .service-digital-forensics .forensic-field-overview{padding-block:24px 28px}
+ .service-incident-response .investigation-screen{gap:21px}
+ .investigation-number{font-size:66px;min-width:104px}
+ .investigation-heading h2{font-size:32px}.investigation-heading p{font-size:13px;margin-top:9px}
+ .investigation-evidence{padding:22px 24px}.investigation-evidence h3{font-size:21px;margin:12px 0 18px}
+ .investigation-signal{margin-top:18px;padding-top:12px}
+ .investigation-scope li{padding:19px 0}.investigation-scope h3{font-size:19px}
+ .management-heading{margin-bottom:23px}.management-heading h2{font-size:32px}.management-heading>p{font-size:16px}
+ .management-orbit{height:250px}.management-route{min-height:250px;padding:18px;gap:12px}
+ .management-hub{width:108px;height:108px}.management-node{min-width:98px;font-size:11px}
+ .management-scope li{padding-block:12px}.management-copy .management-lead{font-size:13px}
+ .service-redesign .detail-process-chapter .detail-chapter-heading{margin-bottom:30px}
+}
+@media(max-width:1100px) and (min-width:801px){
+ .service-opening-areas>a{gap:10px;padding:12px}.service-opening-areas svg{width:23px}.service-opening-areas strong{font-size:11px}.service-opening-areas i{display:none}
+ .management-layout{gap:28px}.management-node{min-width:92px;padding:8px}.management-node.node-0,.management-node.node-2{left:10px}.management-node.node-1,.management-node.node-3{right:10px}
+ .investigation-sources{gap:9px}.investigation-evidence{padding:23px}.investigation-heading{gap:20px}
+ .service-digital-forensics .forensic-tabs .resource-tablist small{font-size:9px}.service-digital-forensics .forensic-tabs .resource-tablist strong{font-size:14px}
+}
+@media(max-width:800px){
+ .service-opening-photo{inset:0;opacity:.6}
+ .service-opening-photo:after{background:linear-gradient(90deg,#091522e6,#09152240),linear-gradient(0deg,#091522,transparent)}
+ .service-redesign .service-opening .detail-hero-frame{min-height:100svh;gap:18px;padding-top:calc(var(--ir-header-height,76px) + 20px);padding-bottom:26px}
+ .service-redesign .service-opening h1{font-size:30px;line-height:1.5}
+ .service-redesign .service-opening .detail-hero-description{font-size:13px;line-height:1.8}
+ .service-opening-content{padding:10px 0 12px}.service-opening-photo>span{display:none}
+ .service-opening-areas{grid-auto-flow:row;grid-template-columns:1fr 1fr;grid-auto-columns:auto}
+ .service-opening-areas>a{min-height:65px;padding:12px;gap:10px;border-bottom:1px solid #ffffff20}
+ .service-opening-areas svg{width:23px;height:25px}.service-opening-areas strong{font-size:11px}.service-opening-areas i{display:none}
+ .service-opening-tags{gap:6px}.service-opening-tags>span{font-size:10px;padding:4px 8px}
+ .service-redesign .service-opening .detail-hero-bottom-label{display:none}
+ .service-digital-forensics .forensic-selector .detail-chapter-heading{display:block}
+ .service-digital-forensics .forensic-selector .detail-chapter-heading .detail-kicker{margin-bottom:10px}
+ .service-digital-forensics .forensic-selector .detail-chapter-heading h2{font-size:24px}
+ .service-digital-forensics .forensic-tabs .resource-tablist{grid-template-columns:1fr 1fr;gap:4px}
+ .service-digital-forensics .forensic-tabs .resource-tablist button{padding:13px 10px;min-height:77px;gap:2px 8px;grid-template-columns:24px 1fr}
+ .service-digital-forensics .forensic-tabs .resource-tablist svg{width:24px}
+ .service-digital-forensics .forensic-tabs .resource-tablist strong{font-size:13px}
+ .service-digital-forensics .forensic-tabs .resource-tablist small{font-size:9px}.service-digital-forensics .forensic-tab-number{display:none}
+ .service-digital-forensics .forensic-field-overview{grid-template-columns:1fr;gap:24px;padding-block:24px 50px;min-height:0}
+ .service-digital-forensics .forensic-field-overview .resource-figure>div{height:230px;aspect-ratio:auto}
+ .service-digital-forensics .forensic-field-overview .resource-copy h3{font-size:25px}
+ .service-digital-forensics .forensic-analysis-map{grid-template-columns:1fr 1fr}
+ .service-digital-forensics .forensic-analysis-map li{padding:20px 16px;border-bottom:1px solid #dce4eb}
+ .service-digital-forensics .forensic-analysis-map h3{font-size:15px;min-height:44px}
+ .service-digital-forensics .forensic-result-line{grid-template-columns:1fr;gap:12px;padding:19px}
+ .service-digital-forensics .forensic-result-line ul{grid-template-columns:1fr;gap:8px}
+ .service-incident-response .investigation-screen{min-height:0;padding-top:calc(var(--ir-header-height,76px) + 28px);padding-bottom:50px;gap:24px}
+ .investigation-heading{align-items:flex-start;gap:16px}.investigation-number{font-size:48px;min-width:56px}.investigation-number>span{font-size:5px;letter-spacing:0}
+ .investigation-heading h2{font-size:26px}.investigation-heading p{font-size:13px;margin-top:13px}.investigation-heading .detail-kicker{font-size:8px}
+ .investigation-layout{grid-template-columns:1fr;gap:18px}.investigation-evidence{padding:25px}
+ .investigation-sources span{font-size:11px}.investigation-scope li{padding:20px 0;gap:15px}.investigation-scope h3{font-size:20px}
+ .investigation-bottom{display:block;line-height:1.8;font-size:11px}.investigation-bottom>a{display:inline-block;margin-top:18px;font-size:13px}
+ .service-incident-response .case-flow{grid-template-columns:1fr}
+ .service-enterprise-security .management-chapter{min-height:0;padding-block:calc(var(--ir-header-height,76px) + 28px) 50px}
+ .management-heading{display:block;margin-bottom:25px}.management-heading h2{font-size:29px}.management-heading>p{font-size:16px;padding-left:0;border:0;margin-top:15px}
+ .management-layout{grid-template-columns:1fr;gap:27px}.management-orbit{height:270px}.management-hub{width:105px;height:105px}.management-hub strong{font-size:13px}
+ .management-node{font-size:11px;min-width:96px}.management-node.node-0,.management-node.node-2{left:12px}.management-node.node-1,.management-node.node-3{right:12px}
+ .management-orbit:before{inset:40px}.management-orbit:after{inset:65px}.management-visual-result{padding:15px;gap:10px}.management-visual-result>strong{font-size:11px}
+ .management-route{padding:16px;gap:10px;min-height:255px}.management-route strong{font-size:12px}.management-route svg{width:26px}.management-route li{padding:14px 10px}
+ .service-redesign .service-process-flow{grid-template-columns:1fr 1fr;gap:12px}
+ .service-redesign .service-process-flow li{padding:22px 16px}.service-redesign .service-process-flow li:after{display:none}
+ .service-redesign .process-node{margin-bottom:23px}.service-redesign .process-node .process-step{font-size:32px}.service-redesign .process-node svg{width:28px}
+ .service-redesign .service-process-flow h3{font-size:16px}.service-redesign .process-output{font-size:10px;margin-top:18px}
+ .service-redesign .detail-faq details{padding-inline:16px}.service-redesign .detail-faq summary{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.service-redesign *,.network-facilities img{scroll-behavior:auto;transition:none!important}}
+@media(max-width:1000px) and (min-width:801px){.network-facilities{grid-template-columns:1fr}.network-lab{display:none}.network-directory-heading{display:block}.network-directory-heading>span{display:block;margin-top:4px}}
+@media(max-width:800px){
+ .company-screen-page .company-network-unified-grid{grid-template-columns:1fr;gap:24px}
+ .company-screen-page .company-network-unified .company-network-map{max-width:380px}
+ .network-facilities{height:235px;grid-template-columns:1.5fr 1fr}
+ .network-facilities strong{font-size:17px}.network-facilities figcaption{inset:auto 13px 14px}
+ .company-screen-page .company-network-unified .company-branches{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .company-screen-page .company-network-unified .company-branch summary{padding:12px 9px}
+ .company-screen-page .company-network-unified .company-branch strong{font-size:13px}
+ .company-screen-page .company-network-unified .company-branch summary>span{display:none}
+ .network-directory-heading{align-items:start;flex-direction:column;gap:3px}
+}

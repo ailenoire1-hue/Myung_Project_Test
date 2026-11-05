@@ -1,0 +1,4 @@
+/* Keep previously shared anchors aligned with their selected service chapter. */
+.ir-approved [data-fr-screen]{position:relative}
+.ir-approved .ir-anchor-alias{position:absolute;top:0;left:0;width:0;height:0;pointer-events:none}
+.ir-approved .sc-anchor-alias{position:absolute;top:0;left:0;width:0;height:0;pointer-events:none}

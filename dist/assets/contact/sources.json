@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-15",
+  "channels": [
+    {
+      "key": "homepage",
+      "title": "회사 홈페이지",
+      "url": "https://www.myung.co.kr/",
+      "asset": "contact-qr-homepage",
+      "file": "dist/assets/contact/qr-homepage.svg",
+      "modulesWithQuietZone": 33,
+      "quietZone": 4,
+      "errorCorrection": "M",
+      "decoded": "https://www.myung.co.kr/"
+    },
+    {
+      "key": "blog",
+      "title": "네이버 블로그",
+      "url": "https://blog.naver.com/myungit2",
+      "asset": "contact-qr-blog",
+      "file": "dist/assets/contact/qr-blog.svg",
+      "modulesWithQuietZone": 37,
+      "quietZone": 4,
+      "errorCorrection": "M",
+      "decoded": "https://blog.naver.com/myungit2"
+    },
+    {
+      "key": "youtube",
+      "title": "유튜브 · 명TV",
+      "url": "https://www.youtube.com/channel/UC7P1LyBxStJkKxAb_yx5DKw",
+      "asset": "contact-qr-youtube",
+      "file": "dist/assets/contact/qr-youtube.svg",
+      "modulesWithQuietZone": 41,
+      "quietZone": 4,
+      "errorCorrection": "M",
+      "decoded": "https://www.youtube.com/channel/UC7P1LyBxStJkKxAb_yx5DKw"
+    }
+  ],
+  "contacts": {
+    "recovery": "1577-1377",
+    "forensic": "1577-4872",
+    "headquarters": "043-218-8400",
+    "email": "cs@myung.co.kr",
+    "address": "충북 청주시 청원구 오창읍 과학산업3로 168"
+  },
+  "sources": [
+    "https://www.myung.co.kr/",
+    "https://www.myung.co.kr/about/contact",
+    "company-profile-data.json / insights.channels",
+    "content.json / company"
+  ],
+  "background": "dist/assets/cover/myung-hq-aerial.jpg"
+}

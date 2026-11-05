@@ -1,0 +1,27 @@
+{
+  "retrieved": "2026-10-14",
+  "logos": {
+    "name": "법무법인(유) 로고스",
+    "page": "https://www.lawlogos.com/",
+    "originalAsset": "https://www.lawlogos.com/img/svg/logo.svg",
+    "localOriginal": "logos.svg",
+    "displayAsset": "logos.png",
+    "displayDimensions": [
+      800,
+      244
+    ],
+    "derivation": "Official SVG geometry unchanged. Rendered in official white-background logo color #18479F defined as --color-main by https://www.lawlogos.com/css/variables.css and applied to logo by https://www.lawlogos.com/css/common.css. Transparent PNG rendered at width 800 for brochure embedding.",
+    "variantSvg": "logos-brand.svg"
+  },
+  "ilsun": {
+    "name": "법무법인 일선",
+    "page": "https://ilsunlaw.com/",
+    "originalAsset": "https://ilsunlaw.com/images/common/logo_on.png",
+    "displayAsset": "ilsun.png",
+    "displayDimensions": [
+      217,
+      45
+    ],
+    "derivation": "Unmodified official PNG used for the homepage logo-on variant. Orange emblem and Korean firm wordmark, transparent background."
+  }
+}

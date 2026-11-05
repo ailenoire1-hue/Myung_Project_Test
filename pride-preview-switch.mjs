@@ -1,0 +1,5 @@
+export function pridePreviewSwitch(html,selected){
+ const choices=[['a','home-pride-preview.html','A · 슬라이드형'],['b','home-pride-business-preview.html','B · 사업분야형']];
+ return html.replace('</head>','<style>.pride-preview-switch{position:fixed;z-index:950;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:4px;padding:5px;background:#fffffff2;border:1px solid #dfe3e8;border-radius:7px;box-shadow:0 4px 18px #18232e0d;white-space:nowrap}.pride-preview-switch a{padding:9px 16px;font-size:13px;line-height:1.4;color:#657181;border-radius:3px}.pride-preview-switch a[aria-current]{background:#172331;color:#fff}.pride-preview-switch a:hover{color:#c77943}.pride-preview-switch a:focus-visible{outline:2px solid #ca7d47;outline-offset:1px}@media(max-width:800px){.pride-preview-switch{bottom:10px}.pride-preview-switch a{padding:9px 12px}}</style></head>')
+ .replace('</body>',`<nav class="pride-preview-switch" aria-label="기술력 챕터 디자인 비교">${choices.map(([key,path,label])=>`<a href="${path}#national-experience"${selected===key?' aria-current="page"':''}>${label}</a>`).join('')}</nav></body>`);
+}
