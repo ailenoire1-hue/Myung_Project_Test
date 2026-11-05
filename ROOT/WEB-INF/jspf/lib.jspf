@@ -1,0 +1,271 @@
+<%--
+  공통 유틸리티 (Java 6 문법만 사용 - Tomcat 7 기본 JSP 컴파일러 호환)
+  - HTML 이스케이프
+  - 문의 데이터 저장 경로(웹 루트 바깥) 결정 및 저장/조회/수정
+  - 요청 빈도 제한, 관리자 인증 보조
+--%><%@ page import="java.io.*,java.util.*,java.text.*,java.security.*" %><%!
+    /* ---------- 회사 기본 정보 ---------- */
+    static final String CS_TEL = "1577-1377";
+    static final String KAKAO_URL = "https://pf.kakao.com/_RxbmYV/chat";
+    static final String SITE_URL = "https://myung.co.kr";
+    static final int RECOVERY_START_YEAR = 1993; // 국내 최초 데이터복구 사업 시작
+
+    /* ---------- 문자열 ---------- */
+    static String h(Object o) {
+        if (o == null) return "";
+        String s = String.valueOf(o);
+        StringBuilder b = new StringBuilder(s.length() + 16);
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            switch (c) {
+                case '&': b.append("&amp;"); break;
+                case '<': b.append("&lt;"); break;
+                case '>': b.append("&gt;"); break;
+                case '"': b.append("&quot;"); break;
+                case '\'': b.append("&#39;"); break;
+                default: b.append(c);
+            }
+        }
+        return b.toString();
+    }
+
+    static String nz(String s) { return s == null ? "" : s.trim(); }
+
+    /** 제어문자 제거 + 길이 제한 (줄바꿈 허용 여부 선택) */
+    static String clean(String s, int max, boolean multiline) {
+        if (s == null) return "";
+        StringBuilder b = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '\r') continue;
+            if (c == '\n' || c == '\t') { b.append(multiline ? c : ' '); continue; }
+            if (c < 0x20 || c == 0x7f) continue;
+            b.append(c);
+        }
+        String r = b.toString().trim();
+        if (r.length() > max) r = r.substring(0, max);
+        return r;
+    }
+
+    static int currentYear() { return Calendar.getInstance().get(Calendar.YEAR); }
+
+    /* ---------- 저장 경로 (웹 루트 바깥) ---------- */
+    static final Object STORE_LOCK = new Object();
+
+    static File dataDir(javax.servlet.ServletContext app) throws IOException {
+        String d = System.getProperty("myung.data.dir");
+        if (d == null || d.trim().length() == 0) d = System.getenv("MYUNG_DATA_DIR");
+        if (d == null || d.trim().length() == 0) d = app.getInitParameter("myung.data.dir");
+        File dir;
+        if (d == null || d.trim().length() == 0) {
+            String base = System.getProperty("catalina.base");
+            if (base == null) base = System.getProperty("user.home");
+            dir = new File(base, "myung-data");
+        } else {
+            dir = new File(d.trim());
+        }
+        dir = dir.getCanonicalFile();
+
+        // 웹 루트(ROOT) 내부 경로는 거부 → 외부에서 URL 로 접근 불가능하도록 보장
+        String webRoot = app.getRealPath("/");
+        if (webRoot != null) {
+            String wr = new File(webRoot).getCanonicalPath();
+            String dp = dir.getPath();
+            if (dp.equals(wr) || dp.startsWith(wr + File.separator)) {
+                throw new IOException("문의 저장 경로가 웹 루트 내부입니다. ROOT 바깥 경로를 지정하세요: " + dp);
+            }
+        }
+        if (!dir.exists() && !dir.mkdirs()) throw new IOException("저장 디렉터리를 만들 수 없습니다: " + dir);
+        return dir;
+    }
+
+    static File inquiryRoot(javax.servlet.ServletContext app) throws IOException {
+        File f = new File(dataDir(app), "inquiries");
+        if (!f.exists() && !f.mkdirs()) throw new IOException("cannot create " + f);
+        return f;
+    }
+
+    static final String[] INQUIRY_FIELDS = {
+        "id", "type", "status", "createdAt", "updatedAt", "name", "phone", "email",
+        "branch", "symptom", "route", "device", "content", "page", "ip", "userAgent", "memo"
+    };
+
+    static String newInquiryId() {
+        SimpleDateFormat f = new SimpleDateFormat("yyyyMMdd-HHmmss");
+        String rnd = Integer.toHexString(new SecureRandom().nextInt(0xFFFFFF) + 0x1000000).substring(1);
+        return f.format(new Date()) + "-" + rnd;
+    }
+
+    static boolean validId(String id) {
+        return id != null && id.matches("\\d{8}-\\d{6}-[0-9a-f]{6}");
+    }
+
+    static File inquiryFile(javax.servlet.ServletContext app, String id) throws IOException {
+        if (!validId(id)) throw new IOException("invalid id");
+        File dir = new File(inquiryRoot(app), id.substring(0, 4) + File.separator + id.substring(4, 6));
+        return new File(dir, id + ".properties");
+    }
+
+    static void writeProps(File target, Properties p) throws IOException {
+        File dir = target.getParentFile();
+        if (!dir.exists() && !dir.mkdirs()) throw new IOException("cannot create " + dir);
+        File tmp = new File(dir, target.getName() + ".tmp");
+        Writer w = new OutputStreamWriter(new FileOutputStream(tmp), "UTF-8");
+        try {
+            p.store(w, "Myung inquiry");
+        } finally {
+            w.close();
+        }
+        if (target.exists() && !target.delete()) throw new IOException("cannot replace " + target);
+        if (!tmp.renameTo(target)) throw new IOException("cannot rename " + tmp);
+    }
+
+    static Properties readProps(File f) throws IOException {
+        Properties p = new Properties();
+        Reader r = new InputStreamReader(new FileInputStream(f), "UTF-8");
+        try {
+            p.load(r);
+        } finally {
+            r.close();
+        }
+        return p;
+    }
+
+    static String saveInquiry(javax.servlet.ServletContext app, Map<String, String> data) throws IOException {
+        synchronized (STORE_LOCK) {
+            String id = newInquiryId();
+            File f = inquiryFile(app, id);
+            while (f.exists()) { id = newInquiryId(); f = inquiryFile(app, id); }
+            Properties p = new Properties();
+            for (Map.Entry<String, String> e : data.entrySet()) {
+                if (e.getValue() != null) p.setProperty(e.getKey(), e.getValue());
+            }
+            String now = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+            p.setProperty("id", id);
+            p.setProperty("status", "new");
+            p.setProperty("createdAt", now);
+            p.setProperty("updatedAt", now);
+            writeProps(f, p);
+            return id;
+        }
+    }
+
+    static Properties loadInquiry(javax.servlet.ServletContext app, String id) throws IOException {
+        File f = inquiryFile(app, id);
+        if (!f.isFile()) return null;
+        return readProps(f);
+    }
+
+    static void updateInquiry(javax.servlet.ServletContext app, String id, String status, String memo) throws IOException {
+        synchronized (STORE_LOCK) {
+            File f = inquiryFile(app, id);
+            if (!f.isFile()) throw new FileNotFoundException(id);
+            Properties p = readProps(f);
+            if (status != null) p.setProperty("status", status);
+            if (memo != null) p.setProperty("memo", memo);
+            p.setProperty("updatedAt", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+            writeProps(f, p);
+        }
+    }
+
+    /** 최신순 전체 목록 */
+    static List<Properties> listInquiries(javax.servlet.ServletContext app) throws IOException {
+        List<File> files = new ArrayList<File>();
+        collect(inquiryRoot(app), files, 0);
+        Collections.sort(files, new Comparator<File>() {
+            public int compare(File a, File b) { return b.getName().compareTo(a.getName()); }
+        });
+        List<Properties> out = new ArrayList<Properties>();
+        for (File f : files) {
+            try { out.add(readProps(f)); } catch (IOException ignore) { }
+        }
+        return out;
+    }
+
+    static void collect(File dir, List<File> out, int depth) {
+        File[] list = dir.listFiles();
+        if (list == null || depth > 3) return;
+        for (File f : list) {
+            if (f.isDirectory()) collect(f, out, depth + 1);
+            else if (f.getName().endsWith(".properties")) out.add(f);
+        }
+    }
+
+    static String typeLabel(String t) {
+        if ("request".equals(t)) return "복구 문의";
+        if ("business".equals(t)) return "출장 복구";
+        if ("call".equals(t)) return "상담 요청";
+        return "기타";
+    }
+
+    static String statusLabel(String s) {
+        if ("progress".equals(s)) return "처리중";
+        if ("done".equals(s)) return "완료";
+        return "신규";
+    }
+
+    /* ---------- 요청 빈도 제한 ---------- */
+    static final Map<String, LinkedList<Long>> HITS = new HashMap<String, LinkedList<Long>>();
+
+    /** key 기준 windowMs 동안 max 회 초과 시 false */
+    static boolean allow(String key, int max, long windowMs, boolean record) {
+        long now = System.currentTimeMillis();
+        synchronized (HITS) {
+            if (HITS.size() > 5000) HITS.clear();
+            LinkedList<Long> q = HITS.get(key);
+            if (q == null) { q = new LinkedList<Long>(); HITS.put(key, q); }
+            while (!q.isEmpty() && now - q.getFirst().longValue() > windowMs) q.removeFirst();
+            if (q.size() >= max) return false;
+            if (record) q.addLast(Long.valueOf(now));
+            return true;
+        }
+    }
+
+    static void hit(String key) {
+        synchronized (HITS) {
+            LinkedList<Long> q = HITS.get(key);
+            if (q == null) { q = new LinkedList<Long>(); HITS.put(key, q); }
+            q.addLast(Long.valueOf(System.currentTimeMillis()));
+        }
+    }
+
+    /* ---------- 관리자 ---------- */
+    static String sha256(String s) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] d = md.digest(s.getBytes("UTF-8"));
+            StringBuilder b = new StringBuilder();
+            for (byte x : d) b.append(String.format("%02x", x & 0xff));
+            return b.toString();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    static Properties adminConfig(javax.servlet.ServletContext app) throws IOException {
+        File f = new File(dataDir(app), "admin.properties");
+        if (!f.isFile()) return null;
+        return readProps(f);
+    }
+
+    static boolean checkAdmin(Properties cfg, String id, String pw) {
+        if (cfg == null || id == null || pw == null) return false;
+        String cid = nz(cfg.getProperty("admin.id", "admin"));
+        String hash = nz(cfg.getProperty("admin.password.sha256")).toLowerCase();
+        String plain = cfg.getProperty("admin.password");
+        boolean idOk = MessageDigest.isEqual(cid.getBytes(), id.trim().getBytes());
+        boolean pwOk;
+        if (hash.length() == 64) pwOk = MessageDigest.isEqual(hash.getBytes(), sha256(pw).getBytes());
+        else if (plain != null && plain.length() > 0) pwOk = MessageDigest.isEqual(plain.getBytes(), pw.getBytes());
+        else pwOk = false;
+        return idOk && pwOk;
+    }
+
+    static String randomToken() {
+        byte[] b = new byte[24];
+        new SecureRandom().nextBytes(b);
+        StringBuilder s = new StringBuilder();
+        for (byte x : b) s.append(String.format("%02x", x & 0xff));
+        return s.toString();
+    }
+%>

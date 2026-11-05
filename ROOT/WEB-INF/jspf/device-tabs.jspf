@@ -1,0 +1,8 @@
+<%-- 데이터 복구 > 장치별 탭 --%><%
+    String[][] DEVICE_TABS = { {"HDD", "/data/hdd"}, {"SSD", "/data/ssd"}, {"모바일", "/data/mobile"}, {"서버 · RAID", "/data/raid"}, {"CCTV · DVR", "/data/cctv"} };
+%>
+<nav class="tabs" aria-label="장치별 복구 안내">
+<% for (String[] t : DEVICE_TABS) { %>
+  <a href="<%= t[1] %>"<%= t[1].equals(CUR) ? " class=\"is-active\" aria-current=\"page\"" : "" %>><%= t[0] %></a>
+<% } %>
+</nav>

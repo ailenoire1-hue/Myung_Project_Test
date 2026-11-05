@@ -1,0 +1,146 @@
+<%--
+  공통 상단 레이아웃.
+  include 전에 페이지에서 아래 변수를 선언해야 합니다.
+    String PAGE_TITLE   : 페이지 제목 (null 이면 메인)
+    String PAGE_DESC    : meta description
+    String SECTION      : about | data | special | forensic | solution | community | (기타 "")
+    String HERO_IMG     : 서브 상단 배경 이미지 (null 이면 서브 히어로 없음)
+    String HERO_EYEBROW : 서브 상단 보조 문구
+    String HERO_SUB     : 서브 상단 설명
+--%><%@ include file="/WEB-INF/jspf/lib.jspf" %><%!
+    /* 메뉴: { 라벨, URL, 활성화 판단용 추가 경로(콤마) } */
+    static final String[] SECTIONS = { "about", "data", "special", "forensic", "solution", "community" };
+    static final String[] SECTION_LABELS = { "회사소개", "데이터 복구", "특수 복구", "디지털 포렌식", "솔루션", "고객센터" };
+    static final String[] SECTION_EN = { "About Us", "Data Recovery", "Special Recovery", "Digital Forensics", "Solution", "Customer Center" };
+    static final String[][][] MENU = {
+        { {"인사말", "/about/greeting", ""}, {"연혁", "/about/history", ""}, {"수상 및 인증", "/about/awards", ""},
+          {"오시는 길", "/about/contact", ""}, {"파트너", "/about/partner", ""} },
+        { {"복구 소개", "/data/hdd", "/data/ssd,/data/mobile,/data/raid,/data/cctv"},
+          {"복구 비용", "/data/cost/common", "/data/cost/premium,/data/cost/forensics"},
+          {"복구 문의", "/data/request", ""} },
+        { {"출장 복구", "/special/business", ""}, {"자가 복구 (DIY)", "/special/diy", ""} },
+        { {"명디지털 포렌식", "/forensic/myung", ""}, {"디지털 포렌식", "/forensic/digital", ""}, {"모바일 포렌식", "/forensic/mobile", ""} },
+        { {"백업", "/solution/backup", ""}, {"데이터 완전삭제", "/solution/delete", ""}, {"PC-3000", "/solution/pc3000", ""},
+          {"수리 기술 서비스", "/solution/repair/comrepair", ""}, {"MIT-HASH", "/solution/mit_hash", ""} },
+        { {"공지사항", "/community/notice", "/community/notice/view"}, {"FAQ", "/community/faq", ""}, {"자료실", "/community/ref", ""},
+          {"뉴스레터", "/community/newsletter", ""}, {"복구 후기", "/community/review", ""} }
+    };
+
+    static boolean isActive(String cur, String[] item) {
+        if (cur == null) return false;
+        if (cur.equals(item[1])) return true;
+        if (item[2].length() > 0) {
+            for (String p : item[2].split(",")) if (cur.equals(p)) return true;
+        }
+        return false;
+    }
+
+    static int sectionIndex(String s) {
+        for (int i = 0; i < SECTIONS.length; i++) if (SECTIONS[i].equals(s)) return i;
+        return -1;
+    }
+%><%
+    String CUR = (String) request.getAttribute("javax.servlet.forward.servlet_path");
+    if (CUR == null) CUR = request.getServletPath();
+    int SEC_IDX = sectionIndex(SECTION);
+    String ACTIVE_LABEL = null;
+    if (SEC_IDX >= 0) for (String[] it : MENU[SEC_IDX]) if (isActive(CUR, it)) ACTIVE_LABEL = it[0];
+    String FULL_TITLE = (PAGE_TITLE == null ? "(주)명정보기술 | 대한민국 데이터 복구 · 디지털 포렌식 전문기업" : PAGE_TITLE + " | (주)명정보기술");
+    String CANONICAL = SITE_URL + ("/index.jsp".equals(CUR) ? "/" : CUR);
+    String ASSET_V = "20261105";
+%><!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title><%= h(FULL_TITLE) %></title>
+<meta name="description" content="<%= h(PAGE_DESC) %>">
+<meta name="keywords" content="데이터복구, 하드디스크 복구, SSD 복구, USB 복구, 메모리 복구, 휴대폰 데이터 복구, RAID 서버 복구, CCTV 복구, 블랙박스 복구, 디지털 포렌식, 명정보기술">
+<meta name="theme-color" content="#1f4fc4">
+<link rel="canonical" href="<%= h(CANONICAL) %>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="(주)명정보기술">
+<meta property="og:title" content="<%= h(FULL_TITLE) %>">
+<meta property="og:description" content="<%= h(PAGE_DESC) %>">
+<meta property="og:url" content="<%= h(CANONICAL) %>">
+<meta property="og:image" content="<%= SITE_URL %>/resources/images/logo/logo.png">
+<link rel="icon" href="/resources/images/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/resources/font/pretendard/woff2/Pretendard-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/resources/font/pretendard/pretendard.css?v=<%= ASSET_V %>">
+<link rel="stylesheet" href="/resources/css/site.css?v=<%= ASSET_V %>">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9S75FFT');</script>
+</head>
+<body class="<%= PAGE_TITLE == null ? "is-home" : "is-sub" %>">
+<a class="skip-link" href="#main">본문 바로가기</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="(주)명정보기술 홈">
+      <img src="/resources/images/logo/logo.png" alt="(주)명정보기술" width="140" height="45">
+    </a>
+
+    <nav class="gnb" id="gnb" aria-label="주 메뉴">
+      <div class="gnb-mobile-top">
+        <a class="gnb-call" href="tel:<%= CS_TEL %>">
+          <span class="gnb-call-label">고객센터</span><strong><%= CS_TEL %></strong>
+        </a>
+        <button type="button" class="btn btn-primary btn-sm" data-open-modal="callModal">상담 요청</button>
+      </div>
+      <ul class="gnb-list">
+<% for (int i = 0; i < SECTIONS.length; i++) { %>
+        <li class="gnb-item<%= i == SEC_IDX ? " is-current" : "" %>">
+          <a class="gnb-link" href="<%= MENU[i][0][1] %>"><%= SECTION_LABELS[i] %></a>
+          <button type="button" class="gnb-expand" aria-expanded="false" aria-label="<%= SECTION_LABELS[i] %> 하위 메뉴 열기"><span></span></button>
+          <ul class="gnb-sub">
+<%   for (String[] it : MENU[i]) { %>
+            <li><a href="<%= it[1] %>"<%= isActive(CUR, it) ? " aria-current=\"page\"" : "" %>><%= it[0] %></a></li>
+<%   } %>
+          </ul>
+        </li>
+<% } %>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-tel" href="tel:<%= CS_TEL %>" aria-label="고객센터 전화 <%= CS_TEL %>">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span><%= CS_TEL %></span>
+      </a>
+      <a class="btn btn-primary btn-sm header-cta" href="/data/request">복구 접수</a>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-controls="gnb" aria-expanded="false" aria-label="전체 메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="gnb-backdrop" id="gnbBackdrop" hidden></div>
+
+<% if (HERO_IMG != null) { %>
+<section class="page-hero" style="background-image:url('<%= h(HERO_IMG) %>')">
+  <div class="container">
+    <p class="page-hero-eyebrow"><%= h(HERO_EYEBROW != null ? HERO_EYEBROW : (SEC_IDX >= 0 ? SECTION_EN[SEC_IDX] : "")) %></p>
+    <h1 class="page-hero-title"><%= h(PAGE_TITLE) %></h1>
+<%   if (HERO_SUB != null) { %><p class="page-hero-sub"><%= HERO_SUB %></p><% } %>
+    <ol class="breadcrumb" aria-label="현재 위치">
+      <li><a href="/">홈</a></li>
+<%   if (SEC_IDX >= 0) { %><li><a href="<%= MENU[SEC_IDX][0][1] %>"><%= SECTION_LABELS[SEC_IDX] %></a></li><% } %>
+      <li aria-current="page"><%= h(ACTIVE_LABEL != null ? ACTIVE_LABEL : PAGE_TITLE) %></li>
+    </ol>
+  </div>
+</section>
+<%   if (SEC_IDX >= 0) { %>
+<nav class="lnb" aria-label="<%= SECTION_LABELS[SEC_IDX] %> 메뉴">
+  <div class="container">
+    <ul class="lnb-list">
+<%     for (String[] it : MENU[SEC_IDX]) { %>
+      <li><a href="<%= it[1] %>"<%= isActive(CUR, it) ? " class=\"is-active\" aria-current=\"page\"" : "" %>><%= it[0] %></a></li>
+<%     } %>
+    </ul>
+  </div>
+</nav>
+<%   } %>
+<% } %>
+
+<main id="main" class="site-main">

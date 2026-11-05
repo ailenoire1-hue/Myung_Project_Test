@@ -1,0 +1,51 @@
+<%-- 관리자 공통 상단 (lib.jspf 는 각 페이지에서 먼저 include) --%><%
+    response.setHeader("Cache-Control", "no-store");
+    response.setHeader("X-Robots-Tag", "noindex, nofollow");
+    response.setHeader("X-Frame-Options", "DENY");
+%><!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title><%= h(ADMIN_TITLE) %> | 명정보기술 관리자</title>
+<link rel="icon" href="/resources/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/resources/font/pretendard/pretendard.css">
+<link rel="stylesheet" href="/resources/css/site.css">
+<style>
+  body { background: var(--bg-soft); }
+  .adm-header { background: var(--navy); color: #fff; }
+  .adm-header .container { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
+  .adm-header a { color: #fff; }
+  .adm-header .brand { font-weight: 800; font-size: 17px; }
+  .adm-header nav { display: flex; gap: 16px; font-size: 14.5px; }
+  .adm-main { padding: 32px 0 64px; }
+  .adm-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+  .adm-filter { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px; }
+  .adm-filter select, .adm-filter input { min-height: 40px; padding: 6px 10px; border: 1px solid var(--line-2); border-radius: 8px; background: #fff; }
+  .adm-filter input[type=search] { width: 220px; }
+  .adm-table { width: 100%; font-size: 14.5px; min-width: 860px; }
+  .adm-table th, .adm-table td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  .adm-table th { background: var(--bg-soft); font-weight: 700; color: var(--ink); white-space: nowrap; }
+  .adm-table tr:hover td { background: #fafbff; }
+  .adm-table .ellipsis { max-width: 340px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .adm-summary { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+  .adm-summary div { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 20px; min-width: 130px; }
+  .adm-summary b { display: block; font-size: 24px; color: var(--ink); }
+  .adm-dl { display: grid; grid-template-columns: 140px 1fr; margin: 0; border-top: 2px solid var(--ink); }
+  .adm-dl dt, .adm-dl dd { margin: 0; padding: 12px; border-bottom: 1px solid var(--line); }
+  .adm-dl dt { background: var(--bg-soft); font-weight: 700; }
+  .adm-dl dd { white-space: pre-wrap; word-break: break-all; }
+  @media (max-width: 640px) { .adm-dl { grid-template-columns: 100px 1fr; } .adm-filter input[type=search] { width: 100%; } }
+</style>
+</head>
+<body>
+<header class="adm-header">
+  <div class="container">
+    <a class="brand" href="/admin">명정보기술 · 문의 관리</a>
+<% if (session.getAttribute("myungAdmin") != null) { %>
+    <nav><a href="/admin">문의 목록</a><a href="/" target="_blank" rel="noopener">사이트</a><a href="/admin/logout">로그아웃</a></nav>
+<% } %>
+  </div>
+</header>
+<main class="adm-main"><div class="container">

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  (주)명정보기술 홈페이지 - Tomcat 7 (Servlet 3.0 / JSP 2.2)
+  - 별도 빌드 없이 webapps/ROOT 에 그대로 배포합니다. (JSP 는 Tomcat 이 컴파일)
+  - 기존 사이트 URL(/about/greeting 등)을 그대로 유지하기 위해 각 URL 을 JSP 파일에 매핑합니다.
+  - 고객 문의 데이터는 ROOT 바깥 디렉터리에 저장됩니다. (README.md 참고)
+-->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+  <display-name>myung.co.kr</display-name>
+
+  <!--
+    문의 저장 디렉터리 (비워두면 기본값 사용)
+    우선순위: JVM 옵션 -Dmyung.data.dir  >  환경변수 MYUNG_DATA_DIR  >  아래 값  >  ${catalina.base}/myung-data
+    ※ ROOT(웹 루트) 내부 경로를 지정하면 저장이 거부됩니다.
+  -->
+  <context-param>
+    <param-name>myung.data.dir</param-name>
+    <param-value></param-value>
+  </context-param>
+
+  <session-config>
+    <session-timeout>30</session-timeout>
+    <cookie-config>
+      <http-only>true</http-only>
+    </cookie-config>
+    <tracking-mode>COOKIE</tracking-mode>
+  </session-config>
+
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <url-pattern>*.jspf</url-pattern>
+      <page-encoding>UTF-8</page-encoding>
+      <trim-directive-whitespaces>true</trim-directive-whitespaces>
+    </jsp-property-group>
+  </jsp-config>
+
+  <mime-mapping><extension>woff2</extension><mime-type>font/woff2</mime-type></mime-mapping>
+  <mime-mapping><extension>json</extension><mime-type>application/json</mime-type></mime-mapping>
+  <mime-mapping><extension>svg</extension><mime-type>image/svg+xml</mime-type></mime-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <error-page><error-code>404</error-code><location>/WEB-INF/views/error/404.jsp</location></error-page>
+  <error-page><error-code>500</error-code><location>/WEB-INF/views/error/500.jsp</location></error-page>
+
+  <!-- ===== 페이지 URL 매핑 ===== -->
+  <servlet><servlet-name>p_about_greeting</servlet-name><jsp-file>/WEB-INF/views/about/greeting.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_about_greeting</servlet-name><url-pattern>/about/greeting</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_about_history</servlet-name><jsp-file>/WEB-INF/views/about/history.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_about_history</servlet-name><url-pattern>/about/history</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_about_awards</servlet-name><jsp-file>/WEB-INF/views/about/awards.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_about_awards</servlet-name><url-pattern>/about/awards</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_about_contact</servlet-name><jsp-file>/WEB-INF/views/about/contact.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_about_contact</servlet-name><url-pattern>/about/contact</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_about_partner</servlet-name><jsp-file>/WEB-INF/views/about/partner.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_about_partner</servlet-name><url-pattern>/about/partner</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_data_hdd</servlet-name><jsp-file>/WEB-INF/views/data/hdd.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_data_hdd</servlet-name><url-pattern>/data/hdd</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_data_ssd</servlet-name><jsp-file>/WEB-INF/views/data/ssd.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_data_ssd</servlet-name><url-pattern>/data/ssd</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_data_mobile</servlet-name><jsp-file>/WEB-INF/views/data/mobile.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_data_mobile</servlet-name><url-pattern>/data/mobile</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_data_raid</servlet-name><jsp-file>/WEB-INF/views/data/raid.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_data_raid</servlet-name><url-pattern>/data/raid</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_data_cctv</servlet-name><jsp-file>/WEB-INF/views/data/cctv.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_data_cctv</servlet-name><url-pattern>/data/cctv</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_data_cost_common</servlet-name><jsp-file>/WEB-INF/views/data/cost/common.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_data_cost_common</servlet-name><url-pattern>/data/cost/common</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_data_cost_premium</servlet-name><jsp-file>/WEB-INF/views/data/cost/premium.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_data_cost_premium</servlet-name><url-pattern>/data/cost/premium</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_data_cost_forensics</servlet-name><jsp-file>/WEB-INF/views/data/cost/forensics.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_data_cost_forensics</servlet-name><url-pattern>/data/cost/forensics</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_data_request</servlet-name><jsp-file>/WEB-INF/views/data/request.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_data_request</servlet-name><url-pattern>/data/request</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_special_business</servlet-name><jsp-file>/WEB-INF/views/special/business.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_special_business</servlet-name><url-pattern>/special/business</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_special_diy</servlet-name><jsp-file>/WEB-INF/views/special/diy.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_special_diy</servlet-name><url-pattern>/special/diy</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_forensic_myung</servlet-name><jsp-file>/WEB-INF/views/forensic/myung.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_forensic_myung</servlet-name><url-pattern>/forensic/myung</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_forensic_digital</servlet-name><jsp-file>/WEB-INF/views/forensic/digital.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_forensic_digital</servlet-name><url-pattern>/forensic/digital</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_forensic_mobile</servlet-name><jsp-file>/WEB-INF/views/forensic/mobile.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_forensic_mobile</servlet-name><url-pattern>/forensic/mobile</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_solution_backup</servlet-name><jsp-file>/WEB-INF/views/solution/backup.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_solution_backup</servlet-name><url-pattern>/solution/backup</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_solution_delete</servlet-name><jsp-file>/WEB-INF/views/solution/delete.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_solution_delete</servlet-name><url-pattern>/solution/delete</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_solution_pc3000</servlet-name><jsp-file>/WEB-INF/views/solution/pc3000.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_solution_pc3000</servlet-name><url-pattern>/solution/pc3000</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_solution_repair_comrepair</servlet-name><jsp-file>/WEB-INF/views/solution/repair/comrepair.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_solution_repair_comrepair</servlet-name><url-pattern>/solution/repair/comrepair</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_solution_mit_hash</servlet-name><jsp-file>/WEB-INF/views/solution/mit_hash.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_solution_mit_hash</servlet-name><url-pattern>/solution/mit_hash</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_community_notice</servlet-name><jsp-file>/WEB-INF/views/community/notice.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_community_notice</servlet-name><url-pattern>/community/notice</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_community_notice_view</servlet-name><jsp-file>/WEB-INF/views/community/notice/view.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_community_notice_view</servlet-name><url-pattern>/community/notice/view</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_community_faq</servlet-name><jsp-file>/WEB-INF/views/community/faq.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_community_faq</servlet-name><url-pattern>/community/faq</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_community_ref</servlet-name><jsp-file>/WEB-INF/views/community/ref.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_community_ref</servlet-name><url-pattern>/community/ref</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_community_newsletter</servlet-name><jsp-file>/WEB-INF/views/community/newsletter.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_community_newsletter</servlet-name><url-pattern>/community/newsletter</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_community_review</servlet-name><jsp-file>/WEB-INF/views/community/review.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_community_review</servlet-name><url-pattern>/community/review</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_policy_privacy</servlet-name><jsp-file>/WEB-INF/views/policy/privacy.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_policy_privacy</servlet-name><url-pattern>/policy/privacy</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_policy_terms</servlet-name><jsp-file>/WEB-INF/views/policy/terms.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_policy_terms</servlet-name><url-pattern>/policy/terms</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_api_inquiry</servlet-name><jsp-file>/WEB-INF/views/api/inquiry.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_api_inquiry</servlet-name><url-pattern>/api/inquiry</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_admin</servlet-name><jsp-file>/WEB-INF/views/admin.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_admin</servlet-name><url-pattern>/admin</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_admin_login</servlet-name><jsp-file>/WEB-INF/views/admin/login.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_admin_login</servlet-name><url-pattern>/admin/login</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_admin_logout</servlet-name><jsp-file>/WEB-INF/views/admin/logout.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_admin_logout</servlet-name><url-pattern>/admin/logout</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_admin_view</servlet-name><jsp-file>/WEB-INF/views/admin/view.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_admin_view</servlet-name><url-pattern>/admin/view</url-pattern></servlet-mapping>
+  <servlet><servlet-name>p_admin_export</servlet-name><jsp-file>/WEB-INF/views/admin/export.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_admin_export</servlet-name><url-pattern>/admin/export</url-pattern></servlet-mapping>
+
+  <!-- 기존 사이트 호환 리다이렉트용 -->
+  <servlet><servlet-name>p_legacy</servlet-name><jsp-file>/WEB-INF/views/legacy.jsp</jsp-file></servlet>
+  <servlet-mapping><servlet-name>p_legacy</servlet-name><url-pattern>/about</url-pattern></servlet-mapping>
+  <servlet-mapping><servlet-name>p_legacy</servlet-name><url-pattern>/data/self</url-pattern></servlet-mapping>
+  <servlet-mapping><servlet-name>p_legacy</servlet-name><url-pattern>/community/ref/board</url-pattern></servlet-mapping>
+  <servlet-mapping><servlet-name>p_legacy</servlet-name><url-pattern>/community/center</url-pattern></servlet-mapping>
+  <servlet-mapping><servlet-name>p_legacy</servlet-name><url-pattern>/special/remote</url-pattern></servlet-mapping>
+
+  <!-- 웹 루트에서 JSP 조각/데이터 디렉터리 직접 접근 차단 -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>blocked</web-resource-name>
+      <url-pattern>*.jspf</url-pattern>
+    </web-resource-collection>
+    <auth-constraint/>
+  </security-constraint>
+</web-app>
