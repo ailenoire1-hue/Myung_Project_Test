@@ -1,5 +1,41 @@
 # 명정보 통합 홈페이지 진행 기록
 
+## 2026-11-06 PM 인수 및 제작 완료
+
+아래 초기 기록은 이력으로 보존한다. 현재 PM은 `ailenoire1-hue/myung-pm-handoff`, 작업 경로는 `C:/Users/DR_ACADEMY/orca/workspaces/Myung_Project_Test/myung-pm-handoff`다. 원본 `user4`와 미추적 사용자 파일은 변경하지 않았다.
+
+- 문서 커밋 `9621c39`, `ce83058`, `caa6276`을 순서대로 가져와 규칙 폴더를 보존했다.
+- 제출 커밋 `c4be39b`, `31400b38`을 검토·통합했다.
+- 별도 Orca 워크트리 `myung-integrated-shell`의 Codex가 공통 화면을 제작(`fd6c698`), `myung-cross-review`의 Claude가 제출 모듈과 최종 화면을 교차 검토했다(`c8e5a77`, `a3b7a3d`). PM이 수정사항을 검토·통합했다. 상세 근거는 [교차 검토](CROSS_REVIEW.md)에 있다.
+- `dist/integrated/`에 메인, 회사, 제품 목록·상세, 수리, 복구, 포렌식, 기업 보안, 고객지원 9개 페이지를 완성했다. 밝은 배경·남색, 기존 MDFC 로고타입, 공통 메뉴·푸터, 모바일 메뉴, 제품 필터, FAQ, 문의·결제 시연을 구현했다. 회사 연혁과 9개 거점은 저장소 `company-data.mjs`를 사용했다.
+
+### PM 직접 검증
+
+- Orca 내장 Node로 `integrated-site.js` 구문 검사, 통합 전용 생성 및 전체 `build.mjs` 실행 성공. 전체 빌드가 재작성한 기존 dist 파일은 원복하여 이번 통합 결과만 유지했다.
+- PM 자체 서버 `http://127.0.0.1:4190`와 Orca 내장 브라우저로 확인했다. PC 1440px 및 모바일 390px의 9개 페이지 모두 가로 넘침·깨진 이미지 0건. 전체 페이지마다 h1 1개. 데스크톱·모바일 홈 스크린샷을 시각 확인했다. 크기별 전수 검사는 동일 출처 iframe을 사용했으며 실제 휴대폰 시험은 아니다.
+- 9개 페이지의 중복 제거된 링크·자산 15개를 HTTP HEAD로 검사하여 오류 0건. 전화 링크와 동일 페이지 앵커는 HTTP 검사에서 제외했다.
+- NAS 필터: 2개 카드 표시 및 aria-pressed 갱신. 문의: 유효 입력 후 시연 상태와 내용 초기화. 결제: dialog 열림 및 완료 상태. 브라우저 콘솔 오류 0건.
+- 모바일 메뉴에서 Esc를 누르면 메뉴가 닫히고 포커스를 메뉴 버튼으로 돌려주도록 보완했다. 실제 Tab 입력으로 다음 포커스가 숨겨진 메뉴 대신 메인 제품 링크로 이동함을 확인했다.
+
+### 로컬 실행
+
+현재 미리보기: http://127.0.0.1:4190/integrated/index.html
+
+일반 Node 환경에서는 `node integrated-site.mjs`로 통합 화면만 생성하고 `node preview.mjs`로 서버를 시작한 뒤 http://127.0.0.1:4173/integrated/index.html 을 연다. `npm run build`는 기존 시안까지 모두 생성한다.
+
+현재 Windows처럼 Node가 PATH에 없다면 PowerShell에서 다음 명령을 사용한다.
+
+```powershell
+$env:ELECTRON_RUN_AS_NODE='1'
+& 'C:/Users/DR_ACADEMY/AppData/Local/Programs/orca/Orca.exe' integrated-site.mjs
+$env:PORT='4190'
+& 'C:/Users/DR_ACADEMY/AppData/Local/Programs/orca/Orca.exe' preview.mjs
+```
+
+### 시안에 남긴 미확정 정보
+
+제품 사진·모델·사양·가격·재고·납기·보증, 서비스 비용·기간·지원 조건, 시설·보유 장비 세부는 확정 전이다. 제품 이미지는 일반 시안 이미지이며 실제 제품 사진이 아니다. 세부 서비스 절차·결과물은 실제 운영 전 회사 확인이 필요하다. 문의는 무전송·무저장 화면 시연, 결제는 실제 주문·청구 없는 시연이다. 외부 배포 및 유료 사용은 하지 않았다.
+
 기록일: 2026년 11월 5일
 
 ## 프로젝트와 현재 브랜치

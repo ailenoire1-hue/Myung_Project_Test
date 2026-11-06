@@ -1,0 +1,77 @@
+// Classic (non-module) script loaded with `defer`. Each initializer is a no-op when its markup is absent.
+function initMenu() {
+  const toggle = document.querySelector('.menu-toggle');
+  if (!toggle) return;
+  toggle.hidden = false;
+  document.documentElement.classList.add('js');
+  const close = () => {
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.textContent = '메뉴';
+  };
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? '닫기' : '메뉴';
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      const restoreFocus = document.querySelector('#navigation').contains(document.activeElement);
+      close();
+      if (restoreFocus) toggle.focus();
+    }
+  });
+  document.querySelectorAll('#navigation a').forEach((a) => a.addEventListener('click', close));
+}
+
+function initProductFilters() {
+  const filters = [...document.querySelectorAll('[data-filter]')];
+  if (!filters.length) return;
+  const status = document.createElement('p');
+  status.className = 'filter-status';
+  status.setAttribute('role', 'status');
+  document.querySelector('.filters').after(status);
+  const apply = (button) => {
+    filters.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+    let count = 0;
+    document.querySelectorAll('[data-product-category]').forEach((card) => {
+      card.hidden = button.dataset.filter !== 'all' && card.dataset.productCategory !== button.dataset.filter;
+      if (!card.hidden) count++;
+    });
+    status.textContent = `${button.textContent.trim()} · ${count}개 분류`;
+  };
+  filters.forEach((b) => b.addEventListener('click', () => apply(b)));
+  apply(filters[0]);
+}
+
+function initInquiryDemo() {
+  const inquiry = document.querySelector('#inquiry');
+  if (!inquiry) return;
+  inquiry.addEventListener('submit', (e) => e.preventDefault());
+  inquiry.addEventListener('reset', () => {
+    document.querySelector('#inquiry-status').textContent = '';
+  });
+  document.querySelector('#inquiry-demo').addEventListener('click', () => {
+    if (!inquiry.reportValidity()) return;
+    inquiry.reset();
+    document.querySelector('#inquiry-status').textContent = '문의 흐름 시연을 완료했습니다. 실제 접수는 되지 않았으며 입력 내용은 지웠습니다. 실제 상담은 1577-4872로 문의해 주세요.';
+  });
+}
+
+function initPaymentDemo() {
+  const payment = document.querySelector('#payment');
+  if (!payment) return;
+  document.querySelector('[data-payment]').addEventListener('click', () => {
+    document.querySelector('#payment-status').textContent = '';
+    document.querySelector('#payment-demo').disabled = false;
+    payment.showModal();
+  });
+  document.querySelector('#payment-demo').addEventListener('click', (e) => {
+    e.currentTarget.disabled = true;
+    document.querySelector('#payment-status').textContent = '시연 완료 · 실제 주문, 청구 및 결제는 발생하지 않았습니다.';
+  });
+}
+
+initMenu();
+initProductFilters();
+initInquiryDemo();
+initPaymentDemo();
