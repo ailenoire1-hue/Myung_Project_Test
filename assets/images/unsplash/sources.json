@@ -1,0 +1,65 @@
+{
+  "collection": "명정보 홈페이지용 Unsplash 이미지 후보",
+  "downloadedAt": "2026-11-06",
+  "license": "Unsplash License",
+  "licenseUrl": "https://unsplash.com/license",
+  "usage": "회사 분위기와 IT 서비스 설명을 위한 스톡 이미지 후보. 명정보의 실제 건물, 사무실, 장비, 판매 제품 또는 고객 현장으로 소개하지 않는다.",
+  "websiteApplied": false,
+  "images": [
+    {
+      "file": "corporate-glass-facade.jpg",
+      "author": "Fabian Kleiser",
+      "profile": "https://unsplash.com/@fabiankleiser",
+      "source": "https://unsplash.com/photos/glass-facade-of-a-modern-office-building-V5vF94h52r0",
+      "download": "https://images.unsplash.com/photo-1745015446589-7ee6f702d8c1?fit=max&w=2000&q=85&fm=jpg",
+      "width": 2000,
+      "height": 3000,
+      "alt": "남색 유리 패널이 반복되는 현대적인 건물 외벽 스톡 사진",
+      "suggestedUse": "브랜드 배경, 기업 신뢰 섹션의 세로 보조 이미지"
+    },
+    {
+      "file": "modern-office-interior.jpg",
+      "author": "Deliberate Directions",
+      "profile": "https://unsplash.com/@deliberatedirections",
+      "source": "https://unsplash.com/photos/modern-office-space-with-glass-walls-and-light-decor-wlHBYkK2y4k",
+      "download": "https://images.unsplash.com/photo-1746021375306-9dec0f637732?fit=max&w=2000&q=85&fm=jpg",
+      "width": 2000,
+      "height": 1334,
+      "alt": "밝은 유리 파티션과 청록색 벽이 있는 사무공간 스톡 사진",
+      "suggestedUse": "기업 IT 환경, 업무 공간 콘셉트"
+    },
+    {
+      "file": "hardware-circuit-board.jpg",
+      "author": "Sven Alleblas",
+      "profile": "https://unsplash.com/@svenalleblas",
+      "source": "https://unsplash.com/photos/a-close-up-shot-of-a-circuit-board-ma3ypTuD88Y",
+      "download": "https://images.unsplash.com/photo-1742811631376-6e6a72f29181?fit=max&w=2000&q=85&fm=jpg",
+      "width": 2000,
+      "height": 1333,
+      "alt": "푸른 조명 아래 전자부품과 회로기판을 확대한 스톡 사진",
+      "suggestedUse": "수리, 하드웨어, 데이터 복구 서비스 콘셉트"
+    },
+    {
+      "file": "data-center-server-rack.jpg",
+      "author": "Kevin Ache",
+      "profile": "https://unsplash.com/@kevinache",
+      "source": "https://unsplash.com/photos/a-rack-of-servers-in-a-server-room-2JJ3wBHu4_0",
+      "download": "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?fit=max&w=2000&q=85&fm=jpg",
+      "width": 2000,
+      "height": 1333,
+      "alt": "여러 서버 장비가 배치된 서버실 스톡 사진",
+      "suggestedUse": "기업 보안, 서버 및 NAS 인프라 설명"
+    },
+    {
+      "file": "network-server-detail.jpg",
+      "author": "Tyler",
+      "profile": "https://unsplash.com/@tylergm",
+      "source": "https://unsplash.com/photos/a-close-up-of-a-computer-with-green-lights-ekF932HpB4M",
+      "download": "https://images.unsplash.com/photo-1680992045535-95919d4971a9?fit=max&w=2000&q=85&fm=jpg",
+      "width": 2000,
+      "height": 1126,
+      "alt": "표시등이 켜진 서버와 네트워크 장비 스톡 사진",
+      "suggestedUse": "네트워크 운영, 백업, 보안 서비스 카드"
+    }
+  ]
+}
