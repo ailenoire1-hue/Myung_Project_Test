@@ -1,0 +1,10 @@
+/* S-Core Dream by S-Core. License is distributed alongside the unmodified fonts. */
+@font-face{font-family:'SCoreDream';src:url('../assets/fonts/s-core-dream/S-CoreDream-4Regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'SCoreDream';src:url('../assets/fonts/s-core-dream/S-CoreDream-5Medium.woff') format('woff');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'SCoreDream';src:url('../assets/fonts/s-core-dream/S-CoreDream-6Bold.woff') format('woff');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'SCoreDream';src:url('../assets/fonts/s-core-dream/S-CoreDream-7ExtraBold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'SCoreDream';src:url('../assets/fonts/s-core-dream/S-CoreDream-9Black.woff') format('woff');font-weight:900;font-style:normal;font-display:swap}
+:root{font-family:'SCoreDream','Malgun Gothic',sans-serif}
+body,button,input,select,textarea,dialog{font-family:inherit}
+/* The existing brand mark is a logotype, not body typography. */
+.brand-mark{font-family:Arial,sans-serif}

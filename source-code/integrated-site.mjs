@@ -8,6 +8,7 @@ import {createSupportPage} from './pages/support.mjs';
 import {renderDocument} from './components/document.mjs';
 import {loadCompany, rootUrl} from './components/utils.mjs';
 import {copyStockPhotos} from './components/stock-photo.mjs';
+import {copySiteFonts} from './components/site-fonts.mjs';
 
 const company = await loadCompany();
 export const pages = [homePage, ...expertise, ...commerce, createSupportPage(company)];
@@ -18,6 +19,8 @@ export async function writeIntegratedSite() {
   await copyFile(rootUrl('font-preview.html'), rootUrl('dist/font-preview.html'));
   for (const ext of ['css', 'js']) await copyFile(rootUrl(`integrated-site.${ext}`), new URL(`integrated-site.${ext}`, out));
   await copyStockPhotos(rootUrl('dist/assets/'));
+  await copySiteFonts();
+  await copyFile(rootUrl('integrated-fonts.css'), new URL('integrated-fonts.css', out));
   for (const page of pages) await writeFile(new URL(page.file, out), renderDocument(page, company));
   console.log(`Integrated: ${pages.length} pages → dist/integrated/`);
 }
