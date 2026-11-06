@@ -30,3 +30,7 @@ export async function loadCompany() {
   const {company} = JSON.parse(await readFile(rootUrl('content.json'), 'utf8'));
   return company;
 }
+
+// The repository root is the parent of the homepage project root (source-code/). Source images live in <repo>/assets.
+export const repoRoot = new URL('../', projectRoot);
+export const repoAssetUrl = (path) => new URL(path, new URL('assets/', repoRoot));

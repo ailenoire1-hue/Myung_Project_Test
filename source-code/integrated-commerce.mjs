@@ -3,6 +3,7 @@ const TBD = '정보 확인 중';
 
 import { faq } from './components/faq.mjs';
 import { articleCard, productCard } from './components/card.mjs';
+import { visualSection } from './components/visual-section.mjs';
 
 const products = [
   ['pc', 'PC·워크스테이션', '업무용 PC와 워크스테이션 분류입니다. 구성·모델 정보는 확인 중입니다.'],
@@ -147,6 +148,8 @@ const repairBody = `
     </div>
   </div>
 </section>
+
+${visualSection({ eyebrow: 'HARDWARE CHECK', title: '부품 단위의 이상 징후를 살펴봅니다', textHtml: '<p class="lead">전원, 부팅, 인식 불량처럼 증상이 다양한 장비는 상태 확인을 거쳐 점검 방향을 정합니다. 수리 가능 여부는 확인 후 안내합니다.</p>', photo: 'circuit' })}
 
 <section class="section">
   <div class="container">

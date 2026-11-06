@@ -7,6 +7,7 @@ import {homePage} from './pages/home.mjs';
 import {createSupportPage} from './pages/support.mjs';
 import {renderDocument} from './components/document.mjs';
 import {loadCompany, rootUrl} from './components/utils.mjs';
+import {copyStockPhotos} from './components/stock-photo.mjs';
 
 const company = await loadCompany();
 export const pages = [homePage, ...expertise, ...commerce, createSupportPage(company)];
@@ -15,6 +16,7 @@ export async function writeIntegratedSite() {
   const out = rootUrl('dist/integrated/');
   await mkdir(out, {recursive: true});
   for (const ext of ['css', 'js']) await copyFile(rootUrl(`integrated-site.${ext}`), new URL(`integrated-site.${ext}`, out));
+  await copyStockPhotos(rootUrl('dist/assets/'));
   for (const page of pages) await writeFile(new URL(page.file, out), renderDocument(page, company));
   console.log(`Integrated: ${pages.length} pages → dist/integrated/`);
 }

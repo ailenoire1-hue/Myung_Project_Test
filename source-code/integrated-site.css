@@ -10,3 +10,21 @@ table.branches tr{border-bottom:1px solid var(--line);padding:14px 0}
 table.branches th,table.branches td{padding:2px 12px;border:0;background:none}
 table.branches td:last-child{white-space:normal;color:var(--muted)}
 }
+
+/* Stock photos (Unsplash): explanatory images with visible captions and credits */
+.stock-photo img{width:100%;height:auto;object-fit:cover;border-radius:3px;background:var(--soft)}
+.stock-photo figcaption{margin-top:10px;font-size:12px;line-height:1.6;color:var(--muted)}
+.stock-photo .stock-credit{display:block}
+.stock-photo figcaption a{text-decoration:underline;text-underline-offset:3px}
+.stock-photo--tall{max-width:420px;justify-self:center;width:100%}
+.stock-photo--tall img{aspect-ratio:4/5;max-height:560px}
+.visual-section .split .stock-photo img{max-height:440px}
+.visual-section .split .stock-photo--tall img{max-height:560px}
+.split-reverse>:first-child{order:2}
+.photo-trio{align-items:start}
+.photo-trio .stock-photo img{aspect-ratio:4/3}
+.photo-trio-item{min-width:0}
+.photo-trio-item p{color:var(--muted);font-size:15px}
+@media(max-width:980px){.split-reverse>:first-child{order:0}}
+@media(max-width:640px){.visual-section .split .stock-photo img,.photo-trio .stock-photo img{max-height:300px}.stock-photo--tall{max-width:none}.stock-photo--tall img{aspect-ratio:4/3;max-height:320px}}
+.stock-photo--server img{object-position:96% 50%}

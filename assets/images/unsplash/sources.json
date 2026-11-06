@@ -4,7 +4,7 @@
   "license": "Unsplash License",
   "licenseUrl": "https://unsplash.com/license",
   "usage": "회사 분위기와 IT 서비스 설명을 위한 스톡 이미지 후보. 명정보의 실제 건물, 사무실, 장비, 판매 제품 또는 고객 현장으로 소개하지 않는다.",
-  "websiteApplied": false,
+  "websiteApplied": true,
   "images": [
     {
       "file": "corporate-glass-facade.jpg",
@@ -15,7 +15,14 @@
       "width": 2000,
       "height": 3000,
       "alt": "남색 유리 패널이 반복되는 현대적인 건물 외벽 스톡 사진",
-      "suggestedUse": "브랜드 배경, 기업 신뢰 섹션의 세로 보조 이미지"
+      "suggestedUse": "브랜드 배경, 기업 신뢰 섹션의 세로 보조 이미지",
+      "applied": true,
+      "appliedTo": [
+        {
+          "page": "source-code/dist/integrated/company.html",
+          "location": "TRUSTED OPERATIONS 세로 보조 이미지"
+        }
+      ]
     },
     {
       "file": "modern-office-interior.jpg",
@@ -26,7 +33,18 @@
       "width": 2000,
       "height": 1334,
       "alt": "밝은 유리 파티션과 청록색 벽이 있는 사무공간 스톡 사진",
-      "suggestedUse": "기업 IT 환경, 업무 공간 콘셉트"
+      "suggestedUse": "기업 IT 환경, 업무 공간 콘셉트",
+      "applied": true,
+      "appliedTo": [
+        {
+          "page": "source-code/dist/integrated/index.html",
+          "location": "메인 서비스 아래 사진 3종 중 업무 환경"
+        },
+        {
+          "page": "source-code/dist/integrated/support.html",
+          "location": "YOUR WORK ENVIRONMENT 섹션"
+        }
+      ]
     },
     {
       "file": "hardware-circuit-board.jpg",
@@ -37,7 +55,18 @@
       "width": 2000,
       "height": 1333,
       "alt": "푸른 조명 아래 전자부품과 회로기판을 확대한 스톡 사진",
-      "suggestedUse": "수리, 하드웨어, 데이터 복구 서비스 콘셉트"
+      "suggestedUse": "수리, 하드웨어, 데이터 복구 서비스 콘셉트",
+      "applied": true,
+      "appliedTo": [
+        {
+          "page": "source-code/dist/integrated/index.html",
+          "location": "메인 서비스 아래 사진 3종 중 기술·장비 점검"
+        },
+        {
+          "page": "source-code/dist/integrated/repair.html",
+          "location": "HARDWARE CHECK 섹션"
+        }
+      ]
     },
     {
       "file": "data-center-server-rack.jpg",
@@ -48,7 +77,20 @@
       "width": 2000,
       "height": 1338,
       "alt": "imgix 로고가 있는 데이터 서버 랙 스톡 사진",
-      "suggestedUse": "기업 보안과 서버 인프라 설명용 참고 사진. 타사 로고가 포함되어 있어 실제 회사 시설 소개에는 사용하지 않는다."
+      "suggestedUse": "기업 보안과 서버 인프라 설명용 참고 사진. 타사 로고가 포함되어 있어 실제 회사 시설 소개에는 사용하지 않는다.",
+      "applied": true,
+      "appliedTo": [
+        {
+          "page": "source-code/dist/integrated/index.html",
+          "location": "메인 서비스 아래 사진 3종 중 인프라·보안(타사 로고 스톡 사진 캡션 명시)"
+        },
+        {
+          "page": "source-code/dist/integrated/security.html",
+          "location": "SERVER INFRASTRUCTURE 섹션"
+        }
+      ]
     }
-  ]
+  ],
+  "appliedAt": "2026-11-06",
+  "appliedNote": "현재 통합 홈페이지(source-code/dist/integrated)에만 적용. 레거시 시안은 수정하지 않음. 빌드가 이 폴더의 4장과 sources.json을 source-code/dist/assets/unsplash/ 로 복사한다. 매핑은 source-code/components/stock-photo.mjs, 상세는 규칙/IMAGE_PLACEMENT.md."
 }

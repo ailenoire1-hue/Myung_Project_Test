@@ -3,6 +3,7 @@
 import { companyHistory, companyBranches } from './company-data.mjs';
 import { esc } from './components/utils.mjs';
 import { faq } from './components/faq.mjs';
+import { visualSection } from './components/visual-section.mjs';
 
 const historyItems = companyHistory
   .filter((h) => ['1990', '1993', '2003', '2006', '2010', '2013', '2014', '2019', '2023', '2024'].includes(h.year))
@@ -137,6 +138,8 @@ export const pages = [
     </div>
   </div>
 </section>
+
+${visualSection({ eyebrow: 'TRUSTED OPERATIONS', title: '신뢰할 수 있는 기업 서비스를 지향합니다', textHtml: '<p class="lead">기업 고객의 데이터와 업무 환경을 다루는 만큼 확인된 정보만 안내하고, 확정되지 않은 내용은 임시 문구로 표시합니다.</p>', photo: 'facade', tall: true, reverse: true })}
 
 <section class="section">
   <div class="container">
@@ -534,6 +537,8 @@ export const pages = [
     </div>
   </div>
 </section>
+
+${visualSection({ eyebrow: 'SERVER INFRASTRUCTURE', title: '서버와 저장 인프라까지 함께 살펴봅니다', textHtml: '<p class="lead">서버·NAS 등 저장 인프라는 운영 환경과 호환 조건을 기준으로 검토합니다. 사진은 설명용 스톡 이미지입니다.</p>', photo: 'server' })}
 
 <section class="section">
   <div class="container">
