@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>명정보 홈페이지 폰트 후보 5종 비교</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f6f8;color:#132b48;font-family:Arial,'Malgun Gothic',sans-serif;line-height:1.7}main{max-width:1200px;margin:auto;padding:42px 24px}h1{font-size:30px;margin:0 0 10px}p{margin:0 0 16px}header{margin-bottom:30px}.controls{display:flex;gap:20px;flex-wrap:wrap;margin:24px 0}.controls label{display:grid;gap:8px;flex:1;min-width:220px}input[type=text]{width:100%;padding:12px;border:1px solid #b7c6d3;border-radius:5px;font:inherit}input[type=range]{width:100%}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}article{background:#fff;border:1px solid #d8e1e9;border-radius:10px;padding:26px;min-width:0}article:first-child{border-top:4px solid #255f91}.meta{display:flex;justify-content:space-between;align-items:center;gap:15px}.meta h2{margin:0;font-size:20px}.meta a{color:#255f91}.recommend{font-size:13px;color:#255f91;margin:6px 0 12px}.sample{font-size:var(--sample-size,34px);line-height:1.4;word-break:keep-all;overflow-wrap:anywhere;letter-spacing:0;font-weight:700;margin:24px 0}.body-sample{font-size:16px;font-weight:400;word-break:keep-all}.digits{font-size:16px;font-weight:400;border-top:1px solid #e2e7ed;padding-top:16px}.state{font-size:12px;color:#65798a}footer{margin-top:28px;color:#65798a;font-size:13px}button{background:#132b48;color:#fff;border:0;padding:12px 18px;border-radius:4px;font:inherit;cursor:pointer}@media(max-width:760px){.grid{grid-template-columns:1fr}main{padding:26px 16px}article{padding:20px}}
+</style>
+</head>
+<body><main>
+<header><p>MYUNG · TYPOGRAPHY REVIEW</p><h1>홈페이지 폰트 후보 5종</h1><p>동일한 문구·크기·굵기로 비교합니다. 제목 700, 본문 400 기준입니다. 홈페이지 기본 글꼴은 아직 변경하지 않았습니다.</p>
+<div class="controls"><label>비교할 제목<input id="sample-input" type="text" value="기술의 시작부터, 데이터의 다음까지."></label><label>제목 크기 <output id="size-label">34px</output><input id="size" type="range" min="24" max="48" value="34"></label></div>
+<p>추천 순서: 프리텐다드 → SUIT → 원티드 산스. 인상 평가는 명정보의 남색 기업형 디자인을 기준으로 한 제안입니다.</p></header>
+<div class="grid" id="fonts"></div>
+<footer>눈누에 공개된 웹폰트 경로로 비교용 글꼴을 불러옵니다. 각 카드가 ‘불러오기 완료’인지 확인하세요. 폰트 이름을 누르면 눈누의 원본·라이선스 페이지로 이동합니다. 에스코어드림은 별도 라이선스이며 나머지 후보는 OFL 안내를 확인했습니다.</footer>
+</main>
+<script>
+const candidates=[
+{name:'프리텐다드',family:'PreviewPretendard',page:694,description:'1순위 · 제목과 본문을 하나로 통일하기 좋은 균형 잡힌 인상',regular:'https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2',bold:'https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2'},
+{name:'SUIT · 수트',family:'PreviewSuit',page:845,description:'2순위 · 간결한 메뉴와 제품·서비스 UI에 어울리는 정돈된 인상',regular:'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2',bold:'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2'},
+{name:'원티드 산스',family:'PreviewWanted',page:1269,description:'3순위 · 기술 기업의 현대적이고 조금 더 부드러운 인상',variable:'https://cdn.jsdelivr.net/gh/Project-Noonnu/2611030107@font-variable-1269/variable-1269/WantedSansVariable.woff2'},
+{name:'에스코어드림',family:'PreviewScore',page:223,description:'크고 힘 있는 메인 제목·사업 영역 타이틀에 추천',regular:'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff',bold:'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff'},
+{name:'프리젠테이션',family:'PreviewFreesentation',page:1369,description:'서비스 설명과 회사 소개를 차분하고 단정하게 전달하는 인상',regular:'https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-4Regular.woff2',bold:'https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-7Bold.woff2'}
+];
+const grid=document.querySelector('#fonts');
+for(const c of candidates){const card=document.createElement('article');card.innerHTML=`<div class="meta"><h2><a href="https://noonnu.cc/font_page/${c.page}" target="_blank" rel="noopener noreferrer">${c.name} ↗</a></h2><span class="state" role="status">글꼴 불러오는 중</span></div><p class="recommend">${c.description}</p><div class="specimen"><p class="sample"></p><p class="body-sample">컴퓨터와 저장장치의 선택부터 수리, 데이터 복구, 디지털포렌식과 기업 보안까지. 필요한 기술과 서비스를 명정보에서 확인하세요.</p><p class="digits">MYUNG INFORMATION TECHNOLOGIES<br>1990 · PC / SSD / NAS · 1577-4872</p><button type="button">서비스 자세히 보기 →</button></div>`;card.querySelector('.sample').textContent=document.querySelector('#sample-input').value;card.querySelector('.specimen').style.fontFamily=`'${c.family}', sans-serif`;grid.append(card);const faces=c.variable?[new FontFace(c.family,`url(${c.variable})`,{weight:'400 1000'})]:[new FontFace(c.family,`url(${c.regular})`,{weight:'400'}),new FontFace(c.family,`url(${c.bold})`,{weight:'700'})];Promise.all(faces.map(async f=>{await f.load();document.fonts.add(f);})).then(()=>{card.querySelector('.state').textContent='불러오기 완료';card.dataset.loaded='true';}).catch(()=>{card.querySelector('.state').textContent='불러오기 실패 · 기본 글꼴 표시';card.dataset.loaded='false';});}
+document.querySelector('#sample-input').addEventListener('input',e=>document.querySelectorAll('.sample').forEach(p=>p.textContent=e.target.value));document.querySelector('#size').addEventListener('input',e=>{document.documentElement.style.setProperty('--sample-size',e.target.value+'px');document.querySelector('#size-label').value=e.target.value+'px';});
+</script></body></html>

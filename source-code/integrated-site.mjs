@@ -15,6 +15,7 @@ export const pages = [homePage, ...expertise, ...commerce, createSupportPage(com
 export async function writeIntegratedSite() {
   const out = rootUrl('dist/integrated/');
   await mkdir(out, {recursive: true});
+  await copyFile(rootUrl('font-preview.html'), rootUrl('dist/font-preview.html'));
   for (const ext of ['css', 'js']) await copyFile(rootUrl(`integrated-site.${ext}`), new URL(`integrated-site.${ext}`, out));
   await copyStockPhotos(rootUrl('dist/assets/'));
   for (const page of pages) await writeFile(new URL(page.file, out), renderDocument(page, company));
