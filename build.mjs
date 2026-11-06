@@ -302,3 +302,5 @@ await writeFile(new URL('./dist/index.html',import.meta.url),homeScrollCueDocume
 // Retain the user's selected situation-led MDFC STORY chapter on future builds.
 const {writeApprovedStoryHome}=await import('./home-insights-story-approved.mjs');
 await writeApprovedStoryHome();
+
+await (await import('./integrated-site.mjs')).writeIntegratedSite();
