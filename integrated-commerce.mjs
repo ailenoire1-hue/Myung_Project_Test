@@ -39,13 +39,13 @@ const productsBody = `
       <p class="lead">PC, 저장장치, NAS 분류로 먼저 살펴보세요. 이 페이지는 시안이며 개별 제품 정보는 확정 전입니다.</p>
     </div>
     <div class="filters" role="group" aria-label="제품 분류 필터">
-      <button class="button" type="button" data-filter="all">전체</button>
-      <button class="button-secondary" type="button" data-filter="pc">PC</button>
-      <button class="button-secondary" type="button" data-filter="storage">저장장치</button>
-      <button class="button-secondary" type="button" data-filter="nas">NAS</button>
+      <button class="button" type="button" data-filter="all" aria-pressed="true">전체</button>
+      <button class="button-secondary" type="button" data-filter="pc" aria-pressed="false">PC</button>
+      <button class="button-secondary" type="button" data-filter="storage" aria-pressed="false">저장장치</button>
+      <button class="button-secondary" type="button" data-filter="nas" aria-pressed="false">NAS</button>
     </div>
     <div class="grid grid-3">${productCards}</div>
-    <p class="note">카드의 이미지는 시안용 일반 이미지이며 실제 제품 사진이 아닙니다. 모델·가격·재고·사양은 확인되는 대로 반영됩니다.</p>
+    <p class="note">카드의 이미지는 시안용 일반 이미지이며 실제 제품 사진이 아닙니다. 모델·가격·재고·사양은 확정 전입니다.</p>
   </div>
 </section>
 
@@ -70,7 +70,7 @@ const productsBody = `
   <div class="container">
     <div class="section-heading"><span class="eyebrow">FAQ</span><h2>자주 묻는 질문</h2></div>
     ${faq([
-      ['제품 가격과 사양은 어디서 확인하나요?', '현재 시안에는 확정된 가격과 사양이 없습니다. 정보가 확인되는 대로 상세 페이지에 반영되며, 우선 <a class="text-link" href="support.html">고객지원</a>으로 문의해 주세요.'],
+      ['제품 가격과 사양은 어디서 확인하나요?', '현재 시안에는 확정된 가격과 사양이 없습니다. 정보는 확정 전이며, 우선 <a class="text-link" href="support.html">고객지원</a>으로 문의해 주세요.'],
       ['NAS와 외장 저장장치는 어떻게 다른가요?', '일반적으로 NAS는 네트워크로 여러 사용자가 자료를 공유하는 용도, 외장 저장장치는 개인 단위 보관·이동 용도로 쓰입니다. 환경에 맞는 구성은 상담으로 확인해 주세요.'],
       ['장비에 문제가 생기면 어떻게 하나요?', '<a class="text-link" href="repair.html">장비 수리</a> 또는 <a class="text-link" href="recovery.html">데이터 복구</a> 안내를 먼저 확인해 주세요.'],
     ])}

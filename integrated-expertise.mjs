@@ -1,5 +1,5 @@
 // Integrated homepage expertise pages: company.html, forensics.html, security.html
-// Strictly based on verified facts in content.json (company/services) and company-facts.mjs.
+// Based on verified facts in content.json and company-facts.mjs; unverified details are marked as placeholders.
 
 export const pages = [
   {
@@ -29,10 +29,10 @@ export const pages = [
             <p>2026년 기준 누적 사고조사·복구 200,000건(개별 고객 수가 아닌 사고조사 및 복구 수행 합산 기준)과 9개 거점 네트워크를 운영하고 있습니다.</p>
           </article>
         </div>
-        <p class="note">안내: 본 페이지의 기업 기본 정보와 주요 지표는 검증된 공식 기준(content.json 및 company-facts.mjs)만을 반영하며, 별도 확인되지 않은 세부 사항은 임시 문구로 표기합니다.</p>
+        <p class="note">안내: 본 페이지의 기업 기본 정보와 주요 지표는 확인된 자료만 반영했으며, 확인되지 않은 세부 사항은 임시 문구로 표기했습니다. 이 페이지는 시안입니다.</p>
       </div>
       <figure class="photo">
-        <img src="../assets/company.jpg" alt="(주)명정보기술 및 명디지털포렌식센터 업무 환경" />
+        <img src="../assets/company.jpg" alt="시안용 업무 이미지 (실제 현장 사진 아님)" />
       </figure>
     </div>
   </div>
@@ -49,11 +49,11 @@ export const pages = [
       <li class="step">
         <span class="tag">1990. 06. 20</span>
         <h3>(주)명정보기술 법인 설립</h3>
-        <p>1990년 6월 20일 (주)명정보기술 설립(창립 연도 1990년)을 기점으로 저장매체·데이터 관련 기술 서비스 기반을 마련했습니다.</p>
+        <p>1990년 6월 20일 (주)명정보기술이 설립되었습니다.</p>
       </li>
       <li class="step">
         <span class="tag">사업 영역 확장</span>
-        <h3>수리·복구·포렌식·보안 통합 역량 구축</h3>
+        <h3>사업 영역 확장 (연혁 확인 중)</h3>
         <p>[임시 문구: 연도별 세부 기술 개발·조직 개편·거점 개소 연혁은 공식 확인 자료 확보 후 순차 반영 예정입니다.]</p>
       </li>
       <li class="step">
@@ -106,7 +106,7 @@ export const pages = [
       <article class="card">
         <span class="tag">CORE 06</span>
         <h3>고객 상담 및 기술 지원</h3>
-        <p>의뢰 전 준비 사항과 접수 절차, 방문·원격 상담 방법을 통합 지원 창구에서 안내합니다.</p>
+        <p>의뢰 전 준비 사항과 접수 절차, 상담 방법을 고객 지원 창구에서 안내합니다.</p>
         <p><a class="text-link" href="support.html">고객 지원 바로가기</a></p>
       </article>
     </div>
@@ -123,24 +123,22 @@ export const pages = [
     <div class="grid grid-2">
       <article class="card">
         <div class="card-media">
-          <img src="../assets/company.jpg" alt="오창 본사 및 분석 시설 전경" />
+          <img src="../assets/company/hq-building.png" alt="충북 청주 오창 (주)명정보기술 본사 전경" />
         </div>
         <span class="tag">HEADQUARTERS FACILITY</span>
         <h3>오창 본사 및 전문 작업 공간</h3>
-        <p>본사 소재지인 충북 청주시 청원구 오창읍 과학산업3로 168을 기반으로 저장매체 점검, 데이터 복구, 디지털 증거 분석 및 기업 보안 지원 업무를 수행합니다.</p>
+        <p>본사는 충북 청주시 청원구 오창읍 과학산업3로 168에 있습니다. 시설별 세부 정보는 확인 중입니다.</p>
         <ul class="checklist">
           <li>본사 소재지: 충북 청주시 청원구 오창읍 과학산업3로 168</li>
-          <li>수행 기능: 디지털 증거 수집·보존, 기록 분석, 기업 보안 점검 및 복구 지원</li>
           <li>[임시 문구: 클린룸 세부 등급, 개별 분석실 면적 및 보유 장비 세부 모델 목록은 공식 확인 후 반영 예정]</li>
         </ul>
       </article>
       <article class="card">
         <span class="tag">NATIONAL NETWORK</span>
         <h3>9개 거점 네트워크 운영</h3>
-        <p>공식 확인 지표(networkCount: 9)에 따라 9개 거점 체계를 통해 상담 접수와 매체 전달, 기술 지원 연계를 운영합니다.</p>
+        <p>2026년 기준 9개 거점을 운영하고 있습니다. 거점별 역할과 세부 정보는 확인 중입니다.</p>
         <ul class="checklist">
           <li>거점 규모: 9개 거점 (2026년 기준)</li>
-          <li>연계 업무: 초기 상담 접수, 분석·복구 대상 인계, 기업 고객 기술 지원</li>
           <li>[임시 문구: 9개 거점별 세부 지점명, 상세 주소 및 지점별 직통 연락처는 공식 확인 자료 대조 후 기재 예정]</li>
         </ul>
         <p class="note">거점 방문 또는 자료 접수 전에는 먼저 센터 대표 상담 창구(1577-4872)를 통해 대상 기기와 방문 가능 일정을 확인해 주시기 바랍니다.</p>
@@ -160,7 +158,7 @@ export const pages = [
       <article class="card">
         <span class="tag">법인 · 본사 행정 정보</span>
         <h3>(주)명정보기술 (법인 및 본사)</h3>
-        <dl class="specs">
+        <dl class="fact-list">
           <div>
             <dt>법인명 (상호)</dt>
             <dd>(주)명정보기술</dd>
@@ -186,7 +184,7 @@ export const pages = [
       <article class="card">
         <span class="tag">센터 상담 · 접수 창구</span>
         <h3>명디지털포렌식센터 (상담 창구)</h3>
-        <dl class="specs">
+        <dl class="fact-list">
           <div>
             <dt>센터명</dt>
             <dd>명디지털포렌식센터 (MYUNG DIGITAL FORENSIC CENTER)</dd>
@@ -205,7 +203,7 @@ export const pages = [
           </div>
           <div>
             <dt>온라인 상담·접수 안내</dt>
-            <dd><a class="text-link" href="support.html">고객 지원 페이지(support.html)에서 접수 절차 확인</a></dd>
+            <dd><a class="text-link" href="support.html">고객 지원 페이지에서 접수 절차 확인</a></dd>
           </div>
         </dl>
       </article>
@@ -213,7 +211,7 @@ export const pages = [
     <p class="note">주의: 대표자(이명재)·사업자등록번호(315-81-04436)·본사 주소(충북 청주시 청원구 오창읍 과학산업3로 168)는 (주)명정보기술 법인 및 본사 기준 정보이며, 서비스 문의 및 사건 접수 상담은 명디지털포렌식센터 대표 상담번호(1577-4872, 평일 09:00 – 18:00)로 운영됩니다.</p>
     <div>
       <a class="button" href="support.html">상담 및 접수 안내 바로가기</a>
-      <a class="button button-secondary" href="index.html">통합 메인으로 이동</a>
+      <a class="button-secondary" href="index.html">통합 메인으로 이동</a>
     </div>
   </div>
 </section>
@@ -241,11 +239,11 @@ export const pages = [
         </ul>
         <div>
           <a class="button" href="support.html">포렌식 상담 문의 (1577-4872)</a>
-          <a class="button button-secondary" href="security.html">침해사고 조사·보안 서비스 보기</a>
+          <a class="button-secondary" href="security.html">침해사고 조사·보안 서비스 보기</a>
         </div>
       </div>
       <figure class="photo">
-        <img src="../assets/forensics.jpg" alt="디지털포렌식 기록 분석 업무 환경" />
+        <img src="../assets/forensics.jpg" alt="시안용 이미지 (실제 현장 사진 아님)" />
       </figure>
     </div>
   </div>
@@ -300,7 +298,7 @@ export const pages = [
         </ul>
       </article>
     </div>
-    <p class="note">기기의 물리적 손상이나 저장매체 인식 불량이 동반된 경우에는 <a class="text-link" href="recovery.html">데이터 복구 서비스(recovery.html)</a>와 연계하여 매체 상태를 먼저 점검할 수 있습니다.</p>
+    <p class="note">기기의 물리적 손상이나 저장매체 인식 불량이 동반된 경우에는 <a class="text-link" href="recovery.html">데이터 복구 서비스</a>와 연계하여 매체 상태를 먼저 점검할 수 있습니다.</p>
   </div>
 </section>
 
@@ -386,12 +384,12 @@ export const pages = [
       </details>
       <details class="card">
         <summary>해킹이나 랜섬웨어 등 기업 보안 사고와 연관된 경우도 의뢰할 수 있나요?</summary>
-        <p>가능합니다. 기기 단일 분석을 넘어 서버·네트워크·계정 로그 전반의 사고 경위 파악이 필요한 경우에는 <a class="text-link" href="security.html">침해사고 조사 및 기업 보안 관리(security.html)</a> 절차와 연계하여 범위를 협의합니다.</p>
+        <p>가능합니다. 기기 단일 분석을 넘어 서버·네트워크·계정 로그 전반의 사고 경위 파악이 필요한 경우에는 <a class="text-link" href="security.html">침해사고 조사 및 기업 보안 관리</a> 절차와 연계하여 범위를 협의합니다.</p>
       </details>
     </div>
     <div>
       <a class="button" href="support.html">디지털포렌식 상담 신청</a>
-      <a class="button button-secondary" href="company.html">센터 및 회사 소개 보기</a>
+      <a class="button-secondary" href="company.html">센터 및 회사 소개 보기</a>
     </div>
   </div>
 </section>
@@ -426,11 +424,11 @@ export const pages = [
         </div>
         <div>
           <a class="button" href="support.html">보안·침해사고 상담 문의 (1577-4872)</a>
-          <a class="button button-secondary" href="forensics.html">디지털포렌식 서비스 보기</a>
+          <a class="button-secondary" href="forensics.html">디지털포렌식 서비스 보기</a>
         </div>
       </div>
       <figure class="photo">
-        <img src="../assets/investigation.jpg" alt="침해사고 조사 및 기업 보안 분석 환경" />
+        <img src="../assets/investigation.jpg" alt="시안용 이미지 (실제 현장 사진 아님)" />
       </figure>
     </div>
   </div>
@@ -487,10 +485,10 @@ export const pages = [
           <h2>기업 보안 관리 서비스 영역</h2>
           <p class="lead">사람과 기기, 데이터와 시스템을 하나의 보안 관점으로 살펴보고 기업의 운영 환경에 필요한 보호 체계를 구성합니다.</p>
         </div>
-        <p class="note">안내: 보안 솔루션 및 서버·NAS·인프라 검토 시 특정 임의 제품 기능을 단정하지 않으며, 기업의 실제 운영 환경과 호환 조건을 기준으로 적용 범위를 협의합니다. 하드웨어·장비 정보는 <a class="text-link" href="products.html">제품 안내(products.html)</a>에서도 확인하실 수 있습니다.</p>
+        <p class="note">안내: 보안 솔루션 및 서버·NAS·인프라 검토 시 특정 임의 제품 기능을 단정하지 않으며, 기업의 실제 운영 환경과 호환 조건을 기준으로 적용 범위를 협의합니다. 하드웨어·장비 정보는 <a class="text-link" href="products.html">제품 안내</a>에서도 확인하실 수 있습니다.</p>
       </div>
       <figure class="photo">
-        <img src="../assets/company.jpg" alt="기업 보안 관리 및 인프라 운영 환경" />
+        <img src="../assets/company.jpg" alt="시안용 업무 이미지 (실제 현장 사진 아님)" />
       </figure>
     </div>
     <div class="grid grid-3">
@@ -549,9 +547,9 @@ export const pages = [
         <h3>포렌식·복구·수리 통합 연계</h3>
         <p>점검 및 사고 조사 중 정밀 증거 분석이나 손상 매체 복구, 장비 수리가 필요한 경우 전문 부서와 연계합니다.</p>
         <ul class="checklist">
-          <li>정밀 증거 분석: <a class="text-link" href="forensics.html">디지털포렌식(forensics.html)</a> 연계</li>
-          <li>저장매체 복구: <a class="text-link" href="recovery.html">데이터 복구(recovery.html)</a> 연계</li>
-          <li>장비 점검·수리: <a class="text-link" href="repair.html">전문 수리(repair.html)</a> 연계</li>
+          <li>정밀 증거 분석: <a class="text-link" href="forensics.html">디지털포렌식</a> 연계</li>
+          <li>저장매체 복구: <a class="text-link" href="recovery.html">데이터 복구</a> 연계</li>
+          <li>장비 점검·수리: <a class="text-link" href="repair.html">전문 수리</a> 연계</li>
         </ul>
       </article>
     </div>
@@ -569,20 +567,20 @@ export const pages = [
       <article class="card">
         <span class="tag">PROCESS A · 침해사고 조사 절차</span>
         <h3>사고 원인 규명 및 대응 우선순위 정리</h3>
-        <ol class="steps">
-          <li class="step">
+        <ol class="process-list">
+          <li>
             <strong>01. 상황 파악·범위 협의</strong>
             <p>발견 시점과 증상, 영향받은 업무와 시스템, 보존 자료를 확인합니다.</p>
           </li>
-          <li class="step">
+          <li>
             <strong>02. 자료 확보·사고 조사</strong>
             <p>협의한 대상의 로그와 시스템 흔적을 수집하고 시간 흐름을 분석합니다.</p>
           </li>
-          <li class="step">
+          <li>
             <strong>03. 영향 분석·대응 검토</strong>
             <p>침해 범위와 잔존 위험을 확인하고 조치·복구 우선순위를 검토합니다.</p>
           </li>
-          <li class="step">
+          <li>
             <strong>04. 결과 보고·개선 안내</strong>
             <p>사고 경위와 확인 근거, 재발 방지를 위한 개선 과제를 정리합니다.</p>
           </li>
@@ -591,20 +589,20 @@ export const pages = [
       <article class="card">
         <span class="tag">PROCESS B · 기업 보안 관리 절차</span>
         <h3>업무 환경 점검 및 보호 체계 구축·인계</h3>
-        <ol class="steps">
-          <li class="step">
+        <ol class="process-list">
+          <li>
             <strong>01. 업무·환경 확인</strong>
             <p>점검·관리·도입 목적, 대상 자산과 계정, 기존 운영 체계를 확인합니다.</p>
           </li>
-          <li class="step">
+          <li>
             <strong>02. 위험·요구사항 검토</strong>
             <p>자료 보존과 접근 범위, 보안 기능, 시스템 연계와 운영 영향을 검토합니다.</p>
           </li>
-          <li class="step">
+          <li>
             <strong>03. 수행 범위 협의</strong>
             <p>점검·분석·구축 일정과 제품 구성, 결과물·교육·지원 범위를 협의합니다.</p>
           </li>
-          <li class="step">
+          <li>
             <strong>04. 결과·운영 인계</strong>
             <p>확인 사항과 개선 우선순위, 권한·관리·백업 등 운영 절차를 안내합니다.</p>
           </li>
@@ -629,7 +627,7 @@ export const pages = [
       </details>
       <details class="card">
         <summary>랜섬웨어 조사를 의뢰하면 복호화도 가능한가요?</summary>
-        <p>사고 조사는 감염 경위와 피해 범위를 확인하는 업무입니다. 데이터 복구나 복호화 가능성은 별도로 검토하며, 암호화 방식과 저장매체·백업 상태에 따라 결과가 달라집니다. 매체 복구 상담이 필요한 경우 <a class="text-link" href="recovery.html">데이터 복구(recovery.html)</a>와 연계하여 확인합니다.</p>
+        <p>사고 조사는 감염 경위와 피해 범위를 확인하는 업무입니다. 데이터 복구나 복호화 가능성은 별도로 검토하며, 암호화 방식과 저장매체·백업 상태에 따라 결과가 달라집니다. 매체 복구 상담이 필요한 경우 <a class="text-link" href="recovery.html">데이터 복구</a>와 연계하여 확인합니다.</p>
       </details>
       <details class="card">
         <summary>기존 보안 담당자나 외부 운영사와 함께 진행할 수 있나요?</summary>
@@ -641,7 +639,7 @@ export const pages = [
       </details>
       <details class="card">
         <summary>퇴사자 자료 점검은 어떻게 범위를 정하나요?</summary>
-        <p>업무용 기기와 계정, 확인할 기간, 자료 보존·인계 목적과 의뢰 권한을 먼저 확인합니다. 협의한 범위에서 기록을 검토하며, 상세 증거 분석이 필요한 경우 <a class="text-link" href="forensics.html">디지털포렌식(forensics.html)</a>과 연계합니다.</p>
+        <p>업무용 기기와 계정, 확인할 기간, 자료 보존·인계 목적과 의뢰 권한을 먼저 확인합니다. 협의한 범위에서 기록을 검토하며, 상세 증거 분석이 필요한 경우 <a class="text-link" href="forensics.html">디지털포렌식</a>과 연계합니다.</p>
       </details>
       <details class="card">
         <summary>NAS나 RAID를 구성하면 별도 백업이 필요 없나요?</summary>
@@ -650,7 +648,7 @@ export const pages = [
     </div>
     <div>
       <a class="button" href="support.html">보안·침해사고 상담 접수</a>
-      <a class="button button-secondary" href="company.html">회사 및 센터 안내 보기</a>
+      <a class="button-secondary" href="company.html">회사 및 센터 안내 보기</a>
     </div>
   </div>
 </section>
