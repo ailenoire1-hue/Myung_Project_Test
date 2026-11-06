@@ -1,8 +1,9 @@
 // Integrated homepage expertise pages: company.html, forensics.html, security.html
 // Based on verified facts in content.json and company-facts.mjs; unverified details are marked as placeholders.
 import { companyHistory, companyBranches } from './company-data.mjs';
+import { esc } from './source-code/components/utils.mjs';
+import { faq } from './source-code/components/faq.mjs';
 
-const esc = (v) => String(v).replace(/[&<>"']/g, (x) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[x]));
 const historyItems = companyHistory
   .filter((h) => ['1990', '1993', '2003', '2006', '2010', '2013', '2014', '2019', '2023', '2024'].includes(h.year))
   .sort((a, b) => Number(a.year) - Number(b.year))
@@ -359,24 +360,12 @@ export const pages = [
       <h2>디지털포렌식 자주 묻는 질문 (FAQ)</h2>
       <p class="lead">상담 및 의뢰 전에 자주 문의하시는 준비 사항과 분석 범위 기준입니다.</p>
     </div>
-    <div class="faq">
-      <details class="card" open>
-        <summary>상담 전에 어떤 정보를 준비하면 되나요?</summary>
-        <p>확인하려는 사건과 기간, 대상 기기의 종류, 현재 보관 상태를 알려주세요. 이미 확보한 자료가 있다면 자료의 종류와 수집 경위를 함께 전달해 주시면 범위를 정하는 데 도움이 됩니다.</p>
-      </details>
-      <details class="card">
-        <summary>삭제된 자료도 분석할 수 있나요?</summary>
-        <p>삭제 이후의 사용 상태, 저장매체 종류, 암호화 여부에 따라 분석 가능 범위가 달라집니다. 상담과 대상 확인을 통해 수집·복구 가능성을 검토하며, 모든 자료의 복구를 보장하지는 않습니다.</p>
-      </details>
-      <details class="card">
-        <summary>분석 기간과 비용은 어떻게 정하나요?</summary>
-        <p>기기 수, 데이터 용량, 확인할 쟁점, 자료 확보 방식에 따라 달라집니다. 상담 후 분석 범위와 예상 일정, 제공할 결과물을 기준으로 안내합니다.</p>
-      </details>
-      <details class="card">
-        <summary>해킹이나 랜섬웨어 등 기업 보안 사고와 연관된 경우도 의뢰할 수 있나요?</summary>
-        <p>가능합니다. 기기 단일 분석을 넘어 서버·네트워크·계정 로그 전반의 사고 경위 파악이 필요한 경우에는 <a class="text-link" href="security.html">침해사고 조사 및 기업 보안 관리</a> 절차와 연계하여 범위를 협의합니다.</p>
-      </details>
-    </div>
+    ${faq([
+      ["상담 전에 어떤 정보를 준비하면 되나요?", "확인하려는 사건과 기간, 대상 기기의 종류, 현재 보관 상태를 알려주세요. 이미 확보한 자료가 있다면 자료의 종류와 수집 경위를 함께 전달해 주시면 범위를 정하는 데 도움이 됩니다."],
+      ["삭제된 자료도 분석할 수 있나요?", "삭제 이후의 사용 상태, 저장매체 종류, 암호화 여부에 따라 분석 가능 범위가 달라집니다. 상담과 대상 확인을 통해 수집·복구 가능성을 검토하며, 모든 자료의 복구를 보장하지는 않습니다."],
+      ["분석 기간과 비용은 어떻게 정하나요?", "기기 수, 데이터 용량, 확인할 쟁점, 자료 확보 방식에 따라 달라집니다. 상담 후 분석 범위와 예상 일정, 제공할 결과물을 기준으로 안내합니다."],
+      ["해킹이나 랜섬웨어 등 기업 보안 사고와 연관된 경우도 의뢰할 수 있나요?", "가능합니다. 기기 단일 분석을 넘어 서버·네트워크·계정 로그 전반의 사고 경위 파악이 필요한 경우에는 <a class=\"text-link\" href=\"security.html\">침해사고 조사 및 기업 보안 관리</a> 절차와 연계하여 범위를 협의합니다."],
+    ], { cardItems: true, openFirst: true })}
     <div>
       <a class="button" href="support.html">디지털포렌식 상담 신청</a>
       <a class="button-secondary" href="company.html">센터 및 회사 소개 보기</a>
@@ -610,32 +599,14 @@ export const pages = [
       <h2>침해사고 조사 · 기업 보안 관리 자주 묻는 질문 (FAQ)</h2>
       <p class="lead">사고 발생 시 초기 대응 방법과 기업 보안 관리 서비스 의뢰 기준에 대한 주요 안내입니다.</p>
     </div>
-    <div class="faq">
-      <details class="card" open>
-        <summary>사고가 의심되면 어떤 정보를 먼저 알려야 하나요?</summary>
-        <p>발견 시점과 증상, 영향을 받은 업무, 대상 기기·시스템, 현재까지 시행한 조치를 정리해 주세요. 관련 알림이나 오류 화면, 보존 중인 로그의 유무도 조사 범위를 판단하는 데 도움이 됩니다.</p>
-      </details>
-      <details class="card">
-        <summary>랜섬웨어 조사를 의뢰하면 복호화도 가능한가요?</summary>
-        <p>사고 조사는 감염 경위와 피해 범위를 확인하는 업무입니다. 데이터 복구나 복호화 가능성은 별도로 검토하며, 암호화 방식과 저장매체·백업 상태에 따라 결과가 달라집니다. 매체 복구 상담이 필요한 경우 <a class="text-link" href="recovery.html">데이터 복구</a>와 연계하여 확인합니다.</p>
-      </details>
-      <details class="card">
-        <summary>기존 보안 담당자나 외부 운영사와 함께 진행할 수 있나요?</summary>
-        <p>담당자와 자료 제공 범위, 접근 방식, 역할과 연락 체계를 협의해 진행합니다. 운영 중인 업무의 영향과 증거 보존을 함께 고려해 조사 순서를 정합니다.</p>
-      </details>
-      <details class="card">
-        <summary>어떤 기업 보안 서비스가 필요한지 정하지 않아도 상담할 수 있나요?</summary>
-        <p>가능합니다. 현재의 불편 사항, 점검할 기기·계정 또는 보호할 자료를 알려주시면 원격 점검·퇴사자 관리·솔루션·인프라 구축 가운데 필요한 범위를 함께 정리합니다.</p>
-      </details>
-      <details class="card">
-        <summary>퇴사자 자료 점검은 어떻게 범위를 정하나요?</summary>
-        <p>업무용 기기와 계정, 확인할 기간, 자료 보존·인계 목적과 의뢰 권한을 먼저 확인합니다. 협의한 범위에서 기록을 검토하며, 상세 증거 분석이 필요한 경우 <a class="text-link" href="forensics.html">디지털포렌식</a>과 연계합니다.</p>
-      </details>
-      <details class="card">
-        <summary>NAS나 RAID를 구성하면 별도 백업이 필요 없나요?</summary>
-        <p>저장장치 구성과 백업은 목적이 다릅니다. 삭제, 랜섬웨어, 장비 장애 등에 대비하려면 별도 사본의 보관 위치와 주기, 접근 권한, 복구 점검 절차를 함께 검토해야 합니다.</p>
-      </details>
-    </div>
+    ${faq([
+      ["사고가 의심되면 어떤 정보를 먼저 알려야 하나요?", "발견 시점과 증상, 영향을 받은 업무, 대상 기기·시스템, 현재까지 시행한 조치를 정리해 주세요. 관련 알림이나 오류 화면, 보존 중인 로그의 유무도 조사 범위를 판단하는 데 도움이 됩니다."],
+      ["랜섬웨어 조사를 의뢰하면 복호화도 가능한가요?", "사고 조사는 감염 경위와 피해 범위를 확인하는 업무입니다. 데이터 복구나 복호화 가능성은 별도로 검토하며, 암호화 방식과 저장매체·백업 상태에 따라 결과가 달라집니다. 매체 복구 상담이 필요한 경우 <a class=\"text-link\" href=\"recovery.html\">데이터 복구</a>와 연계하여 확인합니다."],
+      ["기존 보안 담당자나 외부 운영사와 함께 진행할 수 있나요?", "담당자와 자료 제공 범위, 접근 방식, 역할과 연락 체계를 협의해 진행합니다. 운영 중인 업무의 영향과 증거 보존을 함께 고려해 조사 순서를 정합니다."],
+      ["어떤 기업 보안 서비스가 필요한지 정하지 않아도 상담할 수 있나요?", "가능합니다. 현재의 불편 사항, 점검할 기기·계정 또는 보호할 자료를 알려주시면 원격 점검·퇴사자 관리·솔루션·인프라 구축 가운데 필요한 범위를 함께 정리합니다."],
+      ["퇴사자 자료 점검은 어떻게 범위를 정하나요?", "업무용 기기와 계정, 확인할 기간, 자료 보존·인계 목적과 의뢰 권한을 먼저 확인합니다. 협의한 범위에서 기록을 검토하며, 상세 증거 분석이 필요한 경우 <a class=\"text-link\" href=\"forensics.html\">디지털포렌식</a>과 연계합니다."],
+      ["NAS나 RAID를 구성하면 별도 백업이 필요 없나요?", "저장장치 구성과 백업은 목적이 다릅니다. 삭제, 랜섬웨어, 장비 장애 등에 대비하려면 별도 사본의 보관 위치와 주기, 접근 권한, 복구 점검 절차를 함께 검토해야 합니다."],
+    ], { cardItems: true, openFirst: true })}
     <div>
       <a class="button" href="support.html">보안·침해사고 상담 접수</a>
       <a class="button-secondary" href="company.html">회사 및 센터 안내 보기</a>

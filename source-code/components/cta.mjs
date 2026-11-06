@@ -1,0 +1,1 @@
+export const contactBand = () => `<section class="contact-band"><div class="container"><div><span class="eyebrow">LET’S FIND THE NEXT STEP</span><h2>필요한 다음 단계,<br>함께 확인하세요.</h2></div><a class="button light" href="support.html">고객지원 바로가기 ↗</a></div></section>`;

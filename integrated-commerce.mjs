@@ -1,10 +1,8 @@
 // 명정보 통합 홈페이지 시안 - 제품/수리/복구 페이지 데이터 (시안용, 확인 전 정보 포함)
 const TBD = '정보 확인 중';
 
-const faq = (items) =>
-  `<div class="faq">${items
-    .map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`)
-    .join('')}</div>`;
+import { faq } from './source-code/components/faq.mjs';
+import { articleCard, productCard } from './source-code/components/card.mjs';
 
 const products = [
   ['pc', 'PC·워크스테이션', '업무용 PC와 워크스테이션 분류입니다. 구성·모델 정보는 확인 중입니다.'],
@@ -17,18 +15,20 @@ const products = [
 const catLabel = { pc: 'PC', storage: '저장장치', nas: 'NAS' };
 
 const productCards = products
-  .map(
-    ([c, name, desc]) => `
-<article class="card" data-product-category="${c}">
-  <div class="card-media"><img src="../assets/company.jpg" alt="시안용 이미지 (실제 제품 사진 아님)"></div>
-  <span class="tag">${catLabel[c]}</span>
-  <h3>${name}</h3>
-  <p>${desc}</p>
-  <p class="note">모델·가격·사양: ${TBD}</p>
-  <a class="text-link" href="product-detail.html">상세 보기 →</a>
-</article>`
+  .map(([c, name, desc]) =>
+    productCard({
+      category: c,
+      categoryLabel: catLabel[c],
+      name,
+      description: desc,
+      noteHtml: `모델·가격·사양: ${TBD}`,
+      image: { src: '../assets/company.jpg', alt: '시안용 이미지 (실제 제품 사진 아님)' },
+      href: 'product-detail.html',
+    })
   )
   .join('');
+
+const cards = (items) => items.map(([tag, title, text]) => articleCard({ tag, title, text })).join('\n      ');
 
 const productsBody = `
 <section class="section">
@@ -139,9 +139,11 @@ const repairBody = `
       <p class="lead">PC·저장장치·NAS 등 장비 문제의 접수와 점검 흐름을 안내합니다. 수리 가능 여부, 비용, 소요 기간은 장비 상태 확인 후 별도로 안내하며 이 페이지에서 확정하지 않습니다.</p>
     </div>
     <div class="grid grid-3">
-      <article class="card"><span class="tag">PC</span><h3>PC·노트북 점검</h3><p>부팅, 성능, 하드웨어 이상 증상을 점검합니다.</p></article>
-      <article class="card"><span class="tag">저장장치</span><h3>저장장치 점검</h3><p>인식 불가, 속도 저하 등 증상을 확인합니다.</p></article>
-      <article class="card"><span class="tag">NAS</span><h3>NAS 점검</h3><p>접속·디스크 상태 이상 등을 확인합니다.</p></article>
+      ${cards([
+        ['PC', 'PC·노트북 점검', '부팅, 성능, 하드웨어 이상 증상을 점검합니다.'],
+        ['저장장치', '저장장치 점검', '인식 불가, 속도 저하 등 증상을 확인합니다.'],
+        ['NAS', 'NAS 점검', '접속·디스크 상태 이상 등을 확인합니다.'],
+      ])}
     </div>
   </div>
 </section>
@@ -195,9 +197,11 @@ const recoveryBody = `
       <p class="lead">저장장치·PC·NAS의 데이터 접근 문제에 대한 접수 흐름을 안내합니다. 복구 가능 여부, 범위, 비용, 소요 기간은 장비 상태 확인 후 안내하며 결과를 사전에 보장하지 않습니다.</p>
     </div>
     <div class="grid grid-3">
-      <article class="card"><span class="tag">저장장치</span><h3>외장·내장 저장장치</h3><p>인식 불가, 접근 오류 등 증상을 확인합니다.</p></article>
-      <article class="card"><span class="tag">PC</span><h3>PC·노트북</h3><p>부팅되지 않는 장비의 자료 접근 문제를 살펴봅니다.</p></article>
-      <article class="card"><span class="tag">NAS</span><h3>NAS·다중 디스크</h3><p>디스크 구성과 오류 상태를 확인합니다.</p></article>
+      ${cards([
+        ['저장장치', '외장·내장 저장장치', '인식 불가, 접근 오류 등 증상을 확인합니다.'],
+        ['PC', 'PC·노트북', '부팅되지 않는 장비의 자료 접근 문제를 살펴봅니다.'],
+        ['NAS', 'NAS·다중 디스크', '디스크 구성과 오류 상태를 확인합니다.'],
+      ])}
     </div>
   </div>
 </section>
