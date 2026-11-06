@@ -1,3 +1,5 @@
+> **경로 갱신 (2026-11-06 소스 통합):** 홈페이지 소스는 모두 `source-code/`(프로젝트 루트)로 모았다. 아래 본문의 루트 기준 경로(`*.mjs`, `dist/`, `package.json`, `content.json`, `tests/`, `.versions/`, `./source-code/components`)는 `source-code/` 기준으로 읽는다. 실행은 `cd source-code` 후 `npm run build`, `npm start`, `node integrated-site.mjs`이며 출력은 `source-code/dist/`다. 루트에는 `규칙/`, `janiter/`, `assets/`, `source-code/`, `.openai/`, `README.md`만 둔다. 아래 내용은 과거 이력을 보존한다.
+
 # 명정보 홈페이지 세션 부트스트랩 규칙
 
 부트스트랩은 새로운 PM·구현·검토·janiter 세션이 안전하게 작업을 시작하기 위한 공통 절차다. 별도의 CSS Bootstrap 프레임워크 설치를 의미하지 않는다. 이번 규칙은 의존성이나 외부 서비스를 추가하지 않는다.

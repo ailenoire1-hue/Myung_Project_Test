@@ -1,3 +1,5 @@
+> **경로 갱신 (2026-11-06 소스 통합):** 홈페이지 소스는 모두 `source-code/`(프로젝트 루트)로 모았다. 아래 본문의 루트 기준 경로(`*.mjs`, `dist/`, `package.json`, `content.json`, `tests/`, `.versions/`, `./source-code/components`)는 `source-code/` 기준으로 읽는다. 실행은 `cd source-code` 후 `npm run build`, `npm start`, `node integrated-site.mjs`이며 출력은 `source-code/dist/`다. 루트에는 `규칙/`, `janiter/`, `assets/`, `source-code/`, `.openai/`, `README.md`만 둔다. 아래 내용은 과거 이력을 보존한다.
+
 # 명정보 홈페이지 PM 핸드오프
 
 > 재개 후 상태(2026-11-06): 새 PM 브랜치 `ailenoire1-hue/myung-pm-handoff`에서 제작·교차 검토·PM 검증을 완료했다. 현재 상태와 로컬 실행법은 [진행 기록의 완료 항목](PROJECT_PROGRESS.md)에 있다. 아래 내용은 인계 시점 이력으로 보존하며 미완료 목록은 이후 작업으로 해결했다.

@@ -1,3 +1,5 @@
+> **경로 갱신 (2026-11-06):** 아래의 `source-code/components`, `source-code/pages`는 현재 `source-code/` 안의 `components/`, `pages/`이며 진입점 `integrated-site.mjs`, `integrated-commerce.mjs`, `integrated-expertise.mjs`, `integrated-site.js/.css`도 `source-code/`에 있다. import는 `./components/...`, `./pages/...`이다. 프로젝트 루트 탐색은 `source-code/`(`package.json`과 `content.json` 위치)에서 멈추므로 출력은 `source-code/dist/integrated/`다. 실행은 `cd source-code` 후 `node integrated-site.mjs`다.
+
 # 통합 홈페이지 컴포넌트화 완료 기록
 
 기준 커밋 `570ceab`(통합 시안 완성)을 `--ff-only`로 가져온 뒤 규칙 커밋 `178d227`을 cherry-pick하고 작업했다. 스타일·문구·링크·이미지 경로·DOM 클래스/ID/data 속성·파일명은 변경하지 않았다. 브랜드와 상담번호는 별도 기획 사항이라 그대로 두었다.

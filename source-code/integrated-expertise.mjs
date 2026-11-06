@@ -1,8 +1,8 @@
 // Integrated homepage expertise pages: company.html, forensics.html, security.html
 // Based on verified facts in content.json and company-facts.mjs; unverified details are marked as placeholders.
 import { companyHistory, companyBranches } from './company-data.mjs';
-import { esc } from './source-code/components/utils.mjs';
-import { faq } from './source-code/components/faq.mjs';
+import { esc } from './components/utils.mjs';
+import { faq } from './components/faq.mjs';
 
 const historyItems = companyHistory
   .filter((h) => ['1990', '1993', '2003', '2006', '2010', '2013', '2014', '2019', '2023', '2024'].includes(h.year))

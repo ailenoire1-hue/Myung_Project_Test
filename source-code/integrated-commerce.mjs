@@ -1,8 +1,8 @@
 // 명정보 통합 홈페이지 시안 - 제품/수리/복구 페이지 데이터 (시안용, 확인 전 정보 포함)
 const TBD = '정보 확인 중';
 
-import { faq } from './source-code/components/faq.mjs';
-import { articleCard, productCard } from './source-code/components/card.mjs';
+import { faq } from './components/faq.mjs';
+import { articleCard, productCard } from './components/card.mjs';
 
 const products = [
   ['pc', 'PC·워크스테이션', '업무용 PC와 워크스테이션 분류입니다. 구성·모델 정보는 확인 중입니다.'],

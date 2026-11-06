@@ -1,12 +1,12 @@
-﻿// Entry point: assembles pages from source-code/pages and renders them with source-code/components.
+// Entry point: assembles pages from ./pages and renders them with ./components.
 import {writeFile, mkdir, copyFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {pages as commerce} from './integrated-commerce.mjs';
 import {pages as expertise} from './integrated-expertise.mjs';
-import {homePage} from './source-code/pages/home.mjs';
-import {createSupportPage} from './source-code/pages/support.mjs';
-import {renderDocument} from './source-code/components/document.mjs';
-import {loadCompany, rootUrl} from './source-code/components/utils.mjs';
+import {homePage} from './pages/home.mjs';
+import {createSupportPage} from './pages/support.mjs';
+import {renderDocument} from './components/document.mjs';
+import {loadCompany, rootUrl} from './components/utils.mjs';
 
 const company = await loadCompany();
 export const pages = [homePage, ...expertise, ...commerce, createSupportPage(company)];

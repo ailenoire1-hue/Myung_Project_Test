@@ -1,3 +1,5 @@
+> **경로 갱신 (2026-11-06 소스 통합):** 홈페이지 소스는 모두 `source-code/`(프로젝트 루트)로 모았다. 아래 본문의 루트 기준 경로(`*.mjs`, `dist/`, `package.json`, `content.json`, `tests/`, `.versions/`, `./source-code/components`)는 `source-code/` 기준으로 읽는다. 실행은 `cd source-code` 후 `npm run build`, `npm start`, `node integrated-site.mjs`이며 출력은 `source-code/dist/`다. 루트에는 `규칙/`, `janiter/`, `assets/`, `source-code/`, `.openai/`, `README.md`만 둔다. 아래 내용은 과거 이력을 보존한다.
+
 # 명정보 홈페이지 작업 시작 안내
 
 새 PM과 작업 세션은 작업 지시문에서 이 문서를 명시적으로 전달받고 아래 순서대로 읽는다. `규칙/`의 문서는 자동으로 로드되지 않으므로 세션 시작 프롬프트에 읽을 문서와 역할을 포함한다.
