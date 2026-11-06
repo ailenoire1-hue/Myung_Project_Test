@@ -89,3 +89,14 @@ source-code/
 - 실제 브라우저(PC/모바일) 상호작용 검증은 PM 통합 검증에서 수행해야 한다.
 - `dist/integrated/*.html`은 이전 커밋의 줄바꿈 형태와 달라 줄바꿈 차이가 diff에 보일 수 있다. 내용은 위 비교대로 동일하다.
 - 상담번호 `1577-4872`는 JS의 시연 문구에 남아 있다. 브랜드/상담번호는 별도 기획 사항이므로 변경하지 않았다.
+
+## 재초기화 안전성 (교차검토 P3 수정, 2026-11-06)
+
+`규칙/COMPONENT_REVIEW.md`가 지적한 "initializer 재호출 시 이중 바인딩" 문제를 `source-code/integrated-site.js`에서 수정했다. 모듈 범위 `WeakSet`과 `claim(element)` 가드로 이미 초기화한 요소는 건너뛴다.
+
+- `initMenu()`: 토글 버튼을 기준으로 한 번만 바인딩한다. `document` keydown 리스너도 이때 한 번만 추가된다.
+- `initProductFilters()`: `.filters` 그룹을 기준으로 한 번만 바인딩하고, 기존 `.filter-status`가 있으면 재사용한다.
+- `initInquiryDemo()`, `initPaymentDemo()`: 각각 `#inquiry`, `#payment` 요소 기준으로 한 번만 바인딩한다.
+- 동작은 기존과 같다. 새로 삽입된 DOM(새 요소)에 대한 재호출은 정상적으로 초기화된다.
+
+검증(모의 DOM, 모든 initializer를 추가로 2회 재호출): 메뉴 1클릭 후 `aria-expanded`=true(1회 토글), `.filter-status` 1개, document 리스너 1개, 토글/필터 버튼/문의/결제 요소의 리스너가 각각 1개(문의의 submit·reset은 서로 다른 이벤트)였다.

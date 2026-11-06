@@ -1,7 +1,15 @@
-// Classic (non-module) script loaded with `defer`. Each initializer is a no-op when its markup is absent.
+// Classic (non-module) script loaded with `defer`. Each initializer is a no-op when its markup is absent,
+// and is safe to call again: elements that are already bound are skipped (no duplicate listeners or status nodes).
+const initialized = new WeakSet();
+function claim(element) {
+  if (initialized.has(element)) return false;
+  initialized.add(element);
+  return true;
+}
+
 function initMenu() {
   const toggle = document.querySelector('.menu-toggle');
-  if (!toggle) return;
+  if (!toggle || !claim(toggle)) return;
   toggle.hidden = false;
   document.documentElement.classList.add('js');
   const close = () => {
@@ -26,10 +34,15 @@ function initMenu() {
 function initProductFilters() {
   const filters = [...document.querySelectorAll('[data-filter]')];
   if (!filters.length) return;
-  const status = document.createElement('p');
-  status.className = 'filter-status';
-  status.setAttribute('role', 'status');
-  document.querySelector('.filters').after(status);
+  const group = document.querySelector('.filters');
+  if (!claim(group)) return;
+  let status = document.querySelector('.filter-status');
+  if (!status) {
+    status = document.createElement('p');
+    status.className = 'filter-status';
+    status.setAttribute('role', 'status');
+    group.after(status);
+  }
   const apply = (button) => {
     filters.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
     let count = 0;
@@ -45,7 +58,7 @@ function initProductFilters() {
 
 function initInquiryDemo() {
   const inquiry = document.querySelector('#inquiry');
-  if (!inquiry) return;
+  if (!inquiry || !claim(inquiry)) return;
   inquiry.addEventListener('submit', (e) => e.preventDefault());
   inquiry.addEventListener('reset', () => {
     document.querySelector('#inquiry-status').textContent = '';
@@ -59,7 +72,7 @@ function initInquiryDemo() {
 
 function initPaymentDemo() {
   const payment = document.querySelector('#payment');
-  if (!payment) return;
+  if (!payment || !claim(payment)) return;
   document.querySelector('[data-payment]').addEventListener('click', () => {
     document.querySelector('#payment-status').textContent = '';
     document.querySelector('#payment-demo').disabled = false;
