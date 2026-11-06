@@ -1,5 +1,16 @@
 // Integrated homepage expertise pages: company.html, forensics.html, security.html
 // Based on verified facts in content.json and company-facts.mjs; unverified details are marked as placeholders.
+import { companyHistory, companyBranches } from './company-data.mjs';
+
+const esc = (v) => String(v).replace(/[&<>"']/g, (x) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[x]));
+const historyItems = companyHistory
+  .filter((h) => ['1990', '1993', '2003', '2006', '2010', '2013', '2014', '2019', '2023', '2024'].includes(h.year))
+  .sort((a, b) => Number(a.year) - Number(b.year))
+  .map((h) => `<li class="step"><span class="tag">${esc(h.year)}</span><h3>${esc(h.items[0])}</h3>${h.items.slice(1).map((i) => `<p>${esc(i)}</p>`).join('')}</li>`)
+  .join('');
+const branchRows = companyBranches
+  .map((b) => `<tr><th scope="row">${esc(b.name)}</th><td>${esc(b.new_addr)}</td><td>${esc(b.tel)}</td></tr>`)
+  .join('');
 
 export const pages = [
   {
@@ -45,23 +56,8 @@ export const pages = [
       <h2>기업 역사 및 주요 연혁</h2>
       <p class="lead">1990년 창립부터 2026년 현재까지 이어온 주요 발자취와 공식 확인 지표입니다.</p>
     </div>
-    <ol class="steps">
-      <li class="step">
-        <span class="tag">1990. 06. 20</span>
-        <h3>(주)명정보기술 법인 설립</h3>
-        <p>1990년 6월 20일 (주)명정보기술이 설립되었습니다.</p>
-      </li>
-      <li class="step">
-        <span class="tag">사업 영역 확장</span>
-        <h3>사업 영역 확장 (연혁 확인 중)</h3>
-        <p>[임시 문구: 연도별 세부 기술 개발·조직 개편·거점 개소 연혁은 공식 확인 자료 확보 후 순차 반영 예정입니다.]</p>
-      </li>
-      <li class="step">
-        <span class="tag">2026 기준 현황</span>
-        <h3>36년 업력 · 누적 사고조사·복구 200,000건 · 9개 거점</h3>
-        <p>2026년 기준 업력 36년, 누적 사고조사·복구 200,000건 달성 및 9개 거점 운영 체계를 통해 디지털포렌식, 침해사고 조사, 기업 보안 관리, 데이터 복구 및 장비 서비스를 제공하고 있습니다.</p>
-      </li>
-    </ol>
+    <ol class="steps">${historyItems}</ol>
+    <p class="note">주요 연혁 중 일부를 발췌했습니다. 2026년 기준 업력 36년, 누적 사고조사·복구 200,000건(개별 고객 수가 아닌 합산 기준), 9개 거점입니다.</p>
   </div>
 </section>
 
@@ -118,31 +114,25 @@ export const pages = [
     <div class="section-heading">
       <p class="eyebrow">FACILITIES &amp; NETWORK</p>
       <h2>시설 및 9개 거점 운영 현황</h2>
-      <p class="lead">충북 청주 오창 본사를 중심으로 9개 거점 체계를 갖추고 접수·진단·분석 업무를 수행합니다.</p>
+      <p class="lead">충북 청주 오창 본사와 전국 거점의 주소와 전화번호를 안내합니다.</p>
     </div>
-    <div class="grid grid-2">
+    <div class="split">
       <article class="card">
         <div class="card-media">
           <img src="../assets/company/hq-building.png" alt="충북 청주 오창 (주)명정보기술 본사 전경" />
         </div>
-        <span class="tag">HEADQUARTERS FACILITY</span>
-        <h3>오창 본사 및 전문 작업 공간</h3>
-        <p>본사는 충북 청주시 청원구 오창읍 과학산업3로 168에 있습니다. 시설별 세부 정보는 확인 중입니다.</p>
-        <ul class="checklist">
-          <li>본사 소재지: 충북 청주시 청원구 오창읍 과학산업3로 168</li>
-          <li>[임시 문구: 클린룸 세부 등급, 개별 분석실 면적 및 보유 장비 세부 모델 목록은 공식 확인 후 반영 예정]</li>
-        </ul>
+        <span class="tag">HEADQUARTERS</span>
+        <h3>청주 오창 본사</h3>
+        <p>본사는 충북 청주시 청원구 오창읍 과학산업3로 168에 있으며, 2003년 오창과학산업단지 사옥 이전과 함께 클린룸 시설을 운영해 왔습니다. 클린룸 등급과 보유 장비 등 세부 정보는 확인 중입니다.</p>
       </article>
-      <article class="card">
-        <span class="tag">NATIONAL NETWORK</span>
-        <h3>9개 거점 네트워크 운영</h3>
-        <p>2026년 기준 9개 거점을 운영하고 있습니다. 거점별 역할과 세부 정보는 확인 중입니다.</p>
-        <ul class="checklist">
-          <li>거점 규모: 9개 거점 (2026년 기준)</li>
-          <li>[임시 문구: 9개 거점별 세부 지점명, 상세 주소 및 지점별 직통 연락처는 공식 확인 자료 대조 후 기재 예정]</li>
-        </ul>
-        <p class="note">거점 방문 또는 자료 접수 전에는 먼저 센터 대표 상담 창구(1577-4872)를 통해 대상 기기와 방문 가능 일정을 확인해 주시기 바랍니다.</p>
-      </article>
+      <div>
+        <table class="specs branches">
+          <caption>전국 9개 거점 (2026년 기준)</caption>
+          <thead><tr><th scope="col">거점</th><th scope="col">주소</th><th scope="col">전화</th></tr></thead>
+          <tbody>${branchRows}</tbody>
+        </table>
+        <p class="note">방문 전에는 대표 상담 창구(1577-4872)로 대상 기기와 방문 가능 여부를 먼저 확인해 주세요.</p>
+      </div>
     </div>
   </div>
 </section>
